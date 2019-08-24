@@ -1,0 +1,47 @@
+ <nb-card size="medium">
+      <nb-card-header>
+        <span>Upload New Model</span>
+      </nb-card-header>
+      <nb-card-body class="text-center">
+        <div class="row">
+          <div class="col-12">
+            <nb-stepper orientation="horizontal" disableStepNavigation>
+              <nb-step label="Upload Model">
+                <div class="row">
+                  <div class="col-lg-6 col-md-12">
+                    <nb-icon icon="cloud-upload-outline" style="font-size: 6.25rem; color: grey;"></nb-icon>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <button nbButton class="mb-2">
+                      <label>
+                        Choose Files
+                        <input type="file" ng2FileSelect [uploader]="uploader" />
+                      </label>
+                    </button>
+                    <button nbButton (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length" status="success" nbStepperNext><nb-icon icon="cloud-upload-outline"></nb-icon>Next</button>
+                  </div>
+                </div>
+              </nb-step>
+              <nb-step label="Name and Description" class="text-center">
+                <h3>Data Entry</h3>
+                <div class="row">
+                  <div class="col-lg-6 col-md-12">
+                    <label>
+                      <input type="text" nbInput fullWidth fieldSize="small" placeholder="Model Name" [formControl]="modelNameControl">
+                    </label>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <label>
+                      <textarea nbInput fullWidth placeholder="Textarea" [formControl]="modelDescriptionControl"></textarea>
+                    </label>
+                  </div>
+                </div>
+                <button>Upload Model</button>
+              </nb-step>
+            </nb-stepper>
+          </div>
+
+        </div>
+
+      </nb-card-body>
+    </nb-card>

@@ -12,8 +12,6 @@ import {
 
 import { CommonBackendModule } from './backend/common/common-backend.module';
 import { CommonMockModule } from './mock/common/common-mock.module';
-import { EcommerceMockModule } from './mock/ecommerce/ecommerce-mock.module';
-import { IotMockModule } from './mock/iot/iot-mock.module';
 import { UserStore } from './stores/user.store';
 import { UsersService } from './backend/common/services/users.service';
 import { SettingsService } from './backend/common/services/settings.service';
@@ -22,9 +20,6 @@ import { InitUserService } from '../@theme/services/init-user.service';
 export const NB_CORE_PROVIDERS = [
   ...CommonMockModule.forRoot().providers,
   ...CommonBackendModule.forRoot().providers,
-
-  ...EcommerceMockModule.forRoot().providers,
-  ...IotMockModule.forRoot().providers,
 
   AnalyticsService,
   LayoutService,

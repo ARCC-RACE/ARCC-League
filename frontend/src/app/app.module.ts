@@ -19,6 +19,7 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+import {NbEvaIconsModule} from '@nebular/eva-icons';
 
 export function init_app(injector: Injector) {
   return () =>
@@ -54,6 +55,7 @@ export function init_app(injector: Injector) {
     NbChatModule.forRoot({
       messageGoogleMapKey: 'AIzaSyA_wNuCzia92MAmdLRzmqitRGvCF7wCZPY',
     }),
+    NbEvaIconsModule,
     CoreModule.forRoot(),
   ],
   bootstrap: [AppComponent],

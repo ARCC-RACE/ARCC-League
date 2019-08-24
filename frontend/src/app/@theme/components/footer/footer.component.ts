@@ -5,12 +5,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
   template: `
     <span class="created-by">Created with ♥ by <b>
-      <a href="https://akveo.com" target="_blank">Akveo</a></b> {{ currentYear }}</span>
+      <a href="https://caelinsutch.com" target="_blank">Caelin Sutch</a></b> {{ currentYear }}</span>
     <div class="socials">
-      <a href="#" target="_blank" class="ion ion-social-github"></a>
-      <a href="#" target="_blank" class="ion ion-social-facebook"></a>
-      <a href="#" target="_blank" class="ion ion-social-twitter"></a>
-      <a href="#" target="_blank" class="ion ion-social-linkedin"></a>
+      <a href="https://github.com/caelinsutch" target="_blank" class="ion ion-social-github"></a>
+<!--      <a href="#" target="_blank" class="ion ion-social-facebook"></a>-->
+<!--      <a href="#" target="_blank" class="ion ion-social-twitter"></a>-->
+<!--      <a href="#" target="_blank" class="ion ion-social-linkedin"></a>-->
     </div>
   `,
 })

@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
-import { DashboardModule } from './dashboard/dashboard.module';
 import { PagesRoutingModule } from './pages-routing.module';
 import { ThemeModule } from '../@theme/theme.module';
 import { MiscellaneousModule } from './miscellaneous/miscellaneous.module';
 import { PagesMenu } from './pages-menu';
-import { ECommerceModule } from './e-commerce/e-commerce.module';
 import { NbMenuModule } from '@nebular/theme';
 import { AuthModule } from '../@auth/auth.module';
+import {UserDashboardModule} from './user-dashboard/user-dashboard.module';
 
 const PAGES_COMPONENTS = [
   PagesComponent,
@@ -18,9 +17,8 @@ const PAGES_COMPONENTS = [
   imports: [
     PagesRoutingModule,
     ThemeModule,
-    DashboardModule,
-    ECommerceModule,
     NbMenuModule,
+    UserDashboardModule,
     MiscellaneousModule,
     AuthModule.forRoot(),
   ],
