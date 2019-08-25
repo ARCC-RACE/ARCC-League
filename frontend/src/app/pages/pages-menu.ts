@@ -25,7 +25,7 @@ export class PagesMenu {
         children: [
           {
             title: 'User Information',
-            link: '/pages/layout/stepper',
+            link: 'pages/users/current?profile=true',
           },
           {
             title: 'Billing',

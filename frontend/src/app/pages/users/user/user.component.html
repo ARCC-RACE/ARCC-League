@@ -46,6 +46,11 @@
         <input nbInput class="form-control" id="inputZipCode" placeholder="Zip Code" formControlName="zipCode">
       </div>
     </div>
+    <div class="row">
+      <div class="col-4">
+        <button nbButton status="primary" routerLink="pages/users/reset-password" ></button>
+      </div>
+    </div>
   </nb-card-body>
   <nb-card-footer>
     <button nbButton status="primary" [disabled]="!userForm.valid" (click)="save()" hero>Submit</button>
