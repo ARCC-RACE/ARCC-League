@@ -1,8 +1,4 @@
-/*
- * Copyright (c) Akveo 2019. All Rights Reserved.
- * Licensed under the Single Application / Multi Application License.
- * See LICENSE_SINGLE_APP / LICENSE_MULTI_APP in the 'docs' folder for license information on type of purchased license.
- */
+
 
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
@@ -34,10 +30,6 @@ export class UserComponent implements OnInit, OnDestroy {
   userForm: FormGroup;
 
   protected readonly unsubscribe$ = new Subject<void>();
-
-  get firstName() { return this.userForm.get('firstName'); }
-
-  get lastName() { return this.userForm.get('lastName'); }
 
   get login() { return this.userForm.get('login'); }
 
@@ -72,8 +64,7 @@ export class UserComponent implements OnInit, OnDestroy {
     this.userForm = this.fb.group({
       id: this.fb.control(''),
       role: this.fb.control(''),
-      firstName: this.fb.control('', [Validators.minLength(3), Validators.maxLength(20)]),
-      lastName: this.fb.control('', [Validators.minLength(3), Validators.maxLength(20)]),
+
       login: this.fb.control('', [Validators.required, Validators.minLength(6), Validators.maxLength(20)]),
       age: this.fb.control('', [Validators.required, Validators.min(1),
         Validators.max(120), Validators.pattern(NUMBERS_PATTERN)]),
@@ -119,8 +110,6 @@ export class UserComponent implements OnInit, OnDestroy {
         this.userForm.setValue({
           id: user.id,
           role: user.role,
-          firstName: user.firstName ? user.firstName : '',
-          lastName: user.lastName ? user.lastName : '',
           login: user.login ? user.login : '',
           age: user.age ? user.age : '',
           email: user.email,

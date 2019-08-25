@@ -5,8 +5,6 @@ import { Settings } from './settings';
 export interface User {
   id: number;
   role: string;
-  firstName: string;
-  lastName: string;
   email: string;
   age: number;
   login: string;
