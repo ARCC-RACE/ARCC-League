@@ -20,6 +20,7 @@ import {
   NbWindowModule,
 } from '@nebular/theme';
 import {NbEvaIconsModule} from '@nebular/eva-icons';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 export function init_app(injector: Injector) {
   return () =>
@@ -36,7 +37,7 @@ export function init_app(injector: Injector) {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, LandingPageComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
