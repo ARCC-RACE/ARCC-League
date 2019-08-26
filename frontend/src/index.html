@@ -17,51 +17,78 @@
   </ngx-app>
 
   <style>
-    body {
-      background: #eaecfa;
+    body{
+      margin: 0;
+    }
+    .wrapper{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      min-width: 100vw;
+    }
+    .loader{
+      border-radius: 50%;
+      position: relative;
+      margin: 50px;
+      display: inline-block;
+      height: 0px;
+      width: 0px;
     }
 
-    .loader {
-      width: 250px;
-      height: 50px;
-      line-height: 50px;
-      text-align: center;
+    .loader span{
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      font-family: helvetica, arial, sans-serif;
-      text-transform: uppercase;
-      font-weight: 900;
-      color: #ce4233;
-      letter-spacing: 0.2em;
-    }
-
-    .loader::before .loader::after {
-      content: "";
       display: block;
-      width: 15px;
-      height: 15px;
-      background: #ce4233;
-      position: absolute;
-      animation: load .7s infinite alternate ease-in-out;
+      background: #ddd;
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      top: -20px;
+      perspective: 100000px;
+    }
+    .loader span:nth-child(1) {
+      left:60px;
+      animation: bounce2 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
+      animation-delay: 0s;
+      background: #ff756f;
+    }
+    .loader span:nth-child(2) {
+      left:20px;
+      animation: bounce2 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
+      animation-delay: .2s;
+      background: #ffde6f;
+    }
+    .loader span:nth-child(3) {
+      left:-20px;
+      animation: bounce2 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
+      animation-delay: .4s;
+      background: #01de6f;
+    }
+    .loader span:nth-child(4) {
+      left: -60px;
+      animation: bounce2 1s cubic-bezier(0.04, 0.35, 0, 1) infinite;
+      animation-delay: .6s;
+      background: #6f75ff;
     }
 
-    .loader::before {
-      top: 0;
-    }
-
-    .loader::after {
-      bottom: 0;
-    }
-
-    @keyframes load {
-      0% { left: 0; height: 30px; width: 15px }
-      50% { height: 8px; width: 40px }
-      100% { left: 235px; height: 30px; width: 15px}
+    @keyframes bounce2 {
+      0%, 75%, 100% {
+        transform: translateY(0px);
+      }
+      25% {
+        transform: translateY(-30px);
+      }
     }
   </style>
-  <div class="loader spinner" id="nb-global-spinner">Loading...</div>
+<!--  <div class="loader spinner" id="nb-global-spinner">Loading...</div>-->
+  <section class="wrapper spinner" id="nb-global-spinner">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
 
 </body>
 </html>

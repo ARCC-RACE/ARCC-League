@@ -26,6 +26,9 @@ export class PagesComponent implements OnDestroy {
   ) {
     this.initMenu();
 
+    /**
+     * Marks when the user token is changed and reinits menu if so (For dynamic menu, etc.)
+     */
     this.tokenService.tokenChange()
       .pipe(takeWhile(() => this.alive))
       .subscribe(() => {
@@ -33,6 +36,9 @@ export class PagesComponent implements OnDestroy {
       });
   }
 
+  /**
+   * Initializes side menu with data in pages-menu.ts
+   */
   initMenu() {
     this.pagesMenu.getMenu()
       .pipe(takeWhile(() => this.alive))
@@ -41,6 +47,9 @@ export class PagesComponent implements OnDestroy {
       });
   }
 
+  /**
+   * Marks when not alive
+   */
   ngOnDestroy(): void {
     this.alive = false;
   }

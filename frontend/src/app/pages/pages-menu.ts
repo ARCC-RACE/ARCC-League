@@ -8,9 +8,9 @@ export class PagesMenu {
   getMenu(): Observable<NbMenuItem[]> {
     const dashboardMenu = [
       {
-        title: 'User Dashboard',
+        title: 'Dashboard',
         icon: 'home-outline',
-        link: '/pages/user-dashboard',
+        link: '/pages/dashboard',
         children: undefined,
       },
     ];
@@ -25,7 +25,7 @@ export class PagesMenu {
         children: [
           {
             title: 'User Information',
-            link: 'pages/users/current?profile=true',
+            link: `['pages/users/current', {queryParams: {profile: 'true'}}], `,
           },
           {
             title: 'Billing',

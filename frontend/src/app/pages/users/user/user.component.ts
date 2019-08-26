@@ -29,8 +29,12 @@ export enum UserFormMode {
 export class UserComponent implements OnInit, OnDestroy {
   userForm: FormGroup;
 
+  /**
+   * Subject that is for noting when the action is complete
+   */
   protected readonly unsubscribe$ = new Subject<void>();
 
+  // Getters for the form
   get login() { return this.userForm.get('login'); }
 
   get email() { return this.userForm.get('email'); }
@@ -43,7 +47,15 @@ export class UserComponent implements OnInit, OnDestroy {
 
   get zipCode() { return this.userForm.get('address').get('zipCode'); }
 
+  /**
+   * What mode the form is being loaded in
+   */
   mode: UserFormMode;
+
+  /**
+   * Setter for mode
+   * @param viewMode
+   */
   setViewMode(viewMode: UserFormMode) {
     this.mode = viewMode;
   }
@@ -60,6 +72,9 @@ export class UserComponent implements OnInit, OnDestroy {
     this.loadUserData();
   }
 
+  /**
+   * Initializes the user form
+   */
   initUserForm() {
     this.userForm = this.fb.group({
       id: this.fb.control(''),
@@ -85,22 +100,30 @@ export class UserComponent implements OnInit, OnDestroy {
   }
 
 
+  /**
+   * Decides whether or not to load the users data, add a new user, or view another user
+   * Consolidates multiple edit forms into one
+   */
   loadUserData() {
     const id = this.route.snapshot.paramMap.get('id');
-    const isProfile = this.route.snapshot.queryParamMap.get('profile');
-    if (isProfile) {
-      this.setViewMode(UserFormMode.EDIT_SELF);
+    const isAdd = this.route.snapshot.queryParamMap.get('add');
+    if (isAdd) {
+      this.setViewMode(UserFormMode.ADD);
       this.loadUser();
     } else {
       if (id) {
         this.setViewMode(UserFormMode.EDIT);
         this.loadUser(id);
       } else {
-        this.setViewMode(UserFormMode.ADD);
+        this.setViewMode(UserFormMode.EDIT_SELF);
       }
     }
   }
 
+  /**
+   * Loads another user based on their ID
+   * @param id User ID
+   */
   loadUser(id?) {
     const loadUser = this.mode === UserFormMode.EDIT_SELF
       ? this.usersService.getCurrentUser() : this.usersService.get(id);
@@ -126,11 +149,18 @@ export class UserComponent implements OnInit, OnDestroy {
   }
 
 
+  /**
+   * Converts object to user
+   * @param value Object that will represent the user
+   */
   convertToUser(value: any): User {
     const user: User = value;
     return user;
   }
 
+  /**
+   * Saves the user to the database
+   */
   save() {
     const user: User = this.convertToUser(this.userForm.value);
 
@@ -151,10 +181,16 @@ export class UserComponent implements OnInit, OnDestroy {
       });
   }
 
+  /**
+   * Go to the last page
+   */
   back() {
     this.router.navigate(['/pages']);
   }
 
+  /**
+   * Unsubscribes from stuff on destroy
+   */
   ngOnDestroy(): void {
     this.unsubscribe$.next();
     this.unsubscribe$.complete();

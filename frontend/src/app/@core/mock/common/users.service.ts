@@ -51,9 +51,7 @@ export class UsersService extends UserData {
     {
       id: 1,
       role: 'user',
-      firstName: 'Mark',
-      lastName: 'Walmart',
-      login: '@mdo',
+      login: 'Caelin Sutch',
       email: 'mdo@gmail.com',
       age: 0,
       picture: '',
@@ -69,8 +67,6 @@ export class UsersService extends UserData {
     {
       id: 2,
       role: 'user',
-      firstName: 'Jacob',
-      lastName: 'Cuba',
       login: '@mdo',
       email: 'mdo@gmail.com',
       age: 0,
@@ -87,8 +83,6 @@ export class UsersService extends UserData {
     {
       id: 3,
       role: 'user',
-      firstName: 'Larry',
-      lastName: 'Page',
       login: '@twitter',
       email: 'twitter@outlook.com',
       age: 0,
@@ -105,8 +99,6 @@ export class UsersService extends UserData {
     {
       id: 4,
       role: 'user',
-      firstName: 'John',
-      lastName: 'Snow',
       login: '@snow',
       email: 'snow@gmail.com',
       age: 0,

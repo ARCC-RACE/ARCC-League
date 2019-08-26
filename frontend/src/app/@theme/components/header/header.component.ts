@@ -14,10 +14,11 @@ import { SettingsData } from '../../../@core/interfaces/common/settings';
 })
 export class HeaderComponent implements OnInit, OnDestroy {
 
-  private destroy$: Subject<void> = new Subject<void>();
-  userPictureOnly: boolean = false;
-  user: any;
+  private destroy$: Subject<void> = new Subject<void>(); // Notes when the subject is destroyed
+  userPictureOnly: boolean = false; // If the user picture and username or just picture is displayued
+  user: any; // User that is being displayed
 
+  // Themes for the UI modes
   themes = [
     {
       value: 'default',
@@ -39,6 +40,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   currentTheme = 'default';
 
+  // UserMenu object
   userMenu = this.getMenuItems();
 
   constructor(private sidebarService: NbSidebarService,
@@ -50,8 +52,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
               private breakpointService: NbMediaBreakpointsService) {
   }
 
+  // Gets menu items for the user
   getMenuItems() {
-    const userLink = this.user ?  '/pages/users/current/' : '';
+    const userLink = this.user ?  '/pages/users/current/' : ''; // Assigns user link if it exists
     return [
       { title: 'Profile', link: userLink, queryParams: { profile: true } },
       { title: 'Log out', link: '/auth/logout' },
@@ -59,12 +62,16 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.currentTheme = this.themeService.currentTheme;
+    this.currentTheme = this.themeService.currentTheme; // Sets theme
 
-    this.user = this.userStore.getUser();
-    this.userMenu = this.getMenuItems();
+    this.user = this.userStore.getUser(); // Sets user to user form database
+    this.userMenu = this.getMenuItems(); // Gets user information from menu
 
-    const { xl } = this.breakpointService.getBreakpointsMap();
+    const { xl } = this.breakpointService.getBreakpointsMap(); // Gets breakpoints mapping
+    /**
+     * Runs when screen sized changes and tracks if to display the userpicutre only or all user info
+     *
+     */
     this.themeService.onMediaQueryChange()
       .pipe(
         map(([, currentBreakpoint]) => currentBreakpoint.width < xl),
@@ -72,6 +79,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
       )
       .subscribe((isLessThanXl: boolean) => this.userPictureOnly = isLessThanXl);
 
+    /**
+     * Tracks when the theme is changed, and sets the new theme when it is
+     */
     this.themeService.onThemeChange()
       .pipe(
         map(({ name }) => name),
@@ -80,11 +90,18 @@ export class HeaderComponent implements OnInit, OnDestroy {
       .subscribe(themeName => this.currentTheme = themeName);
   }
 
+  /**
+   * Marks function as complete
+   */
   ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
   }
 
+  /**
+   * Sets theme to User Database and changes is
+   * @param themeName
+   */
   changeTheme(themeName: string) {
     this.userStore.setSetting(themeName);
     this.settingsService.updateCurrent(this.userStore.getUser().settings)
@@ -94,6 +111,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.themeService.changeTheme(themeName);
   }
 
+  /**
+   * Toggles sidebar
+   */
   toggleSidebar(): boolean {
     this.sidebarService.toggle(true, 'menu-sidebar');
     this.layoutService.changeLayoutSize();
@@ -101,6 +121,9 @@ export class HeaderComponent implements OnInit, OnDestroy {
     return false;
   }
 
+  /**
+   * Navigates home
+   */
   navigateHome() {
     this.menuService.navigateHome();
     return false;
