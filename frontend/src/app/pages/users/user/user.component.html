@@ -1,5 +1,5 @@
 <nb-card>
-  <nb-card-header>{{ mode }} user</nb-card-header>
+  <nb-card-header>User Information</nb-card-header>
   <nb-card-body class="container">
     <div [formGroup]="userForm" class="row">
       <div class="form-group col-md-4 col-sm-12">
@@ -48,7 +48,7 @@
     </div>
     <div class="row">
       <div class="col-4">
-        <button nbButton status="primary" routerLink="pages/users/reset-password" ></button>
+        <button nbButton status="warning" routerLink="/pages/users/reset-password" >Reset Password</button>
       </div>
     </div>
   </nb-card-body>
