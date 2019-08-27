@@ -1,5 +1,5 @@
 .top-title {
-  font-size: 6em;
+  font-size: 5em;
 }
 
 .top-content {
@@ -7,33 +7,30 @@
 }
 
 .transition1 {
-  z-index: -20;
-  postiton: absolute;
-  margin-top: -44%;
+  z-index: -10;
+  margin-top: -46%;
 }
 
 .transition2 {
-  z-index: -20;
-  postiton: absolute;
-  margin-top: -44%;
+  z-index: -10;
+  margin-top: -41%;
 }
 
 .transition3 {
-  z-index: -20;
-  postiton: absolute;
-  margin-top: -44%;
+  z-index: -30;
+  width: 100%;
+  margin-top: -16%;
 }
 
 .transition4 {
   z-index: -20;
-  postiton: absolute;
-  margin-top: -44%;
+  width: 100%;
+  margin-top: -53%;
 }
 
 .transition5 {
   z-index: -20;
-  postiton: absolute;
-  margin-top: -44%;
+  margin-top: -17%;
 }
 
 .section1 {
@@ -45,25 +42,74 @@
 .section2 {
   background-color: #212947;
   color: white;
-  margin-top: 16%;
+  margin-top: 10%;
 }
 
 .section3 {
   background-color: #3F4A74;
   color: white;
+  margin-top: -41%;
 }
 
 .section4 {
   background-color: #212947;
   color: white;
+  margin-top: -118%;
 }
 
 .section5 {
   background-color: #3F4A74;
   color: white;
+  margin-top: -38%;
 }
 
 .section6 {
   background-color: #212947;
   color: white;
+  margin-top: -15%;
 }
+
+.track {
+  z-index: 9;
+  position: absolute;
+  margin-left: 163%;
+  margin-top: -95%;
+}
+
+.car {
+  z-index: 10;
+  position: absolute;
+  margin-left: 167.4%;
+  margin-top: -54%;
+}
+
+.computer {
+  z-index: 9;
+  position: absolute;
+  margin-left: 195%;
+  margin-top: -58%;
+}
+
+.arcc {
+  width: 2%;
+  margin-right: 0.5%;
+  margin-left: 2%;
+}
+
+.arcc2 {
+  width: 5%;
+  margin-right: 0.5%;
+  margin-left: 2%;
+}
+
+.safari {
+  margin-top: 7%;
+}
+
+.tran1over {
+  z-index: 30;
+  position: absolute;
+  margin-top: -22%;
+}
+
+
