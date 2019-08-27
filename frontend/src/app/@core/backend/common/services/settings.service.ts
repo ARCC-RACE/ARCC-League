@@ -5,7 +5,7 @@ import { SettingsData, Settings } from '../../../interfaces/common/settings';
 import {NbThemeService} from '@nebular/theme';
 
 @Injectable()
-export class SettingsService extends SettingsData implements OnInit {
+export class SettingsService extends SettingsData {
   constructor(
     private api: SettingsApi,
     private themeService: NbThemeService,
