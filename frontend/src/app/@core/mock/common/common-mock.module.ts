@@ -6,14 +6,12 @@ import { SmartTableData } from '../../interfaces/common/smart-table';
 
 import { UsersService } from './users.service';
 import { SmartTableService } from './smart-table.service';
-import { PeriodsService } from './periods.service';
 import { SettingsData } from '../../interfaces/common/settings';
 import { SettingsService } from './settings.service';
 
 const SERVICES = [
   { provide: UserData, useClass: UsersService },
   { provide: SmartTableData, useClass: SmartTableService },
-  { provide: PeriodsService, useClass: PeriodsService },
   { provide: SettingsData, useClass: SettingsService },
 ];
 
