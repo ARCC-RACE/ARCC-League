@@ -116,19 +116,25 @@
 
 .button {
   background-color: #FD825C;
+  border: rgba(0,0,0,0);
+  height: 38px;
+}
+
+.button:focus {
+  background-color: #fc511c !important;
 }
 
 .buttonwrapper {
   z-index: 10;
   position: absolute;
   margin-top: -54px;
-  margin-left: 326px;
+  margin-left: 335px;
 }
 
 .buttonwrapper2 {
   z-index: 10;
   position: absolute;
   margin-top: -54px;
-  margin-left: 290px;
+  margin-left: 298px;
 }
 

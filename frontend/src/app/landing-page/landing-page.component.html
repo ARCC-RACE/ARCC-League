@@ -9,12 +9,12 @@
     <div class="col-7 mt-5 ml-5">
       <h1 class="top-title">TEST AND COMPETE IN THE REAL WORLD</h1>
       <p class="top-content mb-5">Compete against other AWS DeepRacer times recorded in the real world. Upload your model, we’ll run it on our DeepRacer track, send you the video, and rank your time on our global leaderboard against other cars that have times in the physical world.</p>
-      <form>
+      <form id="email1">
         <div class="col-5">
           <div class="row">
             <div class="col-12">
               <div class="form-group">
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                <input type="email" class="form-control" name="Email" placeholder="Email">
               </div>
               <div class="buttonwrapper">
                 <button type="submit" class="btn btn-primary button">Get Started</button>
@@ -44,12 +44,12 @@
       </div>
       <div class="col-6" style="margin-top: 5%;">
         <p class="top-content mb-5">Unlike the AWS league, we test all of our cars in the real world to see their performance in a non-ideal world. Prepare for a DeepRacer summit or see how your car does out of the simulation by getting started.</p>
-        <form>
+        <form id="email2">
           <div class="col-6">
             <div class="row">
               <div class="col-12">
                 <div class="form-group">
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                  <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Email">
                 </div>
                 <div class="buttonwrapper2">
                   <button type="submit" class="btn btn-primary button">Get Started</button>
@@ -124,15 +124,15 @@
         <h1 class="top-title ml-5">Signup today and one model evaluation is on us.</h1>
       </div>
       <div class="col-6 mt-5">
-        <form class="mt-5">
+        <form class="mt-5" id="fullForm">
           <div class="form-group">
-            <input type="text" class="form-control" id="firstname" placeholder="First Name">
+            <input type="text" class="form-control" name="FirstName" placeholder="First Name">
           </div>
           <div class="form-group">
-            <input type="text" class="form-control" id="lastname" placeholder="Last Name">
+            <input type="text" class="form-control" name="LastName" placeholder="Last Name">
           </div>
           <div class="form-group">
-            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+            <input type="email" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Email">
           </div>
           <button type="submit" class="btn btn-primary button">Get Started</button>
         </form>
