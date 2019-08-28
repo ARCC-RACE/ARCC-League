@@ -40,7 +40,7 @@ export class PagesComponent implements OnDestroy {
    * Initializes side menu with data in pages-menu.ts
    */
   initMenu() {
-    this.pagesMenu.getMenu()
+    PagesMenu.getMenu()
       .pipe(takeWhile(() => this.alive))
       .subscribe(menu => {
         this.menu = menu;

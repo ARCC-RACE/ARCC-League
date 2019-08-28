@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class PagesMenu {
 
-  getMenu(): Observable<NbMenuItem[]> {
+  static getMenu(): Observable<NbMenuItem[]> {
     const dashboardMenu = [
       {
         title: 'Dashboard',
@@ -25,7 +25,7 @@ export class PagesMenu {
         children: [
           {
             title: 'User Information',
-            link: `['pages/users/current', {queryParams: {profile: 'true'}}], `,
+            link: '/pages/users/current',
           },
           {
             title: 'Billing',
@@ -33,7 +33,7 @@ export class PagesMenu {
           },
         ],
       },
-    ]
+    ];
 
     // const menu = [
     //   {

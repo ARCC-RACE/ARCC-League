@@ -30,16 +30,14 @@ export class UsersApi {
   getCurrent(): Observable<any> {
     return this.api.get(`${this.apiController}/current`)
       .pipe(map(data => {
-        const picture = `${this.api.apiUrl}/${this.apiController}/${data.id}/photo`;
-        return { ...data, picture };
+        return { ...data };
       }));
   }
 
   get(id: number): Observable<any> {
     return this.api.get(`${this.apiController}/${id}`)
       .pipe(map(data => {
-        const picture = `${this.api.apiUrl}/${this.apiController}/${data.id}/photo`;
-        return { ...data, picture };
+        return { ...data };
       }));
   }
 

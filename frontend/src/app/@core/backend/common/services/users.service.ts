@@ -28,9 +28,6 @@ export class UsersService extends UserData {
           return authenticated ? this.api.getCurrent() : of(null);
         }),
         map(u => {
-        if (u && !u.setting) {
-          u.setting = {};
-        }
         return u;
       }));
   }

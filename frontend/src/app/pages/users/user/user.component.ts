@@ -107,15 +107,16 @@ export class UserComponent implements OnInit, OnDestroy {
   loadUserData() {
     const id = this.route.snapshot.paramMap.get('id');
     const isProfile = this.route.snapshot.queryParamMap.get('profile');
-    if (isProfile) {
-      this.setViewMode(UserFormMode.EDIT_SELF);
-      this.loadUser();
+    const isAdd = this.route.snapshot.queryParamMap.get('add');
+    if (isAdd) {
+      this.setViewMode(UserFormMode.ADD);
     } else {
       if (id) {
         this.setViewMode(UserFormMode.EDIT);
         this.loadUser(id);
       } else {
-        this.setViewMode(UserFormMode.ADD);
+        this.setViewMode(UserFormMode.EDIT_SELF);
+        this.loadUser();
       }
     }
   }
