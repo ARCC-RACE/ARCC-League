@@ -18,7 +18,6 @@
 
 .transition3 {
   z-index: -30;
-  width: 100%;
   margin-top: -16%;
 }
 
@@ -111,7 +110,8 @@
   z-index: 30;
   position: absolute;
   margin-top: 84vh;
-  margin-left: -1240px;
+  margin-left: -1243px;
+  width: 309% !important;
 }
 
 .button {
@@ -138,3 +138,91 @@
   margin-left: 298px;
 }
 
+.image {
+  width: 100%;
+}
+
+
+@media (max-width: 768px) {
+  .top-title {
+    font-size: 2em;
+  }
+
+  .top-content {
+    font-size: 1em;
+  }
+
+  .buttonwrapper {
+    margin-left: 172px;
+  }
+
+  .die-md {
+    width: 0% !important;
+  }
+
+  .transition1 {
+    margin-top: -53%;
+  }
+
+  .section2 {
+    margin-top: -64%;
+  }
+
+  .sec2space-md {
+    margin-top: 15vh !important;
+  }
+
+  .buttonwrapper2 {
+    margin-left: 189px;
+  }
+
+  .section3 {
+    margin-top: -119%;
+  }
+
+  .medleftsafari {
+    margin-left: 66px !important;
+  }
+
+  .transition2 {
+    margin-top: -115%;
+  }
+
+  .transition3 {
+    margin-top: -108%;
+  }
+
+  .section4 {
+    margin-top: -312%;
+  }
+
+  .medleftex {
+    margin-left: 46px;
+  }
+
+  .transition4 {
+    margin-top: -155%;
+  }
+
+  .section5 {
+    margin-top: 16%;
+  }
+
+  .medtextspacer {
+    margin-top: 110px;
+  }
+
+  .transition5 {
+    margin-top: -43%;
+  }
+
+  .section6 {
+    margin-top: -48%;
+  }
+
+  .medtempback {
+    width: 109% !important;
+    margin-top: -576vh;
+    height: 639vh;
+  }
+}
