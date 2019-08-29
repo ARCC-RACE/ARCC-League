@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
   template: `
     <div>
-      <span class="created-by">Created with ♥ by 
+      <span class="created-by">Created with ♥ by
           <b><a href="https://caelinsutch.com" target="_blank">Caelin Sutch</a></b>  and
           <b><a href="https://arcc.ai" target="_blank">ARCC</a></b>
           {{ currentYear }}</span>

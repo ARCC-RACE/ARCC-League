@@ -16,7 +16,7 @@ import {MarkdownModule} from 'ngx-markdown';
     NbCardModule,
     NbButtonModule,
     MiscellaneousRoutingModule,
-    MarkdownModule
+    MarkdownModule,
   ],
   declarations: [
     MiscellaneousComponent,

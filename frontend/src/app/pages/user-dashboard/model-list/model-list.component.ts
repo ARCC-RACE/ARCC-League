@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {NbSortDirection, NbSortRequest, NbTreeGridDataSource, NbTreeGridDataSourceBuilder} from '@nebular/theme';
+import {Component, Input } from '@angular/core';
 import {LocalDataSource} from 'ng2-smart-table';
 import {SmartTableData} from '../../../@core/interfaces/common/smart-table';
 
@@ -66,7 +65,7 @@ export class ModelListComponent {
 
   constructor(private service: SmartTableData) {
     const data = this.service.getData();
-    this.source.load(data);
+    this.source.load(data).then();
   }
 
   onDeleteConfirm(event): void {

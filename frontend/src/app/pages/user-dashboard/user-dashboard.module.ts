@@ -14,12 +14,12 @@ import {
   NbInputModule,
   NbListModule, NbStepperModule,
   NbTableModule, NbToastrModule,
-  NbTreeGridModule
+  NbTreeGridModule,
 } from '@nebular/theme';
 import {ThemeModule} from '../../@theme/theme.module';
 import {Ng2SmartTableModule} from 'ng2-smart-table';
-import {FileUploadModule} from "ng2-file-upload";
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {FileUploadModule} from 'ng2-file-upload';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [

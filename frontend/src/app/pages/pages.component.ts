@@ -20,7 +20,8 @@ export class PagesComponent implements OnDestroy {
   menu: NbMenuItem[];
   alive: boolean = true;
 
-  constructor(private pagesMenu: PagesMenu,
+  constructor(
+    // private pagesMenu: PagesMenu,
     private tokenService: NbTokenService,
     protected initUserService: InitUserService,
   ) {

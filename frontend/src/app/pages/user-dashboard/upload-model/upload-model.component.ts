@@ -1,10 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FileItem, FileUploader} from 'ng2-file-upload';
-import {NbToastrService} from '@nebular/theme';
-import {FormControl} from "@angular/forms";
-
-const URL = 'https://evening-anchorage-3159.herokuapp.com/api/';
-
+import { FileUploader } from 'ng2-file-upload';
+import { NbToastrService } from '@nebular/theme';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'ngx-upload-model',
