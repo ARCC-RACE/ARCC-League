@@ -3,6 +3,8 @@ import { FileUploader } from 'ng2-file-upload';
 import { NbToastrService } from '@nebular/theme';
 import { FormControl } from '@angular/forms';
 
+const URL = 'path_to_api';
+
 @Component({
   selector: 'ngx-upload-model',
   templateUrl: './upload-model.component.html',
