@@ -52,7 +52,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
               private breakpointService: NbMediaBreakpointsService) {
   }
 
-  // Gets menu items for the user
+  // Gets menu items for the user dropdown
   getMenuItems() {
     const userLink = this.user ?  '/pages/users/current/' : ''; // Assigns user link if it exists
     return [

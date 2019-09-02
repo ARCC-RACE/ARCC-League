@@ -8,11 +8,9 @@
             <nb-stepper orientation="vertical" disableStepNavigation>
               <nb-step label="Upload Model">
                 <div class="row">
-                  <div class="col-lg-6 col-md-12">
-                    <nb-icon icon="cloud-upload-outline" style="font-size: 6.25rem; color: grey;"></nb-icon>
-                  </div>
-                  <div class="col-lg-6 col-md-12">
-                    <button nbButton class="mb-2">
+                  <div class="col-12">
+                    <button nbButton class="mb-3">
+                      <nb-icon icon="cloud-upload-outline"></nb-icon>
                       <label>
                         Choose Files
                         <input type="file" ng2FileSelect [uploader]="uploader" />

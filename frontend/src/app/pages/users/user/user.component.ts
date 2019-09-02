@@ -15,7 +15,7 @@ import { EMAIL_PATTERN, NUMBERS_PATTERN } from '../../../@auth/components';
 
 
 export enum UserFormMode {
-  VIEW = 'View',
+  // VIEW = 'View',
   EDIT = 'Edit',
   ADD = 'Add',
   EDIT_SELF = 'EditSelf',
@@ -95,9 +95,9 @@ export class UserComponent implements OnInit, OnDestroy {
     });
   }
 
-  get canEdit(): boolean {
-    return this.mode !== UserFormMode.VIEW;
-  }
+  // get canEdit(): boolean {
+  //   return this.mode !== UserFormMode.VIEW;
+  // }
 
 
   /**
@@ -106,16 +106,17 @@ export class UserComponent implements OnInit, OnDestroy {
    */
   loadUserData() {
     const id = this.route.snapshot.paramMap.get('id');
-    const isProfile = this.route.snapshot.queryParamMap.get('profile');
-    if (isProfile) {
-      this.setViewMode(UserFormMode.EDIT_SELF);
-      this.loadUser();
+    // const isProfile = this.route.snapshot.queryParamMap.get('profile');
+    const isAdd = this.route.snapshot.queryParamMap.get('add');
+    if (isAdd) {
+      this.setViewMode(UserFormMode.ADD);
     } else {
       if (id) {
         this.setViewMode(UserFormMode.EDIT);
         this.loadUser(id);
       } else {
-        this.setViewMode(UserFormMode.ADD);
+        this.setViewMode(UserFormMode.EDIT_SELF);
+        this.loadUser();
       }
     }
   }
@@ -153,8 +154,9 @@ export class UserComponent implements OnInit, OnDestroy {
    * Converts object to user
    * @param value Object that will represent the user
    */
-  convertToUser(value: any): User {
-    const user: User = value;
+  static convertToUser(value: any): User {
+    let user: User;
+    user = value;
     return user;
   }
 
@@ -162,7 +164,7 @@ export class UserComponent implements OnInit, OnDestroy {
    * Saves the user to the database
    */
   save() {
-    const user: User = this.convertToUser(this.userForm.value);
+    const user: User = UserComponent.convertToUser(this.userForm.value);
 
     let observable = new Observable<User>();
     if (this.mode === UserFormMode.EDIT_SELF) {
@@ -185,11 +187,11 @@ export class UserComponent implements OnInit, OnDestroy {
    * Go to the last page
    */
   back() {
-    this.router.navigate(['/pages']);
+    this.router.navigate(['/pages']).then();
   }
 
   /**
-   * Unsubscribes from stuff on destroy
+   * Unsubscribe from stuff on destroy
    */
   ngOnDestroy(): void {
     this.unsubscribe$.next();

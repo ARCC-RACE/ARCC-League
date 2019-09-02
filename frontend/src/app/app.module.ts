@@ -19,6 +19,9 @@ import {
   NbToastrModule,
   NbWindowModule,
 } from '@nebular/theme';
+
+import { MarkdownModule } from 'ngx-markdown';
+
 import {NbEvaIconsModule} from '@nebular/eva-icons';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
@@ -58,6 +61,7 @@ export function init_app(injector: Injector) {
     }),
     NbEvaIconsModule,
     CoreModule.forRoot(),
+    MarkdownModule.forRoot(),
   ],
   bootstrap: [AppComponent],
   providers: [

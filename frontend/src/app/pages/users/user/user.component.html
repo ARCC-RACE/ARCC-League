@@ -1,8 +1,9 @@
 <nb-card>
   <nb-card-header>User Information</nb-card-header>
   <nb-card-body class="container">
-    <div [formGroup]="userForm" class="row">
-      <div class="form-group col-md-4 col-sm-12">
+    <div [formGroup]="userForm">
+
+      <div class="form-group">
         <label for="inputLogin">Full Name</label>
         <input nbInput id="inputLogin" formControlName="login"
           [status]="(login?.errors?.required || login?.hasError('minlength') || login?.hasError('maxlength')) ? 'danger' : 'primary'"
@@ -12,17 +13,17 @@
           maxLength=20></ngx-validation-message>
       </div>
 
-      <div class="form-group col-md-4 col-sm-12">
-        <label for="inputAge">Age</label>
-        <input nbInput id="inputAge" formControlName="age"
-          [status]="(age?.errors?.min || age?.errors?.max || age?.hasError('pattern')) ? 'danger' : 'primary'"
-          class="form-control" placeholder="Age">
-        <ngx-validation-message label="Age" [showMin]="age?.errors?.min" [showMax]="age?.errors?.max"
-                                [showRequired]="age?.errors?.required"
-                                [showPattern]="age?.hasError('pattern')" min=1 max=120></ngx-validation-message>
-      </div>
+<!--      <div class="form-group col-md-4 col-sm-12">-->
+<!--        <label for="inputAge">Age</label>-->
+<!--        <input nbInput id="inputAge" formControlName="age"-->
+<!--          [status]="(age?.errors?.min || age?.errors?.max || age?.hasError('pattern')) ? 'danger' : 'primary'"-->
+<!--          class="form-control" placeholder="Age">-->
+<!--        <ngx-validation-message label="Age" [showMin]="age?.errors?.min" [showMax]="age?.errors?.max"-->
+<!--                                [showRequired]="age?.errors?.required"-->
+<!--                                [showPattern]="age?.hasError('pattern')" min=1 max=120></ngx-validation-message>-->
+<!--      </div>-->
 
-      <div class="form-group col-md-4 col-sm-12">
+      <div class="form-group">
         <label for="inputEmail">Email</label>
         <input nbInput id="inputEmail" formControlName="email"
           [status]="(email?.errors?.required || email?.hasError('pattern')) ? 'danger' : 'primary'" class="form-control"
@@ -30,30 +31,28 @@
         <ngx-validation-message label="Email" [showPattern]="email?.hasError('pattern')"
           [showRequired]="email?.errors?.required" min=1 max=120></ngx-validation-message>
       </div>
-
-      <div class="form-group col-md-4 col-sm-12" formGroupName="address">
-        <label for="inputStreet">Street</label>
-        <input nbInput class="form-control" id="inputStreet" placeholder="Street" formControlName="street">
+      <div class="form-group text-center">
+        <button nbButton status="warning" routerLink="/pages/users/reset-password">Reset Password</button>
       </div>
 
-      <div class="form-group col-md-4 col-sm-12" formGroupName="address">
-        <label for="inputCity">City</label>
-        <input nbInput class="form-control" id="inputCity" placeholder="City" formControlName="city">
-      </div>
+<!--      <div class="form-group col-md-4 col-sm-12" formGroupName="address">-->
+<!--        <label for="inputStreet">Street</label>-->
+<!--        <input nbInput class="form-control" id="inputStreet" placeholder="Street" formControlName="street">-->
+<!--      </div>-->
 
-      <div class="form-group col-md-4 col-sm-12" formGroupName="address">
-        <label for="inputZipCode">Zip Code</label>
-        <input nbInput class="form-control" id="inputZipCode" placeholder="Zip Code" formControlName="zipCode">
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-4">
-        <button nbButton status="warning" routerLink="/pages/users/reset-password" >Reset Password</button>
-      </div>
+<!--      <div class="form-group col-md-4 col-sm-12" formGroupName="address">-->
+<!--        <label for="inputCity">City</label>-->
+<!--        <input nbInput class="form-control" id="inputCity" placeholder="City" formControlName="city">-->
+<!--      </div>-->
+
+<!--      <div class="form-group col-md-4 col-sm-12" formGroupName="address">-->
+<!--        <label for="inputZipCode">Zip Code</label>-->
+<!--        <input nbInput class="form-control" id="inputZipCode" placeholder="Zip Code" formControlName="zipCode">-->
+<!--      </div>-->
     </div>
   </nb-card-body>
-  <nb-card-footer>
-    <button nbButton status="primary" [disabled]="!userForm.valid" (click)="save()" hero>Submit</button>
+  <nb-card-footer class="text-center">
+    <button nbButton status="primary" [disabled]="!userForm.valid" (click)="save()" hero>Save</button>
     <button nbButton status="info" (click)="back()" hero>Back</button>
   </nb-card-footer>
 </nb-card>

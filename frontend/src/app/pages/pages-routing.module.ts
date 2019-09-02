@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { PagesComponent } from './pages.component';
 import { NotFoundComponent } from './miscellaneous/not-found/not-found.component';
 import {UserDashboardComponent} from './user-dashboard/user-dashboard.component';
+import {TermsAndConditionsComponent} from './miscellaneous/terms-and-conditions/terms-and-conditions.component';
 
 const routes: Routes = [{
   path: '',
@@ -22,6 +23,10 @@ const routes: Routes = [{
       path: 'users',
       loadChildren: () => import('./users/users.module')
         .then(m => m.UsersModule),
+    },
+    {
+      path: 'terms-and-conditions',
+      component: TermsAndConditionsComponent,
     },
     {
       path: '**',
