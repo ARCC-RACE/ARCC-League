@@ -104,7 +104,7 @@ export class UploadModelComponent implements OnInit {
           'We\'re working on evaluating your model, it\'ll be done soon!',
           'success');
         this.uploaded = true;
-        console.log(data);
+        // console.log(data);
       }
 
     };
