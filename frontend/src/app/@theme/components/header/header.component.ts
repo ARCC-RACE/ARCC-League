@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
     },
   ];
 
-  currentTheme = 'default';
+  currentTheme = 'cosmic';
 
   // UserMenu object
   userMenu = this.getMenuItems();

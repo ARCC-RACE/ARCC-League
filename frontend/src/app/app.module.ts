@@ -23,10 +23,7 @@ import {
 import { MarkdownModule } from 'ngx-markdown';
 
 import {NbEvaIconsModule} from '@nebular/eva-icons';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { CloudinaryModule } from '@cloudinary/angular-4.x';
-import * as Cloudinary from 'cloudinary-core';
-import {environment} from '../environments/environment';
+import {StaticModule} from './static/static.module';
 
 export function init_app(injector: Injector) {
   return () =>
@@ -43,12 +40,13 @@ export function init_app(injector: Injector) {
 }
 
 @NgModule({
-  declarations: [AppComponent, LandingPageComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    StaticModule,
 
     ThemeModule.forRoot(),
     AuthModule.forRoot(),

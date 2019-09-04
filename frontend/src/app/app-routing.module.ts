@@ -1,7 +1,6 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { AuthGuard } from './@auth/auth.guard';
-import {LandingPageComponent} from './landing-page/landing-page.component';
 
 const routes: Routes = [
   {
@@ -16,10 +15,12 @@ const routes: Routes = [
       .then(m => m.AuthModule),
   },
   {
-    path: 'landing-page',
-    component: LandingPageComponent,
+    path: '',
+    loadChildren: () => import ('app/static/static.module')
+      .then((m => m.StaticModule),
+      ),
   },
-  { path: '', redirectTo: 'landing-page', pathMatch: 'full' },
+  // { path: '', redirectTo: 'landing-', pathMatch: 'full' },
   { path: '**', redirectTo: 'landing-page' },
 ];
 
