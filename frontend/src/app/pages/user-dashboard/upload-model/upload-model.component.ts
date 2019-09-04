@@ -2,6 +2,8 @@ import {Component, OnInit, Input, NgZone, ViewChild, Renderer2} from '@angular/c
 import {FileUploader, FileUploaderOptions, ParsedResponseHeaders} from 'ng2-file-upload';
 import {Cloudinary} from '@cloudinary/angular-4.x';
 import {NbToastrService} from '@nebular/theme';
+import {Model, ModelData} from '../../../@core/interfaces/common/model';
+import {UserStore} from '../../../@core/stores/user.store';
 
 @Component({
   selector: 'ngx-upload-model',
@@ -17,11 +19,14 @@ export class UploadModelComponent implements OnInit {
   private title: string;
   private description: string;
   public uploaded: boolean = false;
+  private uploadLink: string;
 
   constructor(
     private cloudinary: Cloudinary,
     private zone: NgZone,
     private toastrService: NbToastrService,
+    private user: UserStore,
+    private modelService: ModelData,
   ) {
     this.responses = [];
     this.title = '';
@@ -104,6 +109,8 @@ export class UploadModelComponent implements OnInit {
           'We\'re working on evaluating your model, it\'ll be done soon!',
           'success');
         this.uploaded = true;
+        this.uploadLink = data.url;
+        this.uploadModelThroughApi(data);
         // console.log(data);
       }
 
@@ -147,5 +154,29 @@ export class UploadModelComponent implements OnInit {
   uploadFile() {
     const element: HTMLElement = document.getElementById('fileupload') as HTMLElement;
     element.click();
+  }
+
+  uploadModelThroughApi(data) {
+    console.log(data);
+    const newModel: Model = {
+      id: null,
+      ownerId: String(this.user.getUser().id),
+      trackName: 're:Invent 2019',
+      modelName: this.title, // (Name of the model) Can be changed by User
+      modelDescription: this.description, // (User description) Can be changed by User
+      dateUploaded: data.created_at, // (Date the model was uploaded)
+      isEvaluated: false,
+      time: null, // (Encoded Time it completed track)
+      speedTested: null, // (Speed the model was tested at (percentage))
+      videoLink: null, // (Link to video upload)
+      modelLink: data.url, // (Link to the file)
+      modelId: data.public_id,
+      invoiceNumber: null, // (Paypal Order ID)
+      isPaid: false, // (If users payed for it yet)    }
+    };
+    console.log(newModel);
+    this.modelService.create(newModel).subscribe(res => {
+      console.log(res);
+    });
   }
 }

@@ -30,6 +30,8 @@ export class ModelsApi {
   }
 
   add(item: any): Observable<any> {
+    console.log('item');
+    console.log(item);
     return this.api.post(this.apiController, item);
   }
 

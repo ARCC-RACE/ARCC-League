@@ -7,11 +7,12 @@ export interface Model {
   modelName: string; // (Name of the model) Can be changed by User
   modelDescription: string; // (User description) Can be changed by User
   dateUploaded: string; // (Date the model was uploaded)
-  isEvaluated: string;
+  isEvaluated: boolean;
   time: string; // (Encoded Time it completed track)
   speedTested: string; // (Speed the model was tested at (percentage))
   videoLink: string; // (Link to video upload)
   modelLink: string; // (Link to the file)
+  modelId: string;
   invoiceNumber: string; // (Paypal Order ID)
   isPaid: boolean; // (If users payed for it yet)
 }

@@ -8,6 +8,8 @@ import {ModelData} from '../../../@core/interfaces/common/model';
 })
 export class ModelsUploadedComponent implements OnInit {
 
+  public models: any;
+
   constructor(
     private modelService: ModelData,
   ) { }
