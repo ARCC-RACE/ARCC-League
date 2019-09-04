@@ -16,6 +16,7 @@ import { UserStore } from './stores/user.store';
 import { UsersService } from './backend/common/services/users.service';
 import { SettingsService } from './backend/common/services/settings.service';
 import { InitUserService } from '../@theme/services/init-user.service';
+import {ModelStore} from './stores/model.store';
 
 export const NB_CORE_PROVIDERS = [
   ...CommonMockModule.forRoot().providers,
@@ -47,6 +48,7 @@ export class CoreModule {
       providers: [
         ...NB_CORE_PROVIDERS,
         UserStore,
+        ModelStore,
         UsersService,
         InitUserService,
         SettingsService,

@@ -1,5 +1,4 @@
 import { Observable } from 'rxjs';
-import { DataSource } from 'ng2-smart-table/lib/data-source/data-source';
 import { Settings } from './settings';
 
 export interface User {
@@ -20,7 +19,6 @@ export interface Address {
 }
 
 export abstract class UserData {
-  abstract get gridDataSource(): DataSource;
   abstract getCurrentUser(): Observable<User>;
   abstract list(pageNumber: number, pageSize: number): Observable<User[]>;
   abstract get(id: number): Observable<User>;

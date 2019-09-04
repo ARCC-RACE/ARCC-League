@@ -11,13 +11,17 @@ import { SettingsApi } from './api/settings.api';
 import { NbAuthModule } from '@nebular/auth';
 import { SettingsData } from '../../interfaces/common/settings';
 import { SettingsService } from './services/settings.service';
+import {ModelData} from '../../interfaces/common/model';
+import {ModelsService} from './services/models.service';
+import {ModelsApi} from './api/models.api';
 
-const API = [UsersApi, CountriesApi, SettingsApi,  HttpService];
+const API = [UsersApi, CountriesApi, SettingsApi,  HttpService, ModelsApi];
 
 const SERVICES = [
   { provide: UserData, useClass: UsersService },
   { provide: CountryData, useClass: CountriesService },
   { provide: SettingsData, useClass: SettingsService },
+  { provide: ModelData, useClass: ModelsService },
 ];
 
 @NgModule({

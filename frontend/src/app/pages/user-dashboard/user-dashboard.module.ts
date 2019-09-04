@@ -23,6 +23,24 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {Cloudinary, CloudinaryConfiguration, CloudinaryModule, provideCloudinary} from '@cloudinary/angular-4.x';
 import {environment} from '../../../environments/environment';
 
+const NB_MODULES = [
+  NbCardModule,
+  NbListModule,
+  NbTreeGridModule,
+  NbIconModule,
+  NbTreeGridModule,
+  NbInputModule,
+  ThemeModule,
+  NbTableModule,
+  NbAlertModule,
+  NbIconModule,
+  NbButtonModule,
+  NbToastrModule,
+  NbInputModule,
+  NbStepperModule,
+  NbAlertModule,
+];
+
 @NgModule({
   declarations: [
     UserDashboardComponent,
@@ -37,25 +55,11 @@ import {environment} from '../../../environments/environment';
 
   imports: [
     CommonModule,
-    NbCardModule,
-    NbListModule,
-    NbTreeGridModule,
-    NbIconModule,
-    NbTreeGridModule,
-    NbInputModule,
-    ThemeModule,
-    Ng2SmartTableModule,
-    NbTableModule,
-    NbAlertModule,
-    NbIconModule,
-    FileUploadModule,
-    NbButtonModule,
-    NbToastrModule,
     FormsModule,
-    NbInputModule,
     ReactiveFormsModule,
-    NbStepperModule,
-    NbAlertModule,
+    Ng2SmartTableModule,
+    FileUploadModule,
+    ...NB_MODULES,
     CloudinaryModule.forRoot(Cloudinary, environment.cloudinary.upload),
   ],
 
