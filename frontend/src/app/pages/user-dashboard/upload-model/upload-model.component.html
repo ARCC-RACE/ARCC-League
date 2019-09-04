@@ -2,44 +2,105 @@
       <nb-card-header>
         <span>Upload New Model</span>
       </nb-card-header>
-      <nb-card-body class="text-center">
-        <div class="row">
-          <div class="col-12">
-            <nb-stepper orientation="vertical" disableStepNavigation>
-              <nb-step label="Upload Model">
-                <div class="row">
-                  <div class="col-12">
-                    <button nbButton class="mb-3">
-                      <nb-icon icon="cloud-upload-outline"></nb-icon>
-                      <label>
-                        Choose Files
-                        <input type="file" ng2FileSelect [uploader]="uploader" />
-                      </label>
-                    </button>
-                    <button nbButton (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length" status="success" nbStepperNext><nb-icon icon="cloud-upload-outline"></nb-icon>Next</button>
+<!--      <nb-card-body class="text-center">-->
+<!--        <div class="row">-->
+<!--          <div class="col-12">-->
+<!--            <nb-stepper orientation="vertical" disableStepNavigation>-->
+<!--              <nb-step label="Upload Model">-->
+<!--                <div class="row">-->
+<!--                  <div class="col-12">-->
+<!--                    <button nbButton class="mb-3">-->
+<!--                      <nb-icon icon="cloud-upload-outline"></nb-icon>-->
+<!--                      <label>-->
+<!--                        Choose Files-->
+<!--                        <input type="file" ng2FileSelect [uploader]="uploader" />-->
+<!--                      </label>-->
+<!--                    </button>-->
+<!--                    <button nbButton (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length" status="success" nbStepperNext><nb-icon icon="cloud-upload-outline"></nb-icon>Next</button>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </nb-step>-->
+<!--              <nb-step label="Name and Description" class="text-center">-->
+<!--                <h3>Data Entry</h3>-->
+<!--                <div class="row">-->
+<!--                  <div class="col-lg-6 col-md-12">-->
+<!--                    <label>-->
+<!--                      <input type="text" nbInput fullWidth fieldSize="small" placeholder="Model Name" [formControl]="modelNameControl">-->
+<!--                    </label>-->
+<!--                  </div>-->
+<!--                  <div class="col-lg-6 col-md-12">-->
+<!--                    <label>-->
+<!--                      <textarea nbInput fullWidth placeholder="Textarea" [formControl]="modelDescriptionControl"></textarea>-->
+<!--                    </label>-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--                <button>Upload Model</button>-->
+<!--              </nb-step>-->
+<!--            </nb-stepper>-->
+<!--          </div>-->
+
+<!--        </div>-->
+
+<!--      </nb-card-body>-->
+        <nb-card-body>
+          <div id="direct_upload" ng2FileDrop [uploader]="uploader" (fileOver)="fileOverBase($event)" [ngClass]="{'nv-file-over': hasBaseDropZoneOver}">
+            <form *ngIf="!uploaded">
+              <div class="form_line mb-2">
+                <div class="form_controls">
+                  <label class="mb-2">
+                    Title:
+                    <input type="text" class="form-control mt-1" #title placeholder="Title" (keyup.enter)="updateTitle(title.value)" (blur)="updateTitle(title.value)"/>
+                  </label>
+                  <label>
+                    Description
+                    <input type="text" class="form-control mt-1" #description placeholder="Description" (keyup.enter)="updateDescription(description.value)" (blur)="updateDescription(description.value)"/>
+                  </label>
+                </div>
+              </div>
+              <div class="form_line">
+                <div class="form_controls">
+                  <div>
+                    <button nbButton (click)="uploadFile()">Upload Model</button>
+                    <!-- onChange hanlder resets the input value to get the change event when uploading the same file consecutively -->
+                    <input name="file-upload" type="file" id="fileupload" #fileInput ng2FileSelect [style.display]="'none'" [uploader]="uploader" (change)="fileInput.value=''"/>
                   </div>
                 </div>
-              </nb-step>
-              <nb-step label="Name and Description" class="text-center">
-                <h3>Data Entry</h3>
-                <div class="row">
-                  <div class="col-lg-6 col-md-12">
-                    <label>
-                      <input type="text" nbInput fullWidth fieldSize="small" placeholder="Model Name" [formControl]="modelNameControl">
-                    </label>
-                  </div>
-                  <div class="col-lg-6 col-md-12">
-                    <label>
-                      <textarea nbInput fullWidth placeholder="Textarea" [formControl]="modelDescriptionControl"></textarea>
-                    </label>
-                  </div>
-                </div>
-                <button>Upload Model</button>
-              </nb-step>
-            </nb-stepper>
+<!--                    <button nbButton class="mb-3">-->
+<!--                      <nb-icon icon="cloud-upload-outline"></nb-icon>-->
+<!--                      <label>-->
+<!--                        Choose Files-->
+<!--                        <input type="file" ng2FileSelect [uploader]="uploader" />-->
+<!--                      </label>-->
+<!--                    </button>-->
+              </div>
+            </form>
+            <div class="file" *ngFor="let response of responses">
+              <h5>{{response.file.name}}</h5>
+              <div class="status" *ngIf="!uploaded">
+                Uploading... {{response.progress}}%
+                <div *ngIf="!response.status">In progress</div>
+                <div class="status-code" *ngIf="response.status">Upload completed with status code {{response.status}}</div>
+              </div>
+              <div class="progress-bar" *ngIf="!uploaded">
+                <div class="progress" role="progressbar" [style.width.%]="response.progress"></div>
+              </div>
+<!--              <div class="form_line">-->
+<!--                <div class="form_controls">-->
+<!--                  <div class="preview">-->
+<!--                    &lt;!&ndash; Consider using https://github.com/valor-software/ng2-file-upload/issues/461 for image preview &ndash;&gt;-->
+<!--                  </div>-->
+<!--                </div>-->
+<!--              </div>-->
+              <div class="info">
+                <table>
+                  <tr *ngFor="let property of getFileProperties(response.data)">
+                    <td> {{ property.key }} </td>
+                    <td> {{ property.value | json}} </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+
           </div>
-
-        </div>
-
-      </nb-card-body>
+        </nb-card-body>
     </nb-card>

@@ -24,6 +24,9 @@ import { MarkdownModule } from 'ngx-markdown';
 
 import {NbEvaIconsModule} from '@nebular/eva-icons';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { CloudinaryModule } from '@cloudinary/angular-4.x';
+import * as Cloudinary from 'cloudinary-core';
+import {environment} from '../environments/environment';
 
 export function init_app(injector: Injector) {
   return () =>

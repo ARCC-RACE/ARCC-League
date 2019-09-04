@@ -20,6 +20,8 @@ import {ThemeModule} from '../../@theme/theme.module';
 import {Ng2SmartTableModule} from 'ng2-smart-table';
 import {FileUploadModule} from 'ng2-file-upload';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {Cloudinary, CloudinaryConfiguration, CloudinaryModule, provideCloudinary} from '@cloudinary/angular-4.x';
+import {environment} from '../../../environments/environment';
 
 @NgModule({
   declarations: [
@@ -54,6 +56,11 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
     ReactiveFormsModule,
     NbStepperModule,
     NbAlertModule,
+    CloudinaryModule.forRoot(Cloudinary, environment.cloudinary.upload),
+  ],
+
+  providers: [
+    provideCloudinary(require('cloudinary-core'), environment.cloudinary.upload as CloudinaryConfiguration),
   ],
 })
 export class UserDashboardModule { }
