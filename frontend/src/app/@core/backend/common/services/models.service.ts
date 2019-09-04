@@ -13,15 +13,15 @@ export class ModelsService extends ModelData {
     super();
   }
 
-  getUsersModels(): Observable<Model[]> {
-
+  getUsersModels(userId: string): Observable<Model[]> {
+    return this.api.getUsersModels(userId);
   }
 
   getAllModels(): Observable<Model[]> {
     return this.api.getAllModels();
   }
 
-  getById(id: number): Observable<Model> {
+  getById(id: string): Observable<Model> {
     return this.api.get(id);
   }
 
@@ -33,7 +33,7 @@ export class ModelsService extends ModelData {
     return this.api.update(model);
   }
 
-  delete(id: number): Observable<boolean> {
+  delete(id: string): Observable<boolean> {
     return this.api.delete(id);
   }
 }

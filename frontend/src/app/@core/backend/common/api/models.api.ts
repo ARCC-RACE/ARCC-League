@@ -18,21 +18,21 @@ export class ModelsApi {
     }));
   }
 
-  getUsersModels(userid): Observable<any> {
+  getUsersModels(userid: string): Observable<Array<any>> {
     return this.api.get(`${this.apiController}/usersmodels/${userid}`)
       .pipe(map(data => {
-        return data
+        return data;
       }));
   }
 
-  get(id: number): Observable<any> {
+  get(id: string): Observable<any> {
     return this.api.get(`${this.apiController}/${id}`)
       .pipe(map(data => {
         return { ...data };
       }));
   }
 
-  delete(id: number): Observable<boolean> {
+  delete(id: string): Observable<boolean> {
     return this.api.delete(`${this.apiController}/${id}`);
   }
 

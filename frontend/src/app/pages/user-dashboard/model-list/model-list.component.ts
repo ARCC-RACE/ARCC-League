@@ -1,6 +1,8 @@
 import {Component, Input } from '@angular/core';
 import {LocalDataSource} from 'ng2-smart-table';
 import {SmartTableData} from '../../../@core/interfaces/common/smart-table';
+import {Model, ModelData} from '../../../@core/interfaces/common/model';
+import {ModelStore} from '../../../@core/stores/model.store';
 
 @Component({
   selector: 'ngx-model-list',
@@ -11,11 +13,14 @@ import {SmartTableData} from '../../../@core/interfaces/common/smart-table';
 export class ModelListComponent {
 
   settings = {
-    add: {
-      addButtonContent: '<i class="nb-plus"></i>',
-      createButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
+    actions: {
+      add: false,
     },
+    // add: {
+    //   addButtonContent: '<i class="nb-plus"></i>',
+    //   createButtonContent: '<i class="nb-checkmark"></i>',
+    //   cancelButtonContent: '<i class="nb-close"></i>',
+    // },
     edit: {
       editButtonContent: '<i class="nb-edit"></i>',
       saveButtonContent: '<i class="nb-checkmark"></i>',
@@ -38,7 +43,7 @@ export class ModelListComponent {
         title: 'Model Description',
         type: 'string',
       },
-      modelId: {
+      _id: {
         title: 'Model ID',
         type: 'string',
       },
@@ -58,14 +63,25 @@ export class ModelListComponent {
         title: 'Video',
         type: 'string',
       },
+      isPaid: {
+        title: 'Paid',
+        type: 'boolean',
+      },
     },
   };
 
-  source: LocalDataSource = new LocalDataSource();
+  source: LocalDataSource;
 
-  constructor(private service: SmartTableData) {
-    const data = this.service.getData();
-    this.source.load(data).then();
+  constructor(
+    private modelStore: ModelStore,
+  ) {
+    this.source = new LocalDataSource();
+    this.modelStore.getModels().subscribe(models => {
+      if (models) {
+        console.log(models)
+        this.source.load(models);
+      }
+    });
   }
 
   onDeleteConfirm(event): void {

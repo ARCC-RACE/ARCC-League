@@ -2,7 +2,7 @@ import { Observable } from 'rxjs';
 import { Settings } from './settings';
 
 export interface User {
-  id: number;
+  id: string;
   role: string;
   email: string;
   age: number;

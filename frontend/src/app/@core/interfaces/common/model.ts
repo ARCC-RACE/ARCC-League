@@ -19,8 +19,9 @@ export interface Model {
 
 export abstract class ModelData {
   abstract getAllModels(): Observable<Model[]>;
-  abstract getById(id: number): Observable<Model>;
+  abstract getUsersModels(id: string): Observable<Model[]>;
+  abstract getById(id: string): Observable<Model>;
   abstract create(model: any): Observable<Model>;
   abstract update(model: any): Observable<Model>;
-  abstract delete(id: number): Observable<boolean>;
+  abstract delete(id: string): Observable<boolean>;
 }

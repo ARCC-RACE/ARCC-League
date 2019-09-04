@@ -16,7 +16,7 @@ export class ModelsUploadedComponent implements OnInit {
 
   ngOnInit() {
     this.modelService.getAllModels().subscribe(models => {
-      console.log(models);
+      // console.log(models);
     });
     // console.log()
   }
