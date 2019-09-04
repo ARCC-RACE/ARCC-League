@@ -63,53 +63,14 @@ export class UsersService extends UserData {
       settings: {
         themeName: 'cosmic',
       },
+      updates: [
+        {
+          status: 'success',
+          title: 'Model Evaluated',
+          message: 'We Evaluated your model!',
+          read: false,
+        },
+      ],
     },
-    {
-      id: 2,
-      role: 'user',
-      login: '@mdo',
-      email: 'mdo@gmail.com',
-      age: 0,
-      picture: '',
-      address: {
-        street: 'Wall St.',
-        city: 'New York',
-        zipCode: '10005',
-      },
-      settings: {
-        themeName: 'cosmic',
-      },
-    },
-    {
-      id: 3,
-      role: 'user',
-      login: '@twitter',
-      email: 'twitter@outlook.com',
-      age: 0,
-      picture: '',
-      address: {
-        street: 'Wall St.',
-        city: 'New York',
-        zipCode: '10005',
-      },
-      settings: {
-        themeName: 'cosmic',
-      },
-    },
-    {
-      id: 4,
-      role: 'user',
-      login: '@snow',
-      email: 'snow@gmail.com',
-      age: 0,
-      picture: '',
-      address: {
-        street: 'Wall St.',
-        city: 'New York',
-        zipCode: '10005',
-      },
-      settings: {
-        themeName: 'cosmic',
-      },
-    }];
+  ];
 }

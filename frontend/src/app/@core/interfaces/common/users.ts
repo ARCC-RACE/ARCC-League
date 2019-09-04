@@ -10,12 +10,20 @@ export interface User {
   picture: string;
   address: Address;
   settings: Settings;
+  updates: Array<Update>;
 }
 
 export interface Address {
   street: string;
   city: string;
   zipCode: string;
+}
+
+export interface Update {
+  status: string;
+  title: string;
+  message: string;
+  read: boolean;
 }
 
 export abstract class UserData {
