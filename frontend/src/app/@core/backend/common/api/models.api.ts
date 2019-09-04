@@ -18,6 +18,13 @@ export class ModelsApi {
     }));
   }
 
+  getUsersModels(userid): Observable<any> {
+    return this.api.get(`${this.apiController}/usersmodels/${userid}`)
+      .pipe(map(data => {
+        return data
+      }));
+  }
+
   get(id: number): Observable<any> {
     return this.api.get(`${this.apiController}/${id}`)
       .pipe(map(data => {
@@ -30,8 +37,6 @@ export class ModelsApi {
   }
 
   add(item: any): Observable<any> {
-    console.log('item');
-    console.log(item);
     return this.api.post(this.apiController, item);
   }
 

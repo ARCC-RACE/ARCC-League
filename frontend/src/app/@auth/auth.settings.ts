@@ -30,10 +30,18 @@ export const authOptions = {
       login: {
         endpoint: '/auth/login',
         method: 'post',
+        redirect: {
+          success: '/pages/', // welcome page path
+          failure: null, // stay on the same page
+        },
       },
       register: {
         endpoint: '/auth/sign-up',
         method: 'post',
+        redirect: {
+          success: '/pages/', // welcome page path
+          failure: null, // stay on the same page
+        },
       },
       logout: {
         endpoint: '/auth/sign-out',
@@ -42,10 +50,18 @@ export const authOptions = {
       requestPass: {
         endpoint: '/auth/request-pass',
         method: 'post',
+        redirect: {
+          success: '/pages/', // welcome page path
+          failure: null, // stay on the same page
+        },
       },
       resetPass: {
         endpoint: '/auth/reset-pass',
         method: 'post',
+        redirect: {
+          success: '/pages/', // welcome page path
+          failure: null, // stay on the same page
+        },
       },
     }),
   ],

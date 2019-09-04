@@ -2,12 +2,19 @@ import { Injectable } from '@angular/core';
 import {Model, ModelData} from '../../../interfaces/common/model';
 import {ModelsApi} from '../api/models.api';
 import {Observable} from 'rxjs';
+import {UserData} from '../../../interfaces/common/users';
 
 @Injectable()
 export class ModelsService extends ModelData {
 
-  constructor(private api: ModelsApi) {
+  constructor(
+    private api: ModelsApi,
+    private userService: UserData) {
     super();
+  }
+
+  getUsersModels(): Observable<Model[]> {
+
   }
 
   getAllModels(): Observable<Model[]> {

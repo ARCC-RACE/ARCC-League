@@ -39,13 +39,13 @@ export class UserComponent implements OnInit, OnDestroy {
 
   get email() { return this.userForm.get('email'); }
 
-  get age() { return this.userForm.get('age'); }
-
-  get street() { return this.userForm.get('address').get('street'); }
-
-  get city() { return this.userForm.get('address').get('city'); }
-
-  get zipCode() { return this.userForm.get('address').get('zipCode'); }
+  // get age() { return this.userForm.get('age'); }
+  //
+  // get street() { return this.userForm.get('address').get('street'); }
+  //
+  // get city() { return this.userForm.get('address').get('city'); }
+  //
+  // get zipCode() { return this.userForm.get('address').get('zipCode'); }
 
   /**
    * What mode the form is being loaded in
@@ -80,18 +80,18 @@ export class UserComponent implements OnInit, OnDestroy {
       id: this.fb.control(''),
       role: this.fb.control(''),
 
-      login: this.fb.control('', [Validators.required, Validators.minLength(6), Validators.maxLength(20)]),
-      age: this.fb.control('', [Validators.required, Validators.min(1),
-        Validators.max(120), Validators.pattern(NUMBERS_PATTERN)]),
+      login: this.fb.control('', [Validators.required]),
+      // age: this.fb.control('', [Validators.required, Validators.min(1),
+      //   Validators.max(120), Validators.pattern(NUMBERS_PATTERN)]),
       email: this.fb.control('', [
         Validators.required,
         Validators.pattern(EMAIL_PATTERN),
       ]),
-      address: this.fb.group({
-        street: this.fb.control(''),
-        city: this.fb.control(''),
-        zipCode: this.fb.control(''),
-      }),
+      // address: this.fb.group({
+      //   street: this.fb.control(''),
+      //   city: this.fb.control(''),
+      //   zipCode: this.fb.control(''),
+      // }),
     });
   }
 
@@ -135,13 +135,13 @@ export class UserComponent implements OnInit, OnDestroy {
           id: user.id,
           role: user.role,
           login: user.login ? user.login : '',
-          age: user.age ? user.age : '',
+          // age: user.age ? user.age : '',
           email: user.email,
-          address: {
-            street: (user.address && user.address.street) ? user.address.street : '',
-            city: (user.address && user.address.city) ? user.address.city : '',
-            zipCode: (user.address && user.address.zipCode) ? user.address.zipCode : '',
-          },
+          // address: {
+          //   street: (user.address && user.address.street) ? user.address.street : '',
+          //   city: (user.address && user.address.city) ? user.address.city : '',
+          //   zipCode: (user.address && user.address.zipCode) ? user.address.zipCode : '',
+          // },
         });
 
         // this is a place for value changes handling
@@ -178,7 +178,7 @@ export class UserComponent implements OnInit, OnDestroy {
     observable
       .pipe(takeUntil(this.unsubscribe$))
       .subscribe(() => {
-        this.toasterService.success('', `Item ${this.mode === UserFormMode.ADD ? 'created' : 'updated' }!`);
+        this.toasterService.success('', `User ${this.mode === UserFormMode.ADD ? 'created' : 'updated' }!`);
         this.back();
       });
   }

@@ -66,7 +66,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
     // Attempts to get theme from database
     this.settingsService.getCurrentSetting().subscribe(theme => {
-      this.themeService.currentTheme = theme.themeName;
+      this.themeService.currentTheme = theme.themeName ? theme.themeName : 'cosmic';
       this.currentTheme = this.themeService.currentTheme; // Sets theme
       this.themeService.changeTheme(this.currentTheme);
     });
