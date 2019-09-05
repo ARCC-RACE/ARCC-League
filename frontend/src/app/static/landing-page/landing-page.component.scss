@@ -146,6 +146,18 @@
   margin-left: 35%;
 }
 
+.classidek {
+  margin-top: 4% !important;
+}
+
+.moreclass {
+  margin-top: 9%;
+  margin-bottom: 11%;
+}
+
+.evenmoreclass {
+  margin-top: 5%;
+}
 
 @media (max-width: 768px) {
   .top-title {
@@ -157,13 +169,33 @@
   }
 
   .buttonwrapper {
-    margin-left: 172px;
+    margin-left: 329px;
   }
 
   .buttonwrapper2 {
-    margin-left: 189px;
+    margin-left: 187px;
   }
 
+  .imagecontainer {
+    margin-left: 9%;
+    margin-top: -18%;
+  }
+
+  .arcc {
+    width: 4%;
+  }
+
+  .classidek {
+    margin-top: -4% !important;
+  }
+
+  .arcc2 {
+    width: 12%;
+  }
+
+  .med{
+    margin-top: 13%;
+  }
 }
 
 @media (max-width: 576px) {
@@ -182,6 +214,44 @@
 
   .arcc2 {
     width: 8%;
+  }
+
+  .car {
+    width: 23%;
+    margin-left: 26px;
+    margin-top: 23vh;
+  }
+
+  .computer {
+    width: 34%;
+    margin-left: 161px;
+    margin-top: -45vh;
+  }
+
+  .buttonwrapper {
+    margin-left: 193px;
+  }
+
+  .buttonwrapper2 {
+    margin-left: 168px;
+  }
+
+  .moreclass {
+    margin-top: 9%;
+    margin-bottom: 0%;
+  }
+
+  .evenmoreclass {
+    margin-top: 2%;
+  }
+
+  .theunsmusher {
+    margin-top: -9%;
+    margin-bottom: 3%;
+  }
+
+  .classidek {
+    margin-bottom: 7%;
   }
 }
 
