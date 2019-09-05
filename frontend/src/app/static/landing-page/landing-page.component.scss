@@ -2,6 +2,11 @@
   font-size: 5em;
 }
 
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .top-content {
   font-size: 2em;
 }
@@ -255,9 +260,9 @@
   }
 }
 
-ngx-landing-page {
-  padding: 0 !important;
-}
+//ngx-landing-page {
+//  padding: 0 !important;
+//}
 
 h1, h2, h3, h4, h5, h6, p {
   color: white !important;

@@ -1,28 +1,29 @@
 import { Injectable } from '@angular/core';
 import { Model } from '../interfaces/common/model';
-import {BehaviorSubject, Observable} from 'rxjs';
+import {BehaviorSubject, Observable, Subject} from 'rxjs';
 
 /**
- * Temporarily holds models in local storage to prevent having to make multiple API calls for the same purpose
+ * Temporarily holds userModels in local storage to prevent having to make multiple API calls for the same purpose
  */
 @Injectable({
   providedIn: 'root',
 })
 export class ModelStore {
-  private models: BehaviorSubject<Model[]> = new BehaviorSubject<Model[]>(null);
+  private userModels: Subject<Model[]> = new Subject<Model[]>();
+  private allModels: Subject<Model[]> = new Subject<Model[]>();
 
   /**
-   * Gets all models
+   * Gets all userModels
    */
-  getModels(): BehaviorSubject<Model[]> {
-    return this.models;
+  getUserModels(): Subject<Model[]> {
+    return this.userModels;
   }
 
   /**
    * Sets model in storage
    * @param paramModel
    */
-  setModels(paramModel: Model[]) {
-    this.models.next(paramModel);
+  setUserModels(paramModel: Model[]) {
+    this.userModels.next(paramModel);
   }
 }

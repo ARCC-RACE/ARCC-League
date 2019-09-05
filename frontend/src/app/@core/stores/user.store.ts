@@ -1,13 +1,18 @@
 import { Injectable } from '@angular/core';
-import { User } from '../interfaces/common/users';
+import {Update, User} from '../interfaces/common/users';
 import {Model} from '../interfaces/common/model';
+import {Subject} from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class UserStore {
   private user: User;
-  private userModels: Model[];
+  private updates: Subject<Update[]>;
+
+  constructor() {
+    this.updates = new Subject();
+  }
 
   getUser(): User {
       return this.user;
@@ -17,12 +22,12 @@ export class UserStore {
       this.user = paramUser;
   }
 
-  getModels(): Model[] {
-    return this.userModels;
+  setUpdates(paramUpdates: Update[]) {
+    this.updates.next(paramUpdates);
   }
 
-  setModels(paramModels: Model[]) {
-    this.userModels = paramModels;
+  getUpdates(): Subject<Update[]> {
+    return this.updates;
   }
 
   setSetting(themeName: string) {

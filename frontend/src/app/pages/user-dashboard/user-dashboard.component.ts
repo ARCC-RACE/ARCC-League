@@ -19,7 +19,7 @@ export class UserDashboardComponent implements OnInit {
 
   ngOnInit() {
     this.modelService.getUsersModels(this.userStore.getUser().id).subscribe(models => {
-      models ? this.modelStore.setModels(models) : '';
+      models ? this.modelStore.setUserModels(models) : '';
     });
   }
 

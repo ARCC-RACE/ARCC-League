@@ -76,7 +76,7 @@ export class ModelListComponent {
     private modelStore: ModelStore,
   ) {
     this.source = new LocalDataSource();
-    this.modelStore.getModels().subscribe(models => {
+    this.modelStore.getUserModels().subscribe(models => {
       if (models) {
         console.log(models)
         this.source.load(models);
