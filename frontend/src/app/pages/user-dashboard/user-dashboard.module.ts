@@ -65,7 +65,7 @@ const NB_MODULES = [
   ],
 
   providers: [
-    provideCloudinary(require('cloudinary-core'), environment.cloudinary.upload as CloudinaryConfiguration),
+    // provideCloudinary(require('cloudinary-core'), environment.cloudinary.upload as CloudinaryConfiguration),
   ],
 })
 export class UserDashboardModule { }

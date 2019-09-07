@@ -1,5 +1,5 @@
 .top-title {
-  font-size: 5em;
+  font-size: 3em;
 }
 
 .row {
@@ -230,17 +230,25 @@
 }
 
 @media (max-width: 576px) {
+  .section1 {
+    height: 120vh;
+  }
+
+  .medtext {
+    margin: 0;
+  }
+
   .top-title {
-    font-size: 1em;
+    font-size: 2em;
   }
 
   .top-content {
-    font-size: 0.6em;
+    font-size: 1em;
   }
 
   .arcc {
-    width: 8%;
-    margin-left: 4%;
+    width: 4em;
+    margin-right: .5em;
   }
 
   .arcc2 {
