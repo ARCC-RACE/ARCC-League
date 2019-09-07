@@ -79,20 +79,18 @@
 }
 
 .car {
-  margin-left: 42px;
-  margin-top: 33vh;
+  margin-right: 70px;
+  margin-top: 3vh;
 }
 
 .computer {
-  margin-left: 285px;
-  margin-top: -69vh;
+  margin-right: 120px;
+  margin-top: -50vh;
 }
 
 .imagecontainer {
-  z-index: 9;
-  position: absolute;
-  margin-left: 153%;
-  margin-top: -96%;
+  float: right;
+  margin-top: -21%;
 }
 
 .arcc {
@@ -130,17 +128,13 @@
 }
 
 .buttonwrapper {
-  z-index: 10;
-  position: absolute;
+  float: right;
   margin-top: -54px;
-  margin-left: 605px;
 }
 
 .buttonwrapper2 {
-  z-index: 10;
-  position: absolute;
+  float: right;
   margin-top: -54px;
-  margin-left: 298px;
 }
 
 .image {
@@ -173,14 +167,6 @@
     font-size: 1em;
   }
 
-  .buttonwrapper {
-    margin-left: 329px;
-  }
-
-  .buttonwrapper2 {
-    margin-left: 187px;
-  }
-
   .imagecontainer {
     margin-left: 9%;
     margin-top: -18%;
@@ -200,6 +186,41 @@
 
   .med{
     margin-top: 13%;
+  }
+
+  .car {
+    margin-top: 33vh;
+    margin-right: 90px;
+  }
+
+  .computer {
+    margin-right: 40px;
+    margin-top: 0vh;
+  }
+
+  .medbottom {
+    margin-bottom: 12px;
+  }
+
+  .medbottom2 {
+    margin-bottom: 34px;
+    margin-top: 77px;
+  }
+
+  .medmbnone {
+    margin-bottom: 0px !important;
+  }
+
+  .medmbsum {
+    margin-bottom: 15%;
+  }
+
+  .medorder1 {
+    order: 0;
+  }
+
+  .medorder2 {
+    order: -1;
   }
 }
 
@@ -231,14 +252,6 @@
     width: 34%;
     margin-left: 161px;
     margin-top: -45vh;
-  }
-
-  .buttonwrapper {
-    margin-left: 193px;
-  }
-
-  .buttonwrapper2 {
-    margin-left: 168px;
   }
 
   .moreclass {
