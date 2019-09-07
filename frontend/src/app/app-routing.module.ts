@@ -6,22 +6,18 @@ const routes: Routes = [
   {
     path: 'pages',
     canActivate: [AuthGuard],
-    loadChildren: () => import('app/pages/pages.module')
-      .then(m => m.PagesModule),
+    loadChildren: './pages/pages.module#PagesModule',
   },
   {
     path: 'auth',
-    loadChildren: () => import('app/@auth/auth.module')
-      .then(m => m.AuthModule),
+    loadChildren: './@auth/auth.module#AuthModule',
   },
   {
     path: '',
-    loadChildren: () => import ('app/static/static.module')
-      .then((m => m.StaticModule),
-      ),
+    loadChildren: './static/static.module#StaticModule',
   },
   // { path: '', redirectTo: 'landing-', pathMatch: 'full' },
-  { path: '**', redirectTo: 'landing-page' },
+  { path: '**', redirectTo: '' },
 ];
 
 const config: ExtraOptions = {

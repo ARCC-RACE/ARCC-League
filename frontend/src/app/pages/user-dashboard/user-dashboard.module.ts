@@ -20,8 +20,16 @@ import {ThemeModule} from '../../@theme/theme.module';
 import {Ng2SmartTableModule} from 'ng2-smart-table';
 import {FileUploadModule} from 'ng2-file-upload';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {Cloudinary, CloudinaryConfiguration, CloudinaryModule, provideCloudinary} from '@cloudinary/angular-4.x';
+import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
+import { CloudinaryConfiguration, CloudinaryModule } from '@cloudinary/angular-5.x';
 import {environment} from '../../../environments/environment';
+import { Cloudinary } from '@cloudinary/angular-5.x/src/cloudinary.service';
+
+export const cloudinary = {
+  Cloudinary: CloudinaryCore,
+};
+
+export const config: CloudinaryConfiguration = environment.cloudinary.upload;
 
 const NB_MODULES = [
   NbCardModule,
@@ -60,11 +68,11 @@ const NB_MODULES = [
     Ng2SmartTableModule,
     FileUploadModule,
     ...NB_MODULES,
-    CloudinaryModule.forRoot(Cloudinary, environment.cloudinary.upload),
+    CloudinaryModule.forRoot(cloudinary, config),
   ],
 
   providers: [
-    provideCloudinary(require('cloudinary-core'), environment.cloudinary.upload as CloudinaryConfiguration),
+    // provideCloudinary(require('cloudinary-core'), environment.cloudinary.upload as CloudinaryConfiguration),
   ],
 })
 export class UserDashboardModule { }

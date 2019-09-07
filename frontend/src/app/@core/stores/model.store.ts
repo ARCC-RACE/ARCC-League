@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Model } from '../interfaces/common/model';
+import {Model, ModelData} from '../interfaces/common/model';
 import {BehaviorSubject, Observable, Subject} from 'rxjs';
+import {UserStore} from './user.store';
 
 /**
  * Temporarily holds userModels in local storage to prevent having to make multiple API calls for the same purpose
@@ -9,6 +10,14 @@ import {BehaviorSubject, Observable, Subject} from 'rxjs';
   providedIn: 'root',
 })
 export class ModelStore {
+
+  constructor(
+    private  userStore: UserStore,
+    private modelService: ModelData,
+  ) {
+
+  }
+
   private userModels: Subject<Model[]> = new Subject<Model[]>();
   private allModels: Subject<Model[]> = new Subject<Model[]>();
 
@@ -25,5 +34,14 @@ export class ModelStore {
    */
   setUserModels(paramModel: Model[]) {
     this.userModels.next(paramModel);
+  }
+
+  /**
+   * Updates current users models
+   */
+  updateUsersModels() {
+    this.modelService.getUsersModels(this.userStore.getUser().id).subscribe(models => {
+      models ? this.setUserModels(models) : '';
+    });
   }
 }

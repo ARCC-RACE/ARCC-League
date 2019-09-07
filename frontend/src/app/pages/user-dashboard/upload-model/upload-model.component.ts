@@ -4,6 +4,8 @@ import {Cloudinary} from '@cloudinary/angular-4.x';
 import {NbToastrService} from '@nebular/theme';
 import {Model, ModelData} from '../../../@core/interfaces/common/model';
 import {UserStore} from '../../../@core/stores/user.store';
+import {ModelStore} from '../../../@core/stores/model.store';
+import {first} from 'rxjs/operators';
 
 @Component({
   selector: 'ngx-upload-model',
@@ -14,8 +16,8 @@ export class UploadModelComponent implements OnInit {
   @Input()
   responses: Array<any>;
 
-  private hasBaseDropZoneOver: boolean = false;
-  private uploader: FileUploader;
+  public hasBaseDropZoneOver: boolean = false;
+  public uploader: FileUploader;
   private title: string;
   private description: string;
   public uploaded: boolean = false;
@@ -27,6 +29,7 @@ export class UploadModelComponent implements OnInit {
     private toastrService: NbToastrService,
     private user: UserStore,
     private modelService: ModelData,
+    private modelStore: ModelStore,
   ) {
     this.responses = [];
     this.title = '';
@@ -34,11 +37,15 @@ export class UploadModelComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    /**
+     * Set uploader options
+     */
     const uploaderOptions: FileUploaderOptions = {
       url: `https://api.cloudinary.com/v1_1/${this.cloudinary.config().cloud_name}/upload`,
       autoUpload: true,
       isHTML5: true,
       removeAfterUpload: true,
+      // allowedMimeType: ['image/png'], // Only allow certain types
       headers: [
         {
           name: 'X-Requested-With',
@@ -88,6 +95,13 @@ export class UploadModelComponent implements OnInit {
       });
     };
 
+    /**
+     * When uploa dis complete
+     * @param item
+     * @param response
+     * @param status
+     * @param headers
+     */
     this.uploader.onCompleteItem = (item: any, response: string, status: number, headers: ParsedResponseHeaders) => {
       const data = JSON.parse(response);
       upsertResponse(
@@ -98,19 +112,29 @@ export class UploadModelComponent implements OnInit {
         },
       );
       this.uploaded = true;
-      if (status === 400) {
+      if (status === 400) { // If the upload failed (server error, etc)
         this.showToast('Upload Failed',
           JSON.stringify(data),
           'danger');
         this.uploaded = false;
         this.responses = []; // Clear results
-      } else {
-        this.showToast('Completed Upload!',
-          'We\'re working on evaluating your model, it\'ll be done soon!',
-          'success');
+      } else { // TODO replace with proper status returner (if 200)
         this.uploaded = true;
         this.uploadLink = data.url;
-        this.uploadModelThroughApi(data);
+        // Uploads model data through to the databse
+        this.uploadModelThroughApi(data).then(result => {
+          if (result) {
+            this.showToast('Completed Upload!',
+              'We\'re working on evaluating your model, it\'ll be done soon!',
+              'success');
+          } else {
+            this.showToast('Error Uploading to MongoDB!',
+              'I think the backend must have died :(. Send Caelin an email caelinsutch@gmail.com',
+              'danger');
+          }
+        });
+        // Upload the cached models to show updates on the table
+        this.modelStore.updateUsersModels();
         // console.log(data);
       }
 
@@ -126,18 +150,34 @@ export class UploadModelComponent implements OnInit {
       );
   }
 
+  /**
+   * Setter for value
+   * @param value
+   */
   updateTitle(value: string) {
     this.title = value;
   }
 
+  /**
+   * Setter for descirption
+   * @param value
+   */
   updateDescription(value: string) {
     this.description = value;
   }
 
+  /**
+   * If file is over the base
+   * @param e
+   */
   public fileOverBase(e: any): void {
     this.hasBaseDropZoneOver = e;
   }
 
+  /***
+   * Gets file properties from uploaded file
+   * @param fileProperties
+   */
   getFileProperties(fileProperties: any) {
     // Transforms Javascript Object to an iterable to be used by *ngFor
     if (!fileProperties) {
@@ -147,17 +187,30 @@ export class UploadModelComponent implements OnInit {
       .map((key) => ({ 'key': key, 'value': fileProperties[key] }));
   }
 
+  /**
+   * Simplifies showing toasts for me hehe
+   * @param title
+   * @param description
+   * @param status
+   */
   showToast(title, description, status) {
     this.toastrService.show(description, title, { status } );
   }
 
+  /**
+   * Uplaods file, acts as shadow because default file input is ugly
+   */
   uploadFile() {
     const element: HTMLElement = document.getElementById('fileupload') as HTMLElement;
     element.click();
   }
 
-  uploadModelThroughApi(data) {
-    console.log(data);
+  /**
+   * Uploads model data to databse through API
+   * @param data
+   * @return Promise<boolean> If successful or not
+   */
+  uploadModelThroughApi(data): Promise<boolean> {
     const newModel: Model = {
       id: null,
       ownerId: String(this.user.getUser().id),
@@ -174,9 +227,12 @@ export class UploadModelComponent implements OnInit {
       invoiceNumber: null, // (Paypal Order ID)
       isPaid: false, // (If users payed for it yet)    }
     };
-    console.log(newModel);
-    this.modelService.create(newModel).subscribe(res => {
-      console.log(res);
+
+    return new Promise(resolve => {
+      this.modelService.create(newModel).pipe(first()).subscribe(res => {
+        // @ts-ignore
+        resolve(res.n === 1);
+      });
     });
   }
 }
