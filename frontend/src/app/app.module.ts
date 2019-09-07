@@ -24,6 +24,16 @@ import { MarkdownModule } from 'ngx-markdown';
 
 import {NbEvaIconsModule} from '@nebular/eva-icons';
 import {StaticModule} from './static/static.module';
+import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
+import {CloudinaryConfiguration, CloudinaryModule, provideCloudinary} from '@cloudinary/angular-5.x';
+import {environment} from '../environments/environment';
+import { Cloudinary } from '@cloudinary/angular-5.x/src/cloudinary.service';
+
+export const cloudinary = {
+  Cloudinary: CloudinaryCore,
+};
+
+export const config: CloudinaryConfiguration = environment.cloudinary.upload;
 
 export function init_app(injector: Injector) {
   return () =>
@@ -63,6 +73,7 @@ export function init_app(injector: Injector) {
     NbEvaIconsModule,
     CoreModule.forRoot(),
     MarkdownModule.forRoot(),
+    CloudinaryModule.forRoot(cloudinary, config),
   ],
   bootstrap: [AppComponent],
   providers: [
@@ -72,6 +83,7 @@ export function init_app(injector: Injector) {
       deps: [Injector],
       multi: true,
     },
+    provideCloudinary(CloudinaryCore, environment.cloudinary.upload as CloudinaryConfiguration),
   ],
 })
 export class AppModule {

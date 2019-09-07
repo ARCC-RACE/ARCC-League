@@ -1,6 +1,6 @@
 import {Component, OnInit, Input, NgZone, ViewChild, Renderer2} from '@angular/core';
 import {FileUploader, FileUploaderOptions, ParsedResponseHeaders} from 'ng2-file-upload';
-import {Cloudinary} from '@cloudinary/angular-4.x';
+import {Cloudinary} from '@cloudinary/angular-5.x';
 import {NbToastrService} from '@nebular/theme';
 import {Model, ModelData} from '../../../@core/interfaces/common/model';
 import {UserStore} from '../../../@core/stores/user.store';

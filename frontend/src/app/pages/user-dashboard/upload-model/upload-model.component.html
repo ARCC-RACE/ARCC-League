@@ -46,12 +46,12 @@
           <div id="direct_upload" ng2FileDrop [uploader]="uploader" (fileOver)="fileOverBase($event)" [ngClass]="{'nv-file-over': hasBaseDropZoneOver}">
             <form *ngIf="!uploaded">
               <div class="form_line mb-2">
-                <div class="form_controls">
-                  <label class="mb-2">
+                <div class="form_controls row">
+                  <label class="mb-2 col-12">
                     Title:
                     <input type="text" class="form-control mt-1" #title placeholder="Title" (keyup.enter)="updateTitle(title.value)" (blur)="updateTitle(title.value)"/>
                   </label>
-                  <label>
+                  <label class="col-12 mb-2">
                     Description
                     <input type="text" class="form-control mt-1" #description placeholder="Description" (keyup.enter)="updateDescription(description.value)" (blur)="updateDescription(description.value)"/>
                   </label>
