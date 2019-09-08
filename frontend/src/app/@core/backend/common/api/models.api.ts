@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { HttpService } from './http.service';
-import { map } from 'rxjs/operators';
+import {catchError, map} from 'rxjs/operators';
 import { DataSource } from 'ng2-smart-table/lib/data-source/data-source';
 
 @Injectable()
@@ -32,7 +32,7 @@ export class ModelsApi {
       }));
   }
 
-  delete(id: string): Observable<boolean> {
+  delete(id: string): Observable<any> {
     return this.api.delete(`${this.apiController}/${id}`);
   }
 

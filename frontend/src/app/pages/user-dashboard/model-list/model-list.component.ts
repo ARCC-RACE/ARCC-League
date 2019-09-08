@@ -1,6 +1,8 @@
 import {Component, Input } from '@angular/core';
 import {LocalDataSource} from 'ng2-smart-table';
 import {ModelStore} from '../../../@core/stores/model.store';
+import {ModelData} from '../../../@core/interfaces/common/model';
+import {NbToastrService} from '@nebular/theme';
 
 @Component({
   selector: 'ngx-model-list',
@@ -13,6 +15,7 @@ export class ModelListComponent {
   settings = {
     actions: {
       add: false,
+      edit: false,
     },
     // add: {
     //   addButtonContent: '<i class="nb-plus"></i>',
@@ -72,6 +75,8 @@ export class ModelListComponent {
 
   constructor(
     private modelStore: ModelStore,
+    private modelService: ModelData,
+    private toastrService: NbToastrService,
   ) {
     this.source = new LocalDataSource();
     this.modelStore.getUserModels().subscribe(models => {
@@ -83,6 +88,15 @@ export class ModelListComponent {
 
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
+      console.log(event);
+      this.modelService.delete(event.data._id).subscribe(
+        res => console.log(res),
+        err => console.log(err),
+      )
+      this.toastrService.success(
+        `Model ${event.data.modelName} deleted!`,
+        'Model Deleted',
+      )
       event.confirm.resolve();
     } else {
       event.confirm.reject();
