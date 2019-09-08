@@ -78,19 +78,8 @@
   margin-top: -10%;
 }
 
-.car {
-  margin-right: 70px;
-  margin-top: 3vh;
-}
-
-.computer {
-  margin-right: 120px;
-  margin-top: -50vh;
-}
-
 .imagecontainer {
   float: right;
-  margin-top: -21%;
 }
 
 .arcc {
@@ -141,10 +130,6 @@
   width: 100%;
 }
 
-.medtext {
-  margin-left: 35%;
-}
-
 .classidek {
   margin-top: 4% !important;
 }
@@ -163,18 +148,77 @@
   margin-bottom: 160px;
 }
 
+.section1-text {
+  margin-top: 20vh;
+}
+
+@media (min-width: 1920px) {
+  .section1-text {
+    margin-top: 20vh;
+  }
+
+  .section2 {
+    padding-bottom: 3rem;
+  }
+
+  .section3-text, .section4-text-1, .section4-text-2, .section4-text-3, .section5-text {
+    padding-top: 25%;
+  }
+}
+
+@media (min-width: 992px) {
+  .section1-text {
+    margin-top: 10vh !important;
+  }
+
+  .section2 {
+    padding-bottom: 3rem;
+  }
+
+  .section5-text, .top-title {
+    padding-top: 15%;
+  }
+
+  .section4-text-1, .section4-text-2, .section4-text-3 {
+    padding-top: 25% !important;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .section1-text {
+    margin-top: 3vh;
+  }
+ .imagecontainer {
+   float: none;
+   margin-right: auto;
+   margin-left: auto;
+   text-align: center;
+ }
+
+}
+
 @media (max-width: 768px) {
+  .imagecontainer {
+    text-align: center;
+  }
+  .car {
+    width: 25%;
+  }
+
+  .computer {
+    width: 50%;
+  }
+
+  .section1-text {
+    margin-top: 0;
+  }
   .top-title {
     font-size: 2em;
   }
 
   .top-content {
     font-size: 1em;
-  }
-
-  .imagecontainer {
-    margin-left: 9%;
-    margin-top: -18%;
   }
 
   .arcc {
@@ -191,16 +235,6 @@
 
   .med{
     margin-top: 13%;
-  }
-
-  .car {
-    margin-top: 33vh;
-    margin-right: 90px;
-  }
-
-  .computer {
-    margin-right: 40px;
-    margin-top: 0vh;
   }
 
   .medbottom {
@@ -253,18 +287,6 @@
 
   .arcc2 {
     width: 8%;
-  }
-
-  .car {
-    width: 23%;
-    margin-left: 26px;
-    margin-top: 23vh;
-  }
-
-  .computer {
-    width: 34%;
-    margin-left: 161px;
-    margin-top: -45vh;
   }
 
   .moreclass {
