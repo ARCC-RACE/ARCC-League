@@ -1,7 +1,5 @@
 import {Component, Input } from '@angular/core';
 import {LocalDataSource} from 'ng2-smart-table';
-import {SmartTableData} from '../../../@core/interfaces/common/smart-table';
-import {Model, ModelData} from '../../../@core/interfaces/common/model';
 import {ModelStore} from '../../../@core/stores/model.store';
 
 @Component({
@@ -78,7 +76,6 @@ export class ModelListComponent {
     this.source = new LocalDataSource();
     this.modelStore.getUserModels().subscribe(models => {
       if (models) {
-        console.log(models)
         this.source.load(models);
       }
     });
