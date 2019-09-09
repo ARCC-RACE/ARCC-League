@@ -90,13 +90,13 @@ export class ModelListComponent {
     if (window.confirm('Are you sure you want to delete?')) {
       console.log(event);
       this.modelService.delete(event.data._id).subscribe(
-        res => console.log(res),
+        res =>  this.toastrService.success(
+          `Model ${event.data.modelName} deleted!`,
+          'Model Deleted',
+        ),
         err => console.log(err),
-      )
-      this.toastrService.success(
-        `Model ${event.data.modelName} deleted!`,
-        'Model Deleted',
-      )
+      );
+
       event.confirm.resolve();
     } else {
       event.confirm.reject();

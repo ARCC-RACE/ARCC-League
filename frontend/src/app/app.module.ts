@@ -65,7 +65,9 @@ export let cloudinaryFactory = () => {
 };
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [
+    AppComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

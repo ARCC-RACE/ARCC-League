@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Update, UserData} from '../../../@core/interfaces/common/users';
 
 @Component({
   selector: 'ngx-updates',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UpdatesComponent implements OnInit {
 
-  constructor() { }
+  updates: Update[];
+
+  constructor(
+    private userService: UserData,
+  ) { }
 
   ngOnInit() {
+    this.userService.getCurrentUser().subscribe(user => {
+      this.updates = user.updates;
+    });
   }
 
 }

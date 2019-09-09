@@ -3,6 +3,8 @@ import {Model, ModelData} from '../../../interfaces/common/model';
 import {ModelsApi} from '../api/models.api';
 import {Observable} from 'rxjs';
 import {UserData} from '../../../interfaces/common/users';
+import { of } from 'rxjs';
+import {expand} from 'rxjs-compat/operator/expand';
 
 @Injectable()
 export class ModelsService extends ModelData {

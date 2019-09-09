@@ -68,6 +68,7 @@ export class NgxRegisterComponent implements OnInit {
 
   register(): void {
     this.user = this.registerForm.value;
+    this.user.themeName = 'cosmic';
     this.errors = this.messages = [];
     this.submitted = true;
 

@@ -8,7 +8,7 @@ import {ModelData} from '../../../@core/interfaces/common/model';
 })
 export class ModelsUploadedComponent implements OnInit {
 
-  public models: any;
+  modelsUploaded = 0;
 
   constructor(
     private modelService: ModelData,
@@ -16,8 +16,7 @@ export class ModelsUploadedComponent implements OnInit {
 
   ngOnInit() {
     this.modelService.getAllModels().subscribe(models => {
-      // console.log(models);
+      this.modelsUploaded = models.length;
     });
-    // console.log()
   }
 }
