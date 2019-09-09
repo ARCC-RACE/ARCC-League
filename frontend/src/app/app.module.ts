@@ -27,24 +27,12 @@ import {StaticModule} from './static/static.module';
 import { Cloudinary as CloudinaryCore } from 'cloudinary-core';
 import {CloudinaryConfiguration, CloudinaryModule } from '@cloudinary/angular-5.x/';
 import {environment} from '../environments/environment';
-import { Cloudinary } from '@cloudinary/angular-5.x/src/cloudinary.service';
-import {type} from 'os';
 
 export const cloudinary = {
   Cloudinary: CloudinaryCore,
 };
 
 export const config: CloudinaryConfiguration = environment.cloudinary.upload;
-
-// export declare function provideCloudinary(cloudinaryJsLib: any, configuration: CloudinaryConfiguration): {
-//   provide: typeof Cloudinary;
-//   useFactory: () => Cloudinary;
-// }
-
-// export const provideCloudinary = {
-//   provide: typeof Cloudinary;
-//   useFactory: () => Cloudinary;
-// }
 
 export function init_app(injector: Injector) {
   return () =>
@@ -59,10 +47,6 @@ export function init_app(injector: Injector) {
         } }, () => resolve());
     });
 }
-
-export let cloudinaryFactory = () => {
-  Cloudinary;
-};
 
 @NgModule({
   declarations: [
@@ -100,12 +84,6 @@ export let cloudinaryFactory = () => {
       deps: [Injector],
       multi: true,
     },
-    // {
-    //   provide: Cloudinary,
-    //   useFactory: cloudinaryFactory,
-    //   deps: [require('cloudinary-core'), environment.cloudinary.upload as CloudinaryConfiguration],
-    // },
-    // provideCloudinary(require('cloudinary-core'), environment.cloudinary.upload as CloudinaryConfiguration),
   ],
 })
 export class AppModule {

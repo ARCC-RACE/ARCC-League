@@ -17,16 +17,6 @@ export class ModelListComponent {
       add: false,
       edit: false,
     },
-    // add: {
-    //   addButtonContent: '<i class="nb-plus"></i>',
-    //   createButtonContent: '<i class="nb-checkmark"></i>',
-    //   cancelButtonContent: '<i class="nb-close"></i>',
-    // },
-    edit: {
-      editButtonContent: '<i class="nb-edit"></i>',
-      saveButtonContent: '<i class="nb-checkmark"></i>',
-      cancelButtonContent: '<i class="nb-close"></i>',
-    },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
@@ -50,6 +40,10 @@ export class ModelListComponent {
       },
       dateUploaded: {
         title: 'Date Uploaded',
+        type: 'string',
+      },
+      modelLink: {
+        title: 'Link to model file',
         type: 'string',
       },
       status: {
@@ -88,13 +82,15 @@ export class ModelListComponent {
 
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
-      console.log(event);
       this.modelService.delete(event.data._id).subscribe(
         res =>  this.toastrService.success(
           `Model ${event.data.modelName} deleted!`,
           'Model Deleted',
         ),
-        err => console.log(err),
+        err => this.toastrService.danger(
+          `${err}`,
+          'Error Deleting Model',
+        ),
       );
 
       event.confirm.resolve();

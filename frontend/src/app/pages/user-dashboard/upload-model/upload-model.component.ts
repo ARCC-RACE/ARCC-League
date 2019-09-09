@@ -1,5 +1,5 @@
 import {Component, OnInit, Input, NgZone, ViewChild, Renderer2} from '@angular/core';
-import {FileUploader, FileUploaderOptions, ParsedResponseHeaders} from 'ng2-file-upload';
+import {FileLikeObject, FileUploader, FileUploaderOptions, ParsedResponseHeaders} from 'ng2-file-upload';
 import {Cloudinary} from '@cloudinary/angular-5.x';
 import {NbToastrService} from '@nebular/theme';
 import {Model, ModelData} from '../../../@core/interfaces/common/model';
@@ -52,6 +52,22 @@ export class UploadModelComponent implements OnInit {
           value: 'XMLHttpRequest',
         },
       ],
+      // filters: [{
+      //   name: 'only-tarballs',
+      //   fn: (item?: FileLikeObject, options?: FileUploaderOptions): boolean => {
+      //     const n = item.name.lastIndexOf('.');
+      //     const result = item.name.substring(n + 1);
+      //     if (result === '.tar.gz' || result === 'tar' || result === 'gz') {
+      //       return true;
+      //     } else {
+      //       this.toastrService.danger(
+      //         'Make sure you upload a .tar.gz file',
+      //         'File not accepted!',
+      //       );
+      //       return false;
+      //     }
+      //   },
+      // }],
     };
     this.uploader = new FileUploader(uploaderOptions);
 
@@ -96,7 +112,7 @@ export class UploadModelComponent implements OnInit {
     };
 
     /**
-     * When uploa dis complete
+     * When upload is complete
      * @param item
      * @param response
      * @param status
@@ -139,6 +155,18 @@ export class UploadModelComponent implements OnInit {
       }
 
     };
+
+    this.uploader.onErrorItem = ((item, response, status, headers) => {
+      // console.log({item, response, status, headers});
+      let error: string;
+      if (response) {
+        error = JSON.parse(response);
+      }
+      this.toastrService.danger(
+        `${error ? error : 'We have no idea what happened :('}`,
+        'Error uploading! Contact the devs',
+      );
+    });
 
 
     this.uploader.onProgressItem = (fileItem: any, progress: any) =>
