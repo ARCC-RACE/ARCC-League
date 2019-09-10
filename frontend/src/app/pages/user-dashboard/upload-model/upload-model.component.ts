@@ -6,6 +6,7 @@ import {Model, ModelData} from '../../../@core/interfaces/common/model';
 import {UserStore} from '../../../@core/stores/user.store';
 import {ModelStore} from '../../../@core/stores/model.store';
 import {first} from 'rxjs/operators';
+import {environment} from '../../../../environments/environment';
 
 @Component({
   selector: 'ngx-upload-model',
@@ -40,34 +41,31 @@ export class UploadModelComponent implements OnInit {
     /**
      * Set uploader options
      */
+    // const uploaderOptions: FileUploaderOptions = {
+    //   url: `https://api.cloudinary.com/v1_1/${this.cloudinary.config().cloud_name}/upload`,
+    //   autoUpload: true,
+    //   isHTML5: true,
+    //   removeAfterUpload: true,
+    //   // allowedMimeType: ['image/png'], // Only allow certain types
+    //   headers: [
+    //     {
+    //       name: 'X-Requested-With',
+    //       value: 'XMLHttpRequest',
+    //     },
+    //   ],
+    // };
     const uploaderOptions: FileUploaderOptions = {
-      url: `https://api.cloudinary.com/v1_1/${this.cloudinary.config().cloud_name}/upload`,
-      autoUpload: true,
-      isHTML5: true,
-      removeAfterUpload: true,
-      // allowedMimeType: ['image/png'], // Only allow certain types
-      headers: [
-        {
-          name: 'X-Requested-With',
-          value: 'XMLHttpRequest',
-        },
-      ],
-      // filters: [{
-      //   name: 'only-tarballs',
-      //   fn: (item?: FileLikeObject, options?: FileUploaderOptions): boolean => {
-      //     const n = item.name.lastIndexOf('.');
-      //     const result = item.name.substring(n + 1);
-      //     if (result === '.tar.gz' || result === 'tar' || result === 'gz') {
-      //       return true;
-      //     } else {
-      //       this.toastrService.danger(
-      //         'Make sure you upload a .tar.gz file',
-      //         'File not accepted!',
-      //       );
-      //       return false;
-      //     }
+      url: `${environment.apiUrl}/models/upload`,
+      // autoUpload: true,
+      // isHTML5: true,
+      // removeAfterUpload: true,
+      // // allowedMimeType: ['image/png'], // Only allow certain types
+      // headers: [
+      //   {
+      //     name: 'X-Requested-With',
+      //     value: 'XMLHttpRequest',
       //   },
-      // }],
+      // ],
     };
     this.uploader = new FileUploader(uploaderOptions);
 
@@ -136,7 +134,7 @@ export class UploadModelComponent implements OnInit {
         this.responses = []; // Clear results
       } else { // TODO replace with proper status returner (if 200)
         this.uploaded = true;
-        this.uploadLink = data.url;
+        this.uploadLink = data.modelUrl;
         // Uploads model data through to the databse
         this.uploadModelThroughApi(data).then(result => {
           if (result) {
