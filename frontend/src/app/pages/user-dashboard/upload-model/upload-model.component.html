@@ -91,13 +91,21 @@
 <!--                  </div>-->
 <!--                </div>-->
 <!--              </div>-->
-              <div class="info">
-                <table>
-                  <tr *ngFor="let property of getFileProperties(response.data)">
-                    <td> {{ property.key }} </td>
-                    <td> {{ property.value | json}} </td>
-                  </tr>
-                </table>
+<!--              <div class="info">-->
+<!--                <table>-->
+<!--                  <tr *ngFor="let property of getFileProperties(response.data)">-->
+<!--                    <td> {{ property.key }} </td>-->
+<!--                    <td> {{ property.value | json}} </td>-->
+<!--                  </tr>-->
+<!--                </table>-->
+<!--              </div>-->
+              <div *ngIf="uploaded">
+                <nb-alert status="success" *ngIf="success">
+                  Model Uploaded! We'll send you an email once your model is evaluated!
+                </nb-alert>
+                <nb-alert status="danger" *ngIf="!success">
+                  Upload Failed!
+                </nb-alert>
               </div>
             </div>
 

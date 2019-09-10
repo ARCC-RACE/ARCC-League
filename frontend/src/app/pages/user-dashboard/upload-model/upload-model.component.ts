@@ -23,6 +23,8 @@ export class UploadModelComponent implements OnInit {
   private description: string;
   public uploaded: boolean = false;
   private uploadLink: string;
+  public success: boolean;
+  public errorMessage: string;
 
   constructor(
     private cloudinary: Cloudinary,
@@ -56,7 +58,8 @@ export class UploadModelComponent implements OnInit {
     // };
     const uploaderOptions: FileUploaderOptions = {
       url: `${environment.apiUrl}/models/upload`,
-      // autoUpload: true,
+      autoUpload: true,
+      itemAlias: 'image',
       // isHTML5: true,
       // removeAfterUpload: true,
       // // allowedMimeType: ['image/png'], // Only allow certain types
@@ -126,14 +129,24 @@ export class UploadModelComponent implements OnInit {
         },
       );
       this.uploaded = true;
+      console.log(status);
       if (status === 400) { // If the upload failed (server error, etc)
         this.showToast('Upload Failed',
           JSON.stringify(data),
           'danger');
         this.uploaded = false;
         this.responses = []; // Clear results
-      } else { // TODO replace with proper status returner (if 200)
-        this.uploaded = true;
+      } else if (status === 422) {
+        this.responses = [];
+        this.success = false;
+        this.errorMessage = 'Are you sure you uploaded the right file?';
+        this.toastrService.danger(
+          this.errorMessage,
+          'Upload Failed!',
+        );
+        this.uploaded = false;
+      } else if (status === 200) { // TODO replace with proper status returner (if 200)
+        // this.uploaded = true;
         this.uploadLink = data.modelUrl;
         // Uploads model data through to the databse
         this.uploadModelThroughApi(data).then(result => {
@@ -141,10 +154,12 @@ export class UploadModelComponent implements OnInit {
             this.showToast('Completed Upload!',
               'We\'re working on evaluating your model, it\'ll be done soon!',
               'success');
+            this.success = true;
           } else {
             this.showToast('Error Uploading to MongoDB!',
               'I think the backend must have died :(. Send Caelin an email caelinsutch@gmail.com',
               'danger');
+            this.success = false;
           }
         });
         // Upload the cached models to show updates on the table
@@ -153,18 +168,6 @@ export class UploadModelComponent implements OnInit {
       }
 
     };
-
-    this.uploader.onErrorItem = ((item, response, status, headers) => {
-      // console.log({item, response, status, headers});
-      let error: string;
-      if (response) {
-        error = JSON.parse(response);
-      }
-      this.toastrService.danger(
-        `${error ? error : 'We have no idea what happened :('}`,
-        'Error uploading! Contact the devs',
-      );
-    });
 
 
     this.uploader.onProgressItem = (fileItem: any, progress: any) =>
@@ -237,21 +240,23 @@ export class UploadModelComponent implements OnInit {
    * @return Promise<boolean> If successful or not
    */
   uploadModelThroughApi(data): Promise<boolean> {
+    const d = new Date();
+    const n = d.toLocaleString();
     const newModel: Model = {
       id: null,
       ownerId: String(this.user.getUser().id),
       trackName: 're:Invent 2019',
       modelName: this.title, // (Name of the model) Can be changed by User
       modelDescription: this.description, // (User description) Can be changed by User
-      dateUploaded: data.created_at, // (Date the model was uploaded)
+      dateUploaded: n, // (Date the model was uploaded)
       isEvaluated: false,
       time: null, // (Encoded Time it completed track)
       speedTested: null, // (Speed the model was tested at (percentage))
       videoLink: null, // (Link to video upload)
-      modelLink: data.url, // (Link to the file)
+      modelLink: data.modelUrl, // (Link to the file)
       modelId: data.public_id,
       invoiceNumber: null, // (Paypal Order ID)
-      isPaid: false, // (If users payed for it yet)    }
+      isPaid: false, // (If users payed for it yet)
     };
 
     return new Promise(resolve => {
