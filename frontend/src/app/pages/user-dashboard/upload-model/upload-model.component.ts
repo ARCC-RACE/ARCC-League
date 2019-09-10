@@ -129,7 +129,6 @@ export class UploadModelComponent implements OnInit {
         },
       );
       this.uploaded = true;
-      console.log(status);
       if (status === 400) { // If the upload failed (server error, etc)
         this.showToast('Upload Failed',
           JSON.stringify(data),

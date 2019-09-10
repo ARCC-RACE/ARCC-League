@@ -43,6 +43,7 @@ import { COSMIC_THEME } from './styles/theme.cosmic';
 import { CORPORATE_THEME } from './styles/theme.corporate';
 import { DARK_THEME } from './styles/theme.dark';
 import {EvaIconsPipe} from './pipes/eva-icons.pipe';
+import {RouterModule} from '@angular/router';
 
 const NB_MODULES = [
   NbLayoutModule,
@@ -78,7 +79,7 @@ const PIPES = [
 ];
 
 @NgModule({
-  imports: [CommonModule, AuthModule, ...NB_MODULES],
+  imports: [CommonModule, AuthModule, ...NB_MODULES, RouterModule],
   exports: [CommonModule, ...PIPES, ...COMPONENTS],
   declarations: [...COMPONENTS, ...PIPES],
 })
