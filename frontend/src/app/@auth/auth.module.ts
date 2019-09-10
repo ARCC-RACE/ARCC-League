@@ -39,6 +39,7 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { ComponentsModule } from '../@components/components.module';
 import { authOptions } from './auth.settings';
 import { authSettings } from './access.settings';
+import {FileUploadModule} from 'ng2-file-upload';
 
 const GUARDS = [AuthGuard, AdminGuard];
 const PIPES = [AuthPipe];
@@ -76,6 +77,7 @@ export function filterInterceptorRequest(req: HttpRequest<any>): boolean {
     ComponentsModule,
     ...NB_MODULES,
     NbAuthModule.forRoot(authOptions),
+    FileUploadModule,
   ],
   exports: [...PIPES],
   providers: [

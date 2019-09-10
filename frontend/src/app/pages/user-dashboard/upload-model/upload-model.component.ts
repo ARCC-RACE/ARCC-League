@@ -14,7 +14,6 @@ import {environment} from '../../../../environments/environment';
   styleUrls: ['./upload-model.component.scss'],
 })
 export class UploadModelComponent implements OnInit {
-  @Input()
   responses: Array<any>;
 
   public hasBaseDropZoneOver: boolean = false;

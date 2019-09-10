@@ -10,6 +10,7 @@ export interface User {
   picture: string;
   address: Address;
   settings: Settings;
+  themeName: string;
   updates: Array<Update>;
 }
 

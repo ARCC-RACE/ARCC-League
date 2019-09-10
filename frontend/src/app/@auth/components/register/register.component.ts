@@ -1,9 +1,19 @@
-import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit } from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, NgZone, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { NB_AUTH_OPTIONS, NbAuthSocialLink, NbAuthService, NbAuthResult } from '@nebular/auth';
+import {
+  NB_AUTH_OPTIONS,
+  NbAuthSocialLink,
+  NbAuthService,
+  NbAuthResult,
+  NbTokenService,
+  NbTokenStorage
+} from '@nebular/auth';
 import { getDeepFromObject } from '../../helpers';
 import { EMAIL_PATTERN } from '../constants';
+import {FileUploader, FileUploaderOptions, ParsedResponseHeaders} from 'ng2-file-upload';
+import {environment} from '../../../../environments/environment';
+import {User} from '../../../@core/interfaces/common/users';
 
 @Component({
   selector: 'ngx-register',
@@ -12,6 +22,10 @@ import { EMAIL_PATTERN } from '../constants';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NgxRegisterComponent implements OnInit {
+
+  public uploader: FileUploader;
+  responses: Array<any>;
+  profilePhoto: string;
 
   minLength: number = this.getConfigValue('forms.validation.password.minLength');
   maxLength: number = this.getConfigValue('forms.validation.password.maxLength');
@@ -26,14 +40,17 @@ export class NgxRegisterComponent implements OnInit {
   submitted = false;
   errors: string[] = [];
   messages: string[] = [];
-  user: any = {};
+  user: User;
 
   registerForm: FormGroup;
   constructor(protected service: NbAuthService,
     @Inject(NB_AUTH_OPTIONS) protected options = {},
     protected cd: ChangeDetectorRef,
     private fb: FormBuilder,
-    protected router: Router) { }
+    protected router: Router,
+    private zone: NgZone,
+    private tokenService: NbTokenStorage,
+  ) { }
 
   get fullName() { return this.registerForm.get('fullName'); }
   get email() { return this.registerForm.get('email'); }
@@ -42,9 +59,6 @@ export class NgxRegisterComponent implements OnInit {
   get terms() { return this.registerForm.get('terms'); }
 
   ngOnInit(): void {
-    const fullNameValidators = [
-    ];
-    this.isFullNameRequired && fullNameValidators.push(Validators.required);
 
     const emailValidators = [
       Validators.pattern(EMAIL_PATTERN),
@@ -58,17 +72,41 @@ export class NgxRegisterComponent implements OnInit {
     this.isPasswordRequired && passwordValidators.push(Validators.required);
 
     this.registerForm = this.fb.group({
-      fullName: this.fb.control('', [...fullNameValidators]),
+      fullName: this.fb.control('', [Validators.required]),
       email: this.fb.control('', [...emailValidators]),
       password: this.fb.control('', [...passwordValidators]),
       confirmPassword: this.fb.control('', [...passwordValidators]),
       terms: this.fb.control(''),
     });
+
+    // Init File Uploader
+    const uploaderOptions: FileUploaderOptions = {
+      url: `${environment.apiUrl}/users/profilepicture`,
+      autoUpload: true,
+      itemAlias: 'image',
+      authToken: 'Bearer ' + this.tokenService.get().getValue(),
+      allowedMimeType: ['image/png', 'image/jpg'],
+    };
+    this.uploader = new FileUploader(uploaderOptions);
+    this.uploader.onBuildItemForm = (fileItem: any, form: FormData): any => {
+      fileItem.withCredentials = false;
+      return { fileItem };
+    };
+    this.uploader.onCompleteItem = (item: any, response: string, status: number, headers: ParsedResponseHeaders) => {
+      const data = JSON.parse(response);
+      this.profilePhoto = data.profilePictureUrl;
+    };
+  }
+
+  uploadFile() {
+    const element: HTMLElement = document.getElementById('file-upload') as HTMLElement;
+    element.click();
   }
 
   register(): void {
     this.user = this.registerForm.value;
     this.user.themeName = 'cosmic';
+    this.user.picture = this.profilePhoto;
     this.errors = this.messages = [];
     this.submitted = true;
 
