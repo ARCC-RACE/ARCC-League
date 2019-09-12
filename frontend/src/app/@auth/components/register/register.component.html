@@ -86,7 +86,7 @@
   </div>
 
   <div class="form-control-group">
-    <button nbButton (click)="uploadFile()" >Upload Profile Picture</button>
+    <button nbButton (click)="uploadFile()" [nbSpinner]="uploading">Upload Profile Picture</button>
     <input type="file" style="display: none;" id="file-upload" ng2FileSelect [uploader]="uploader">
   </div>
 
@@ -96,7 +96,7 @@
     </nb-checkbox>
   </div>
 
-  <button nbButton fullWidth status="primary" size="large" [disabled]="submitted || !registerForm.valid || !terms?.value"
+  <button nbButton fullWidth status="primary" size="large" [disabled]="submitted || !registerForm.valid || !terms?.value || uploading"
     [class.btn-pulse]="submitted" (click)="register()">
     Register
   </button>

@@ -1,6 +1,5 @@
 import {Component, OnInit, Input, NgZone, ViewChild, Renderer2} from '@angular/core';
 import {FileLikeObject, FileUploader, FileUploaderOptions, ParsedResponseHeaders} from 'ng2-file-upload';
-import {Cloudinary} from '@cloudinary/angular-5.x';
 import {NbToastrService} from '@nebular/theme';
 import {Model, ModelData} from '../../../@core/interfaces/common/model';
 import {UserStore} from '../../../@core/stores/user.store';
@@ -26,7 +25,6 @@ export class UploadModelComponent implements OnInit {
   public errorMessage: string;
 
   constructor(
-    private cloudinary: Cloudinary,
     private zone: NgZone,
     private toastrService: NbToastrService,
     private user: UserStore,
@@ -39,22 +37,6 @@ export class UploadModelComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    /**
-     * Set uploader options
-     */
-    // const uploaderOptions: FileUploaderOptions = {
-    //   url: `https://api.cloudinary.com/v1_1/${this.cloudinary.config().cloud_name}/upload`,
-    //   autoUpload: true,
-    //   isHTML5: true,
-    //   removeAfterUpload: true,
-    //   // allowedMimeType: ['image/png'], // Only allow certain types
-    //   headers: [
-    //     {
-    //       name: 'X-Requested-With',
-    //       value: 'XMLHttpRequest',
-    //     },
-    //   ],
-    // };
     const uploaderOptions: FileUploaderOptions = {
       url: `${environment.apiUrl}/models/upload`,
       autoUpload: true,
@@ -73,7 +55,6 @@ export class UploadModelComponent implements OnInit {
 
     // Add custom tag for displaying the uploaded photo in the list
     this.uploader.onBuildItemForm = (fileItem: any, form: FormData): any => {
-      form.append('upload_preset', this.cloudinary.config().upload_preset);
       const tags = 'model';
       if (this.title) {
         form.append('context', `photo=${this.title}`);

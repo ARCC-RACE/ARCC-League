@@ -43,6 +43,11 @@
 
 <!--      </nb-card-body>-->
         <nb-card-body>
+          <p>
+            Currently, model evaluations cost $5 each. Once evaluated, we'll send you your time and a video of your car completing the track.
+            We evaluate times based on how AWS does it, three faults or less constitute completing a lap.
+            If you have any questions, contact us at help@arcc.ai
+          </p>
           <div id="direct_upload" ng2FileDrop [uploader]="uploader" (fileOver)="fileOverBase($event)" [ngClass]="{'nv-file-over': hasBaseDropZoneOver}">
             <form *ngIf="!uploaded">
               <div class="form_line mb-2">
@@ -101,7 +106,7 @@
 <!--              </div>-->
               <div *ngIf="uploaded">
                 <nb-alert status="success" *ngIf="success">
-                  Model Uploaded! We'll send you an email once your model is evaluated!
+                  Model Uploaded! We'll send you an email wth how to pay and once your model is evaluated!
                 </nb-alert>
                 <nb-alert status="danger" *ngIf="!success">
                   Upload Failed!

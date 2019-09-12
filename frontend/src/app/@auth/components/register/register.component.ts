@@ -6,8 +6,7 @@ import {
   NbAuthSocialLink,
   NbAuthService,
   NbAuthResult,
-  NbTokenService,
-  NbTokenStorage
+  NbTokenStorage,
 } from '@nebular/auth';
 import { getDeepFromObject } from '../../helpers';
 import { EMAIL_PATTERN } from '../constants';
@@ -25,7 +24,9 @@ export class NgxRegisterComponent implements OnInit {
 
   public uploader: FileUploader;
   responses: Array<any>;
-  profilePhoto: string;
+  profilePhoto: string = '';
+  uploading: boolean;
+  uploaded = false;
 
   minLength: number = this.getConfigValue('forms.validation.password.minLength');
   maxLength: number = this.getConfigValue('forms.validation.password.maxLength');
@@ -83,18 +84,23 @@ export class NgxRegisterComponent implements OnInit {
     const uploaderOptions: FileUploaderOptions = {
       url: `${environment.apiUrl}/users/profilepicture`,
       autoUpload: true,
+      isHTML5: true,
       itemAlias: 'image',
       authToken: 'Bearer ' + this.tokenService.get().getValue(),
-      allowedMimeType: ['image/png', 'image/jpg'],
     };
     this.uploader = new FileUploader(uploaderOptions);
     this.uploader.onBuildItemForm = (fileItem: any, form: FormData): any => {
       fileItem.withCredentials = false;
       return { fileItem };
     };
+    this.uploader.onBeforeUploadItem = (fileItem => {
+      this.uploading = true;
+    });
     this.uploader.onCompleteItem = (item: any, response: string, status: number, headers: ParsedResponseHeaders) => {
       const data = JSON.parse(response);
+      this.uploading = false;
       this.profilePhoto = data.profilePictureUrl;
+      this.uploaded = true;
     };
   }
 
@@ -125,7 +131,9 @@ export class NgxRegisterComponent implements OnInit {
         }, this.redirectDelay);
       }
       this.cd.detectChanges();
-    });
+    },
+      (error => {
+      }));
   }
 
   getConfigValue(key: string): any {

@@ -27,10 +27,10 @@ export class PagesMenu {
             title: 'User Information',
             link: '/pages/users/current',
           },
-          {
-            title: 'Billing',
-            link: '/pages/layout/list',
-          },
+          // {
+          //   title: 'Billing',
+          //   link: '/pages/layout/list',
+          // },
         ],
       },
     ];

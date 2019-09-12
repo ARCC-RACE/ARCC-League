@@ -33,7 +33,7 @@ import {
   NbLayoutModule,
   NbCheckboxModule,
   NbInputModule,
-  NbButtonModule,
+  NbButtonModule, NbUserModule, NbSpinnerModule,
 } from '@nebular/theme';
 import { AuthRoutingModule } from './auth-routing.module';
 import { ComponentsModule } from '../@components/components.module';
@@ -61,6 +61,8 @@ const NB_MODULES = [
   NbCheckboxModule,
   NbInputModule,
   NbButtonModule,
+  NbUserModule,
+  NbSpinnerModule,
 ];
 
 export function filterInterceptorRequest(req: HttpRequest<any>): boolean {
