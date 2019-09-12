@@ -4,7 +4,7 @@ import { AuthGuard } from './@auth/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'pages',
+    path: 'app',
     canActivate: [AuthGuard],
     loadChildren: './pages/pages.module#PagesModule',
   },
