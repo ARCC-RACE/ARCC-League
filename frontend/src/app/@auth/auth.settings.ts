@@ -31,7 +31,7 @@ export const authOptions = {
         endpoint: '/auth/login',
         method: 'post',
         redirect: {
-          success: '/pages/', // welcome page path
+          success: '/app/dashboard', // welcome page path
           failure: null, // stay on the same page
         },
       },
@@ -39,7 +39,7 @@ export const authOptions = {
         endpoint: '/auth/sign-up',
         method: 'post',
         redirect: {
-          success: '/pages/', // welcome page path
+          success: '/app/dashboard', // welcome page path
           failure: null, // stay on the same page
         },
       },
@@ -51,7 +51,7 @@ export const authOptions = {
         endpoint: '/auth/request-pass',
         method: 'post',
         redirect: {
-          success: '/pages/', // welcome page path
+          success: '/app/', // welcome page path
           failure: null, // stay on the same page
         },
       },
@@ -59,7 +59,7 @@ export const authOptions = {
         endpoint: '/auth/reset-pass',
         method: 'post',
         redirect: {
-          success: '/pages/', // welcome page path
+          success: '/app/', // welcome page path
           failure: null, // stay on the same page
         },
       },

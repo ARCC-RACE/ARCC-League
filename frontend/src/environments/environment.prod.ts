@@ -1,18 +1,18 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:3001/api',
+  apiUrl: 'https://us-central1-arcc-league.cloudfunctions.net/api',
   testUser: {
     // tslint:disable
     token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1laWRlbnRpZmllciI6IjIiLCJodHRwOi8vc2NoZW1hcy54bWxzb2FwLm9yZy93cy8yMDA1LzA1L2lkZW50aXR5L2NsYWltcy9uYW1lIjoiQFVzZXIiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL2FjY2Vzc2NvbnRyb2xzZXJ2aWNlLzIwMTAvMDcvY2xhaW1zL2lkZW50aXR5cHJvdmlkZXIiOiJBU1AuTkVUIElkZW50aXR5IiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoidXNlciIsIm5iZiI6MTU1MDA2NDE3NCwiZXhwIjoxNTgxNjg2NTc0LCJpc3MiOiJpc3N1ZXJfc2FtcGxlIiwiYXVkIjoiYXVkaWVuY2Vfc2FtcGxlIn0.ctOTvAv-RK_IhFx0nFzOKQ1R19fenVf6UyLR_Mq8j2c',
     // tslint:enable
     email: 'user@user.user',
   },
-  cloudinary: {
-    upload: {
-      cloud_name: 'dg0mlrlfd', // Your cloud name
-      api_key: '533986851152756',
-      api_secret: 'pjdyjUZJ5kQYLtXvbRvov3vORUE',
-      upload_preset: 'grayamzp', // Your preset
-    },
-  },
+  // cloudinary: {
+  //   upload: {
+  //     cloud_name: 'dg0mlrlfd', // Your cloud name
+  //     api_key: '533986851152756',
+  //     api_secret: 'pjdyjUZJ5kQYLtXvbRvov3vORUE',
+  //     upload_preset: 'grayamzp', // Your preset
+  //   },
+  // },
 };

@@ -3,11 +3,11 @@
 @import '~@nebular/theme/styles/global/breakpoints';
 
 :host {
-  $auth-layout-padding: 2.5rem;
+  $auth-layout-padding: 0;
 
   nb-card {
     margin: 0;
-    height: calc(100vh - 2 * #{$auth-layout-padding});
+    height: 100vh
   }
 
   .navigation .link {

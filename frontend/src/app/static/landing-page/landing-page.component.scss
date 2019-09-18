@@ -1,3 +1,13 @@
+
+.filler {
+  flex-grow: 1;
+}
+
+.dashboard-btn {
+  height: 50px;
+  margin: 0.67em;
+}
+
 .top-title {
   font-size: 3em;
 }
@@ -40,7 +50,7 @@
 .section1 {
   background-color: #1EC18D;
   color: white;
-  height: 100vh;
+  //height: 100vh;
 }
 
 .section2 {
@@ -78,7 +88,7 @@
   margin-top: -10%;
 }
 
-.imagecontainer {
+.image-container {
   float: right;
 }
 
@@ -150,6 +160,7 @@
 
 .section1-text {
   margin-top: 20vh;
+  padding-bottom: 10vh;
 }
 
 @media (min-width: 1920px) {
@@ -189,7 +200,7 @@
   .section1-text {
     margin-top: 3vh;
   }
- .imagecontainer {
+ .image-container {
    float: none;
    margin-right: auto;
    margin-left: auto;
@@ -199,7 +210,10 @@
 }
 
 @media (max-width: 768px) {
-  .imagecontainer {
+  .dashboard-btn {
+    display: none;
+  }
+  .image-container {
     text-align: center;
   }
   .car {
@@ -215,6 +229,10 @@
   }
   .top-title {
     font-size: 2em;
+  }
+
+  .image-container {
+    margin-top: 24px;
   }
 
   .top-content {
@@ -264,9 +282,6 @@
 }
 
 @media (max-width: 576px) {
-  .section1 {
-    height: 120vh;
-  }
 
   .medtext {
     margin: 0;

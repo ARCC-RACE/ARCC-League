@@ -1,13 +1,13 @@
 {
-  "name": "ngx-admin-bundle",
+  "name": "ARCC-League",
   "version": "3.2.1",
   "license": "LICENCE",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akveo/ngx-admin.git"
+    "url": "git+https://github.com/ARCC-RACE/ARCC-League"
   },
   "bugs": {
-    "url": "https://github.com/akveo/ngx-admin-bundle-support/issues"
+    "url": "https://github.com/ARCC-RACE/ARCC-League/issues"
   },
   "scripts": {
     "ng": "ng",
