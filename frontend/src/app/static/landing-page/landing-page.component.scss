@@ -171,13 +171,17 @@
   .section2 {
     padding-bottom: 3rem;
   }
-
-  .section3-text, .section4-text-1, .section4-text-2, .section4-text-3, .section5-text {
-    padding-top: 25%;
-  }
 }
 
 @media (min-width: 992px) {
+
+  .section2-text {
+    padding-top: 15% !important;
+  }
+   .section3-text, .section4-text-1, .section4-text-2, .section4-text-3, .section5-text {
+    padding-top: 20% !important;
+  }
+
   .section1-text {
     margin-top: 10vh !important;
   }
