@@ -12,15 +12,4 @@ export const environment = {
     // tslint:enable
     email: 'user@user.user',
   },
-  cloudinary: {
-    upload: {
-      cloud_name: 'dg0mlrlfd', // Your cloud name
-      api_key: '533986851152756',
-      api_secret: 'pjdyjUZJ5kQYLtXvbRvov3vORUE',
-      upload_preset: 'grayamzp', // Your preset
-    },
-
-    // baseApiUrl: 'https://api.cloudinary.com/v1_1/',
-    // Other configuration stuff necessary for cloudinary
-  },
 };
