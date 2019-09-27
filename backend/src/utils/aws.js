@@ -31,7 +31,7 @@ const imageFilter = (req, file, cb) => {
 
 // Upload
 const upload = multer({
-  fileFilter,
+  // fileFilter,
   storage: multerS3({
     acl: 'public-read',
     s3,
