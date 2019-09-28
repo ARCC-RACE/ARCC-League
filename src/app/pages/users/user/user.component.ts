@@ -1,5 +1,3 @@
-
-
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
@@ -11,7 +9,7 @@ import { takeUntil } from 'rxjs/operators';
 import { NbToastrService } from '@nebular/theme';
 
 import { UserData, User } from '../../../@core/interfaces/common/users';
-import { EMAIL_PATTERN, NUMBERS_PATTERN } from '../../../@auth/components';
+import { EMAIL_PATTERN } from '../../../@auth/components';
 
 
 export enum UserFormMode {

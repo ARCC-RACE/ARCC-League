@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Model, ModelData} from '../interfaces/common/model';
-import {BehaviorSubject, Observable, Subject} from 'rxjs';
+import {Subject} from 'rxjs';
 import {UserStore} from './user.store';
 
 /**
@@ -14,27 +14,10 @@ export class ModelStore {
   constructor(
     private  userStore: UserStore,
     private modelService: ModelData,
-  ) {
-
-  }
+  ) { }
 
   private userModels: Subject<Model[]> = new Subject<Model[]>();
   private allModels: Subject<Model[]> = new Subject<Model[]>();
-
-  /**
-   * Gets all userModels
-   */
-  getUserModels(): Subject<Model[]> {
-    return this.userModels;
-  }
-
-  /**
-   * Sets model in storage
-   * @param paramModel
-   */
-  setUserModels(paramModel: Model[]) {
-    this.userModels.next(paramModel);
-  }
 
   /**
    * Updates current users models
@@ -44,4 +27,16 @@ export class ModelStore {
       models ? this.setUserModels(models) : '';
     });
   }
+
+  updateAllModels() {
+    this.modelService.getAllModels().subscribe(models => {
+      models ? this.setAllModels(models) : '';
+    });
+  }
+
+  // GETTERS AND SETTERS
+  getUserModels(): Subject<Model[]> { return this.userModels; }
+  setUserModels(paramModel: Model[]) { this.userModels.next(paramModel); }
+  getAllModels(): Subject<Model[]> { return this.allModels; }
+  setAllModels(paramModel: Model[]) { this.allModels.next(paramModel); }
 }

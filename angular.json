@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-admin-demo": {
+    "arcc-league": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",

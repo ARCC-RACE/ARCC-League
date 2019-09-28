@@ -1,5 +1,5 @@
-import {Component, OnInit, Input, NgZone, ViewChild, Renderer2} from '@angular/core';
-import {FileLikeObject, FileUploader, FileUploaderOptions, ParsedResponseHeaders} from 'ng2-file-upload';
+import {Component, OnInit, NgZone} from '@angular/core';
+import { FileUploader, FileUploaderOptions, ParsedResponseHeaders} from 'ng2-file-upload';
 import {NbToastrService} from '@nebular/theme';
 import {Model, ModelData} from '../../../@core/interfaces/common/model';
 import {UserStore} from '../../../@core/stores/user.store';
@@ -20,7 +20,6 @@ export class UploadModelComponent implements OnInit {
   private title: string;
   private description: string;
   public uploaded: boolean = false;
-  private uploadLink: string;
   public success: boolean;
   public errorMessage: string;
 
@@ -126,7 +125,6 @@ export class UploadModelComponent implements OnInit {
         this.uploaded = false;
       } else if (status === 200) { // TODO replace with proper status returner (if 200)
         // this.uploaded = true;
-        this.uploadLink = data.modelUrl;
         // Uploads model data through to the databse
         this.uploadModelThroughApi(data).then(result => {
           if (result) {

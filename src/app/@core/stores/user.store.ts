@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import {Update, User} from '../interfaces/common/users';
-import {Model} from '../interfaces/common/model';
 import {Subject} from 'rxjs';
 
 @Injectable({

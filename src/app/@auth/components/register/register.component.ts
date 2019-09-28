@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, NgZone, OnInit} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, Inject, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
@@ -49,7 +49,6 @@ export class NgxRegisterComponent implements OnInit {
     protected cd: ChangeDetectorRef,
     private fb: FormBuilder,
     protected router: Router,
-    private zone: NgZone,
     private tokenService: NbTokenStorage,
   ) { }
 
