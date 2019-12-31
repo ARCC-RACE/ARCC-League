@@ -10,7 +10,7 @@ export class PagesMenu {
       {
         title: 'Dashboard',
         icon: 'home-outline',
-        link: '/pages/dashboard',
+        link: '/dashboard',
         children: undefined,
       },
     ];
@@ -25,7 +25,7 @@ export class PagesMenu {
         children: [
           {
             title: 'User Information',
-            link: '/pages/users/current',
+            link: '/users/current',
           },
           // {
           //   title: 'Billing',

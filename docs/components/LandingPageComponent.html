@@ -26,18 +26,15 @@
                 <ul class="list">
             
                     <li class="title">
-                        <a href="../">arcc-league documentation</a>
+                        <a href="../index.html">arcc-league documentation</a>
                     </li>
             
                     <li class="divider"></li>
             
             
                     <li class="chapter">
-                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                         <ul class="links">
-                                <li class="link">
-                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
                                 <li class="link">
                                     <a 
                                         
@@ -47,25 +44,43 @@
                                         <span class="fa fa-th"></span>Overview
                                     </a>
                                 </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./changelog.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>CHANGELOG
+                                    </a>
+                                </li>
                         </ul>
                     </li>
             
+            
                     <li class="chapter">
-                        <a data-type="chapter-link" href="./modules.html" >
-                            <span class="fa fa-archive"></span>
-                            <span>Modules</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
                                     data-target="#xs-modules-links"
-                            ></span>
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
                         </a>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-modules-links"
                             >
                                 <li class="link">
                                     <a href="../modules/AppModule.html" >AppModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/AuthModule.html" >AuthModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AuthRoutingModule.html" >AuthRoutingModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/CommonBackendModule.html" >CommonBackendModule</a>
@@ -80,13 +95,22 @@
                                     <a href="../modules/CoreModule.html" >CoreModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/LeaderboardRoutingModule.html" >LeaderboardRoutingModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/MiscellaneousModule.html" >MiscellaneousModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/MiscellaneousRoutingModule.html" >MiscellaneousRoutingModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/PagesModule.html" >PagesModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/StaticModule.html" >StaticModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/StaticRoutingModule.html" >StaticRoutingModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/ThemeModule.html" >ThemeModule</a>
@@ -100,18 +124,21 @@
                                 <li class="link">
                                     <a href="../modules/UsersModule.html" >UsersModule</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../modules/UsersRoutingModule.html" >UsersRoutingModule</a>
+                                </li>
                         </ul>
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
                             <span class="fa fa-cogs"></span>
                             <span>Components</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-components-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-components-links"
                             >
                                 <li class="link">
@@ -130,7 +157,7 @@
                                     <a href="../components/HeaderComponent.html" >HeaderComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/LandingPageComponent.html"  class="active" >LandingPageComponent</a>
+                                    <a href="../components/LandingPageComponent.html"  data-type="entity-link" class="active" >LandingPageComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/LeaderboardComponent.html" >LeaderboardComponent</a>
@@ -221,14 +248,14 @@
             
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
                             <span class="fa fa-file-code-o"></span>
                             <span>Classes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-classes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-classes-links"
                             >
                                 <li class="link">
@@ -243,16 +270,15 @@
                         </ul>
                     </li>
             
-            
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
                             <span class="fa fa-long-arrow-down"></span>
                             <span>Injectables</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-injectables-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-injectables-links"
                             >
                                 <li class="link">
@@ -316,14 +342,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
                             <span class="fa fa-info"></span>
                             <span>Interfaces</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-interfaces-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-interfaces-links"
                             >
                                 <li class="link">
@@ -348,14 +374,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-pipes-links"
+                            >
                             <span class="fa fa-plus"></span>
                             <span>Pipes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-pipes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-pipes-links"
                             >
                                 <li class="link">
@@ -383,7 +409,30 @@
                     </li>
             
                     <li class="chapter">
-                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
+                                </li>
+                                <li class="link">
+                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                </li>
+                                <li class="link">
+                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
                     </li>
             
                     <li class="chapter">
@@ -392,7 +441,7 @@
             
                     <li class="divider"></li>
                     <li class="copyright">
-                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
                                         <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
                             </a>
                     </li>
@@ -410,7 +459,7 @@
                        <ul class="list">
                    
                            <li class="title">
-                               <a href="../">arcc-league documentation</a>
+                               <a href="../index.html">arcc-league documentation</a>
                            </li>
                    
                            <li class="divider"></li>
@@ -420,11 +469,8 @@
                                </div>
                    
                            <li class="chapter">
-                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                                <ul class="links">
-                                       <li class="link">
-                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
                                        <li class="link">
                                            <a 
                                                
@@ -434,25 +480,43 @@
                                                <span class="fa fa-th"></span>Overview
                                            </a>
                                        </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./changelog.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>CHANGELOG
+                                           </a>
+                                       </li>
                                </ul>
                            </li>
                    
+                   
                            <li class="chapter">
-                               <a data-type="chapter-link" href="./modules.html" >
-                                   <span class="fa fa-archive"></span>
-                                   <span>Modules</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
                                            data-target="#modules-links"
-                                   ></span>
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
                                </a>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="modules-links"
                    >
                                        <li class="link">
                                            <a href="../modules/AppModule.html" >AppModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/AuthModule.html" >AuthModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AuthRoutingModule.html" >AuthRoutingModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/CommonBackendModule.html" >CommonBackendModule</a>
@@ -467,13 +531,22 @@
                                            <a href="../modules/CoreModule.html" >CoreModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/LeaderboardRoutingModule.html" >LeaderboardRoutingModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/MiscellaneousModule.html" >MiscellaneousModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/MiscellaneousRoutingModule.html" >MiscellaneousRoutingModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/PagesModule.html" >PagesModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/StaticModule.html" >StaticModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/StaticRoutingModule.html" >StaticRoutingModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/ThemeModule.html" >ThemeModule</a>
@@ -487,18 +560,21 @@
                                        <li class="link">
                                            <a href="../modules/UsersModule.html" >UsersModule</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../modules/UsersRoutingModule.html" >UsersRoutingModule</a>
+                                       </li>
                                </ul>
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
                                    <span class="fa fa-cogs"></span>
                                    <span>Components</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#components-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="components-links"
                    >
                                        <li class="link">
@@ -517,7 +593,7 @@
                                            <a href="../components/HeaderComponent.html" >HeaderComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/LandingPageComponent.html"  class="active" >LandingPageComponent</a>
+                                           <a href="../components/LandingPageComponent.html"  data-type="entity-link" class="active" >LandingPageComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/LeaderboardComponent.html" >LeaderboardComponent</a>
@@ -608,14 +684,14 @@
                    
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
                                    <span class="fa fa-file-code-o"></span>
                                    <span>Classes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#classes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="classes-links"
                    >
                                        <li class="link">
@@ -630,16 +706,15 @@
                                </ul>
                            </li>
                    
-                   
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
                                    <span class="fa fa-long-arrow-down"></span>
                                    <span>Injectables</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#injectables-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="injectables-links"
                    >
                                        <li class="link">
@@ -703,14 +778,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
                                    <span class="fa fa-info"></span>
                                    <span>Interfaces</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#interfaces-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="interfaces-links"
                    >
                                        <li class="link">
@@ -735,14 +810,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#pipes-links"
+                   >
                                    <span class="fa fa-plus"></span>
                                    <span>Pipes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#pipes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="pipes-links"
                    >
                                        <li class="link">
@@ -770,7 +845,30 @@
                            </li>
                    
                            <li class="chapter">
-                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
                            </li>
                    
                            <li class="chapter">
@@ -779,7 +877,7 @@
                    
                            <li class="divider"></li>
                            <li class="copyright">
-                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
                                                <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
                                    </a>
                            </li>
@@ -792,29 +890,46 @@
                    <div class="content-data">
 
 
+
+
 <ol class="breadcrumb">
   <li>Components</li>
   <li>LandingPageComponent</li>
 </ol>
 
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
 
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
-        </li>
-        <li>
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
-        </li>
-    </ul>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
 
-    <div class="tab-content">
-        <div class="tab-pane fade active in" id="infos"><p class="comment">
+    <li>
+        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+    </li>
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
     <code>src/app/static/landing-page/landing-page.component.ts</code>
 </p>
 
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/docs/ts/latest/api/core/index/OnInit-interface.html" target="_blank" >OnInit</a></code>
+    </p>
 
 
 <section>
@@ -847,7 +962,7 @@
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>landing-page.component.html</code></td>
+                <td class="col-md-9"><code>./landing-page.component.html</code></td>
             </tr>
 
 
@@ -855,7 +970,27 @@
     </table>
 </section>
 
-
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
     <section>
         <h3 id="constructor">Constructor</h3>
@@ -866,15 +1001,64 @@
                             <code>constructor()</code>
                         </td>
                     </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/static/landing-page/landing-page.component.ts:8</a></div>
+                                </td>
+                            </tr>
     
                 </tbody>
             </table>
     </section>
 
 
+
+
+
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngOnInit"></a>
+                            <span class="name"><b> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>ngOnInit()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/static/landing-page/landing-page.component.ts:12</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
 </div>
-        <div class="tab-pane fade tab-source-code" id="source">
-            <pre><code class="hljs javascript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
   selector: &#x27;ngx-landing-page&#x27;,
@@ -891,9 +1075,215 @@ export class LandingPageComponent implements OnInit {
 
 }
 </code></pre>
-        </div>
     </div>
 
+    <div class="tab-pane fade" id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;section class&#x3D;&quot;section1&quot;&gt;
+  &lt;div class&#x3D;&quot;col-12 mb-5 pt-3&quot; style&#x3D;&quot;text-align: left;&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;img src&#x3D;&quot;../../assets/images/ARCCLogo.svg&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;arcc&quot;&gt;
+      &lt;h1 class&#x3D;&quot;ml-2&quot;&gt;ARCC LEAGUE&lt;/h1&gt;
+      &lt;div class&#x3D;&quot;filler&quot;&gt;&lt;/div&gt;
+      &lt;button class&#x3D;&quot;btn btn-outline-light dashboard-btn&quot; routerLink&#x3D;&quot;/app&quot;&gt;Dashboard&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;row section1-text&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-7 col-md-11 pl-lg-5&quot;&gt;
+      &lt;h1 class&#x3D;&quot;top-title&quot;&gt;TEST AND COMPETE IN THE REAL WORLD&lt;/h1&gt;
+      &lt;p class&#x3D;&quot;top-content mb-5&quot;&gt;Compete against other AWS DeepRacer times recorded in the real world. Upload your model, we’ll run it on our DeepRacer track, send you the video, and rank your time on our global leaderboard against other cars that have times in the physical world.&lt;/p&gt;
+      &lt;form id&#x3D;&quot;email1&quot; action&#x3D;&quot;https://jhs.us4.list-manage.com/subscribe/post&quot; method&#x3D;&quot;POST&quot;&gt;
+        &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;u&quot; value&#x3D;&quot;47713ec5a39b4f14f5b4e9657&quot;&gt;
+        &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;id&quot; value&#x3D;&quot;fdb5156b5a&quot;&gt;
+        &lt;div class&#x3D;&quot;col-lg-8 col-md-8 col-xs-12&quot;&gt;
+          &lt;div class&#x3D;&quot;row&quot;&gt;
+            &lt;div class&#x3D;&quot;col-12&quot;&gt;
+              &lt;div class&#x3D;&quot;form-group&quot;&gt;
+                &lt;input type&#x3D;&quot;email&quot; autocapitalize&#x3D;&quot;off&quot; autocorrect&#x3D;&quot;off&quot; name&#x3D;&quot;MERGE0&quot; id&#x3D;&quot;MERGE0&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;Email&quot; placeholder&#x3D;&quot;Email&quot;&gt;
+              &lt;/div&gt;
+              &lt;div class&#x3D;&quot;buttonwrapper&quot;&gt;
+                &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary button&quot;&gt;Get Started&lt;/button&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;col-lg-5&quot; &gt;
+      &lt;div class&#x3D;&quot;image-container mt-sm-4&quot;&gt;
+        &lt;img src&#x3D;&quot;../../assets/images/Car.svg&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;car mr-5&quot;&gt;
+        &lt;img src&#x3D;&quot;../../assets/images/Computer.svg&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;computer&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;section2&quot;&gt;
+  &lt;div class&#x3D;&quot;col-11 mx-auto&quot;&gt;
+    &lt;div class&#x3D;&quot;row infront&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12&quot;&gt;
+        &lt;div class&#x3D;&quot;section2-text&quot;&gt;
+          &lt;h1 class&#x3D;&quot;&quot;&gt;Race your model on a real track, from home.&lt;/h1&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12 sec2space-md evenmoreclass&quot;&gt;
+        &lt;p class&#x3D;&quot;top-content mb-5&quot;&gt;Unlike the AWS league, we test all of our cars in the real world to see their performance in a non-ideal world. Prepare for a DeepRacer summit or see how your car does out of the simulation by getting started.&lt;/p&gt;
+        &lt;form id&#x3D;&quot;email2&quot; class&#x3D;&quot;medbottom&quot;&gt;
+          &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;u&quot; value&#x3D;&quot;47713ec5a39b4f14f5b4e9657&quot;&gt;
+          &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;id&quot; value&#x3D;&quot;fdb5156b5a&quot;&gt;
+          &lt;div class&#x3D;&quot;col-lg-6 col-md-12 theunsmusher&quot;&gt;
+            &lt;div class&#x3D;&quot;form-group&quot;&gt;
+              &lt;input type&#x3D;&quot;email&quot; autocapitalize&#x3D;&quot;off&quot; autocorrect&#x3D;&quot;off&quot; name&#x3D;&quot;MERGE0&quot; id&#x3D;&quot;MERGE5&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;Email&quot; aria-describedby&#x3D;&quot;emailHelp&quot; placeholder&#x3D;&quot;Email&quot;&gt;
+            &lt;/div&gt;
+            &lt;div class&#x3D;&quot;buttonwrapper2&quot;&gt;
+              &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary button&quot;&gt;Get Started&lt;/button&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;section3&quot;&gt;
+  &lt;div class&#x3D;&quot;col-12 mx-auto medleftsafari&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-md-6 col-sm-12&quot;&gt;
+        &lt;img src&#x3D;&quot;../../assets/images/SafariDark.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;safari image&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-md-6 col-sm-12&quot;&gt;
+        &lt;div class&#x3D;&quot;section3-text&quot;&gt;
+          &lt;h1 class&#x3D;&quot;&quot;&gt;Upload. Watch. Compete.&lt;/h1&gt;
+          &lt;p class&#x3D;&quot;top-content&quot;&gt;Our simple GUI and fast backend make it easy to compete and watch your car as it races in the real world.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;section4 row&quot;&gt;
+  &lt;div class&#x3D;&quot;col-12&quot;&gt;
+    &lt;h1 class&#x3D;&quot; mt-5 medtext&quot; style&#x3D;&quot;text-align: center;&quot;&gt;HOW IT WORKS&lt;/h1&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 mx-auto mb-2&quot;&gt;
+    &lt;div class&#x3D;&quot;row medleftex&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12 medorder1&quot;&gt;
+        &lt;img src&#x3D;&quot;../../assets/images/Ex1.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;image&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12 medorder2&quot;&gt;
+        &lt;div class&#x3D;&quot;section4-text-1&quot;&gt;
+          &lt;h2 class&#x3D;&quot;&quot;&gt;Upload Your Trained Model.&lt;/h2&gt;
+          &lt;p class&#x3D;&quot;top-content&quot;&gt; Download your model from AWS and upload it to our servers. Don’t know how? Watch our how-to video.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 mx-auto mb-2&quot;&gt;
+    &lt;div class&#x3D;&quot;row medleftex&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12&quot;&gt;
+        &lt;div class&#x3D;&quot;section4-text-2&quot;&gt;
+          &lt;h2 class&#x3D;&quot;&quot;&gt;We Evaluate Your Model and Stream it.&lt;/h2&gt;
+          &lt;p class&#x3D;&quot;top-content&quot;&gt;We run your model on our physical DeepRacer track and stream the video to twitch. Watch your car live, or tune in later to see how it does.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12&quot;&gt;
+        &lt;img src&#x3D;&quot;../../assets/images/Ex2.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;image&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class&#x3D;&quot;col-12 mx-auto mb-2&quot;&gt;
+    &lt;div class&#x3D;&quot;row medleftex&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12 medorder1 medmbsum&quot;&gt;
+        &lt;img src&#x3D;&quot;../../assets/images/Ex3.png&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;image&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12 medorder2 medmbnone&quot; style&#x3D;&quot;margin-bottom: 15%;&quot;&gt;
+        &lt;div class&#x3D;&quot;section4-text-3&quot;&gt;
+          &lt;h2 class&#x3D;&quot;&quot;&gt;View Your Results on our Dashboard&lt;/h2&gt;
+          &lt;p class&#x3D;&quot;top-content&quot;&gt;See the results of all your tested models and view all your models waiting to be evaluated.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;section5&quot;&gt;
+  &lt;div class&#x3D;&quot;col-med-11 col-sm-12 mx-auto&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12 medtextspacer&quot; style&#x3D;&quot;margin-top: 3%;&quot;&gt;
+        &lt;div class&#x3D;&quot;section5-text&quot;&gt;
+          &lt;h1 class&#x3D;&quot;&quot;&gt;Signup today and one model evaluation is on us.&lt;/h1&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;col-lg-6 col-md-6 col-sm-12 classidek&quot;&gt;
+        &lt;form class&#x3D;&quot;mt-5&quot; id&#x3D;&quot;fullForm&quot; class&#x3D;&quot;medbottom2&quot;&gt;
+          &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;u&quot; value&#x3D;&quot;47713ec5a39b4f14f5b4e9657&quot;&gt;
+          &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;id&quot; value&#x3D;&quot;fdb5156b5a&quot;&gt;
+          &lt;div class&#x3D;&quot;form-group&quot;&gt;
+            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;MERGE1&quot; id&#x3D;&quot;MERGE1&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;FirstName&quot; placeholder&#x3D;&quot;First Name&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;form-group&quot;&gt;
+            &lt;input type&#x3D;&quot;text&quot; name&#x3D;&quot;MERGE2&quot; id&#x3D;&quot;MERGE2&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;LastName&quot; placeholder&#x3D;&quot;Last Name&quot;&gt;
+          &lt;/div&gt;
+          &lt;div class&#x3D;&quot;form-group&quot;&gt;
+            &lt;input type&#x3D;&quot;email&quot; autocapitalize&#x3D;&quot;off&quot; autocorrect&#x3D;&quot;off&quot; name&#x3D;&quot;MERGE0&quot; id&#x3D;&quot;MERGE4&quot; class&#x3D;&quot;form-control&quot; name&#x3D;&quot;Email&quot; aria-describedby&#x3D;&quot;emailHelp&quot; placeholder&#x3D;&quot;Email&quot;&gt;
+          &lt;/div&gt;
+          &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary button&quot;&gt;Get Started&lt;/button&gt;
+          &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;ht&quot; value&#x3D;&quot;939e500637a2d3b76f6a40ee6966696c28c5c090:MTU2NzgxNTU4MS45NDI2&quot;&gt;
+          &lt;input type&#x3D;&quot;hidden&quot; name&#x3D;&quot;mc_signupsource&quot; value&#x3D;&quot;hosted&quot;&gt;
+        &lt;/form&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class&#x3D;&quot;section6&quot;&gt;
+  &lt;div class&#x3D;&quot;row ml-5&quot;&gt;
+    &lt;div class&#x3D;&quot;col-lg-4 col-med-4 col-sm-4&quot; style&#x3D;&quot;margin-top: 5%; margin-bottom: 5%;&quot;&gt;
+      &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;img src&#x3D;&quot;../../assets/images/ARCCLogo.svg&quot; alt&#x3D;&quot;&quot; class&#x3D;&quot;arcc2&quot;&gt;
+        &lt;h1 class&#x3D;&quot;ml-2&quot;&gt;LEAGUE&lt;/h1&gt;
+      &lt;/div&gt;
+      &lt;p&gt;by &lt;a href&#x3D;&quot;https://arcc.ai&quot; target&#x3D;&quot;_blank&quot;&gt;ARCC&lt;/a&gt;&lt;/p&gt;
+      &lt;p&gt;Developed by Caelin Sutch and Alden Parker&lt;/p&gt;
+    &lt;/div&gt;
+&lt;!--    &lt;div class&#x3D;&quot;col-lg-4 col-med-4 col-sm-4&quot; style&#x3D;&quot;margin-top: 5%; margin-bottom: 5%;&quot;&gt;--&gt;
+&lt;!--      &lt;a class&#x3D;&quot;med&quot;&gt;Privacy Policy&lt;/a&gt;--&gt;
+&lt;!--      &lt;a&gt;License&lt;/a&gt;--&gt;
+&lt;!--      &lt;a&gt;Terms of Use&lt;/a&gt;--&gt;
+&lt;!--    &lt;/div&gt;--&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><section class="section1">  <div class="col-12 mb-5 pt-3" style="text-align: left;">    <div class="row">      <img src="../../assets/images/ARCCLogo.svg" alt="" class="arcc">      <h1 class="ml-2">ARCC LEAGUE</h1>      <div class="filler"></div>      <button class="btn btn-outline-light dashboard-btn" routerLink="/app">Dashboard</button>    </div>  </div>  <div class="row section1-text">    <div class="col-lg-7 col-md-11 pl-lg-5">      <h1 class="top-title">TEST AND COMPETE IN THE REAL WORLD</h1>      <p class="top-content mb-5">Compete against other AWS DeepRacer times recorded in the real world. Upload your model, we’ll run it on our DeepRacer track, send you the video, and rank your time on our global leaderboard against other cars that have times in the physical world.</p>      <form id="email1" action="https://jhs.us4.list-manage.com/subscribe/post" method="POST">        <input type="hidden" name="u" value="47713ec5a39b4f14f5b4e9657">        <input type="hidden" name="id" value="fdb5156b5a">        <div class="col-lg-8 col-md-8 col-xs-12">          <div class="row">            <div class="col-12">              <div class="form-group">                <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" class="form-control" name="Email" placeholder="Email">              </div>              <div class="buttonwrapper">                <button type="submit" class="btn btn-primary button">Get Started</button>              </div>            </div>          </div>        </div>      </form>    </div>    <div class="col-lg-5" >      <div class="image-container mt-sm-4">        <img src="../../assets/images/Car.svg" alt="" class="car mr-5">        <img src="../../assets/images/Computer.svg" alt="" class="computer">      </div>    </div>  </div></section><section class="section2">  <div class="col-11 mx-auto">    <div class="row infront">      <div class="col-lg-6 col-md-6 col-sm-12">        <div class="section2-text">          <h1 class="">Race your model on a real track, from home.</h1>        </div>      </div>      <div class="col-lg-6 col-md-6 col-sm-12 sec2space-md evenmoreclass">        <p class="top-content mb-5">Unlike the AWS league, we test all of our cars in the real world to see their performance in a non-ideal world. Prepare for a DeepRacer summit or see how your car does out of the simulation by getting started.</p>        <form id="email2" class="medbottom">          <input type="hidden" name="u" value="47713ec5a39b4f14f5b4e9657">          <input type="hidden" name="id" value="fdb5156b5a">          <div class="col-lg-6 col-md-12 theunsmusher">            <div class="form-group">              <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE5" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Email">            </div>            <div class="buttonwrapper2">              <button type="submit" class="btn btn-primary button">Get Started</button>            </div>          </div>        </form>      </div>    </div>  </div></section><section class="section3">  <div class="col-12 mx-auto medleftsafari">    <div class="row">      <div class="col-md-6 col-sm-12">        <img src="../../assets/images/SafariDark.png" alt="" class="safari image">      </div>      <div class="col-md-6 col-sm-12">        <div class="section3-text">          <h1 class="">Upload. Watch. Compete.</h1>          <p class="top-content">Our simple GUI and fast backend make it easy to compete and watch your car as it races in the real world.</p>        </div>      </div>    </div>  </div></section><section class="section4 row">  <div class="col-12">    <h1 class=" mt-5 medtext" style="text-align: center;">HOW IT WORKS</h1>  </div>  <div class="col-12 mx-auto mb-2">    <div class="row medleftex">      <div class="col-lg-6 col-md-6 col-sm-12 medorder1">        <img src="../../assets/images/Ex1.png" alt="" class="image">      </div>      <div class="col-lg-6 col-md-6 col-sm-12 medorder2">        <div class="section4-text-1">          <h2 class="">Upload Your Trained Model.</h2>          <p class="top-content"> Download your model from AWS and upload it to our servers. Don’t know how? Watch our how-to video.</p>        </div>      </div>    </div>  </div>  <div class="col-12 mx-auto mb-2">    <div class="row medleftex">      <div class="col-lg-6 col-md-6 col-sm-12">        <div class="section4-text-2">          <h2 class="">We Evaluate Your Model and Stream it.</h2>          <p class="top-content">We run your model on our physical DeepRacer track and stream the video to twitch. Watch your car live, or tune in later to see how it does.</p>        </div>      </div>      <div class="col-lg-6 col-md-6 col-sm-12">        <img src="../../assets/images/Ex2.png" alt="" class="image">      </div>    </div>  </div>  <div class="col-12 mx-auto mb-2">    <div class="row medleftex">      <div class="col-lg-6 col-md-6 col-sm-12 medorder1 medmbsum">        <img src="../../assets/images/Ex3.png" alt="" class="image">      </div>      <div class="col-lg-6 col-md-6 col-sm-12 medorder2 medmbnone" style="margin-bottom: 15%;">        <div class="section4-text-3">          <h2 class="">View Your Results on our Dashboard</h2>          <p class="top-content">See the results of all your tested models and view all your models waiting to be evaluated.</p>        </div>      </div>    </div>  </div></section><section class="section5">  <div class="col-med-11 col-sm-12 mx-auto">    <div class="row">      <div class="col-lg-6 col-md-6 col-sm-12 medtextspacer" style="margin-top: 3%;">        <div class="section5-text">          <h1 class="">Signup today and one model evaluation is on us.</h1>        </div>      </div>      <div class="col-lg-6 col-md-6 col-sm-12 classidek">        <form class="mt-5" id="fullForm" class="medbottom2">          <input type="hidden" name="u" value="47713ec5a39b4f14f5b4e9657">          <input type="hidden" name="id" value="fdb5156b5a">          <div class="form-group">            <input type="text" name="MERGE1" id="MERGE1" class="form-control" name="FirstName" placeholder="First Name">          </div>          <div class="form-group">            <input type="text" name="MERGE2" id="MERGE2" class="form-control" name="LastName" placeholder="Last Name">          </div>          <div class="form-group">            <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE4" class="form-control" name="Email" aria-describedby="emailHelp" placeholder="Email">          </div>          <button type="submit" class="btn btn-primary button">Get Started</button>          <input type="hidden" name="ht" value="939e500637a2d3b76f6a40ee6966696c28c5c090:MTU2NzgxNTU4MS45NDI2">          <input type="hidden" name="mc_signupsource" value="hosted">        </form>      </div>    </div>  </div></section><section class="section6">  <div class="row ml-5">    <div class="col-lg-4 col-med-4 col-sm-4" style="margin-top: 5%; margin-bottom: 5%;">      <div class="row">        <img src="../../assets/images/ARCCLogo.svg" alt="" class="arcc2">        <h1 class="ml-2">LEAGUE</h1>      </div>      <p>by <a href="https://arcc.ai" target="_blank">ARCC</a></p>      <p>Developed by Caelin Sutch and Alden Parker</p>    </div><!--    <div class="col-lg-4 col-med-4 col-sm-4" style="margin-top: 5%; margin-bottom: 5%;">--><!--      <a class="med">Privacy Policy</a>--><!--      <a>License</a>--><!--      <a>Terms of Use</a>--><!--    </div>-->  </div></section></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'ngx-app'},{'name': 'BoardComponent', 'selector': 'ngx-user'},{'name': 'FooterComponent', 'selector': 'ngx-footer'},{'name': 'FsIconComponent', 'selector': 'ngx-fs-icon'},{'name': 'HeaderComponent', 'selector': 'ngx-header'},{'name': 'LandingPageComponent', 'selector': 'ngx-landing-page'},{'name': 'LeaderboardComponent', 'selector': 'ngx-users'},{'name': 'LeaderboardRankingComponent', 'selector': 'ngx-leaderboard-ranking'},{'name': 'MiscellaneousComponent', 'selector': 'ngx-miscellaneous'},{'name': 'ModelListComponent', 'selector': 'ngx-model-list'},{'name': 'ModelsAwaitingTestingComponent', 'selector': 'ngx-models-awaiting-testing'},{'name': 'ModelsUploadedComponent', 'selector': 'ngx-models-uploaded'},{'name': 'NgxAuthBlockComponent', 'selector': 'ngx-auth-block'},{'name': 'NgxAuthComponent', 'selector': 'ngx-auth'},{'name': 'NgxLoginComponent', 'selector': 'ngx-login'},{'name': 'NgxLogoutComponent', 'selector': 'ngx-logout'},{'name': 'NgxRegisterComponent', 'selector': 'ngx-register'},{'name': 'NgxRequestPasswordComponent', 'selector': 'ngx-request-password-page'},{'name': 'NgxResetPasswordComponent', 'selector': 'ngx-reset-password-page'},{'name': 'NgxValidationMessageComponent', 'selector': 'ngx-validation-message'},{'name': 'NotFoundComponent', 'selector': 'ngx-not-found'},{'name': 'OneColumnLayoutComponent', 'selector': 'ngx-one-column-layout'},{'name': 'PagesComponent', 'selector': 'ngx-pages'},{'name': 'SearchInputComponent', 'selector': 'ngx-search-input'},{'name': 'StaticComponent', 'selector': 'ngx-static'},{'name': 'TermsAndConditionsComponent', 'selector': 'ngx-terms-and-conditions'},{'name': 'ThreeColumnsLayoutComponent', 'selector': 'ngx-three-columns-layout'},{'name': 'TinyMCEComponent', 'selector': 'ngx-tiny-mce'},{'name': 'TwoColumnsLayoutComponent', 'selector': 'ngx-two-columns-layout'},{'name': 'UpdatesComponent', 'selector': 'ngx-updates'},{'name': 'UploadModelComponent', 'selector': 'ngx-upload-model'},{'name': 'UserComponent', 'selector': 'ngx-user'},{'name': 'UserDashboardComponent', 'selector': 'ngx-user-dashboard'},{'name': 'UsersComponent', 'selector': 'ngx-users'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'LandingPageComponent'};
+</script>
+<script src="../js/tree.js"></script>
 
 
 
@@ -925,20 +1315,17 @@ export class LandingPageComponent implements OnInit {
 
        <script src="../js/compodoc.js"></script>
 
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
        <script src="../js/search/search.js"></script>
        <script src="../js/search/lunr.min.js"></script>
        <script src="../js/search/search-lunr.js"></script>
 
+       <script src="../js/tabs.js"></script>
        <script src="../js/menu.js"></script>
-       <script src="../js/libs/highlight.pack.js"></script>
-       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
        <script src="../js/search/search_index.js"></script>
-       <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                hljs.initHighlightingOnLoad();
-                hljs.initLineNumbersOnLoad();
-            });
-       </script>
 
     </body>
 </html>

@@ -4,18 +4,19 @@ import { AuthGuard } from './@auth/auth.guard';
 
 const routes: Routes = [
   {
-    path: 'app',
-    canActivate: [AuthGuard],
-    loadChildren: './pages/pages.module#PagesModule',
-  },
-  {
     path: 'auth',
     loadChildren: './@auth/auth.module#AuthModule',
   },
   {
     path: '',
-    loadChildren: './static/static.module#StaticModule',
+    canActivate: [AuthGuard],
+    loadChildren: './pages/pages.module#PagesModule',
   },
+  // {
+  //   path: '',
+  //   loadChildren: './static/static.module#StaticModule',
+  //   redirectTo: 'app',
+  // },
   // { path: '', redirectTo: 'landing-', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];

@@ -5,11 +5,11 @@
 
       <div class="form-group">
         <label for="inputLogin">Full Name</label>
-        <input nbInput id="inputLogin" formControlName="login"
-          [status]="(login?.errors?.required || login?.hasError('minlength') || login?.hasError('maxlength')) ? 'danger' : 'primary'"
+        <input nbInput id="inputLogin" formControlName="fullName"
+          [status]="(fullName?.errors?.required || fullName?.hasError('minlength') || fullName?.hasError('maxlength')) ? 'danger' : 'primary'"
           class="form-control" placeholder="Login">
-        <ngx-validation-message label="Login" [showMinLength]="login?.hasError('minlength')"
-          [showMaxLength]="login?.hasError('maxlength')" [showRequired]="login?.errors?.required" minLength=6
+        <ngx-validation-message label="Login" [showMinLength]="fullName?.hasError('minlength')"
+          [showMaxLength]="fullName?.hasError('maxlength')" [showRequired]="fullName?.errors?.required" minLength=6
           maxLength=20></ngx-validation-message>
       </div>
 

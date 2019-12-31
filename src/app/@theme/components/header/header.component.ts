@@ -54,7 +54,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   // Gets menu items for the user dropdown
   getMenuItems() {
-    const userLink = this.user ?  '/pages/users/current/' : ''; // Assigns user link if it exists
+    const userLink = this.user ?  '/users/current/' : ''; // Assigns user link if it exists
     return [
       { title: 'Profile', link: userLink, queryParams: { profile: true } },
       { title: 'Log out', link: '/auth/logout' },

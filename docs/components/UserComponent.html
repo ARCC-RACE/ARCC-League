@@ -26,18 +26,15 @@
                 <ul class="list">
             
                     <li class="title">
-                        <a href="../">arcc-league documentation</a>
+                        <a href="../index.html">arcc-league documentation</a>
                     </li>
             
                     <li class="divider"></li>
             
             
                     <li class="chapter">
-                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                         <ul class="links">
-                                <li class="link">
-                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
-                                </li>
                                 <li class="link">
                                     <a 
                                         
@@ -47,25 +44,43 @@
                                         <span class="fa fa-th"></span>Overview
                                     </a>
                                 </li>
+                                <li class="link">
+                                  <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a href="./changelog.html"
+                                        >
+                                        <span class="fa fa-file-text-o"></span>CHANGELOG
+                                    </a>
+                                </li>
                         </ul>
                     </li>
             
+            
                     <li class="chapter">
-                        <a data-type="chapter-link" href="./modules.html" >
-                            <span class="fa fa-archive"></span>
-                            <span>Modules</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                        <a data-type="chapter-link" href="../modules.html" >
+                            <div class="menu-toggler linked" data-toggle="collapse"
                                     data-target="#xs-modules-links"
-                            ></span>
+                            >
+                                <span class="fa fa-archive"></span>
+                                <span class="link-name">Modules</span>
+                                <span class="fa fa-angle-down"></span>
+                            </div>
                         </a>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-modules-links"
                             >
                                 <li class="link">
                                     <a href="../modules/AppModule.html" >AppModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/AuthModule.html" >AuthModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AuthRoutingModule.html" >AuthRoutingModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/CommonBackendModule.html" >CommonBackendModule</a>
@@ -80,13 +95,22 @@
                                     <a href="../modules/CoreModule.html" >CoreModule</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../modules/LeaderboardRoutingModule.html" >LeaderboardRoutingModule</a>
+                                </li>
+                                <li class="link">
                                     <a href="../modules/MiscellaneousModule.html" >MiscellaneousModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/MiscellaneousRoutingModule.html" >MiscellaneousRoutingModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/PagesModule.html" >PagesModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/StaticModule.html" >StaticModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/StaticRoutingModule.html" >StaticRoutingModule</a>
                                 </li>
                                 <li class="link">
                                     <a href="../modules/ThemeModule.html" >ThemeModule</a>
@@ -100,18 +124,21 @@
                                 <li class="link">
                                     <a href="../modules/UsersModule.html" >UsersModule</a>
                                 </li>
+                                <li class="link">
+                                    <a href="../modules/UsersRoutingModule.html" >UsersRoutingModule</a>
+                                </li>
                         </ul>
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-components-links"
+                            >
                             <span class="fa fa-cogs"></span>
                             <span>Components</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-components-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-components-links"
                             >
                                 <li class="link">
@@ -208,7 +235,7 @@
                                     <a href="../components/UploadModelComponent.html" >UploadModelComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/UserComponent.html"  class="active" >UserComponent</a>
+                                    <a href="../components/UserComponent.html"  data-type="entity-link" class="active" >UserComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/UserDashboardComponent.html" >UserDashboardComponent</a>
@@ -221,14 +248,14 @@
             
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-classes-links"
+                            >
                             <span class="fa fa-file-code-o"></span>
                             <span>Classes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-classes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-classes-links"
                             >
                                 <li class="link">
@@ -243,16 +270,15 @@
                         </ul>
                     </li>
             
-            
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-injectables-links"
+                            >
                             <span class="fa fa-long-arrow-down"></span>
                             <span>Injectables</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-injectables-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-injectables-links"
                             >
                                 <li class="link">
@@ -316,14 +342,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-interfaces-links"
+                            >
                             <span class="fa fa-info"></span>
                             <span>Interfaces</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-interfaces-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-interfaces-links"
                             >
                                 <li class="link">
@@ -348,14 +374,14 @@
                     </li>
             
                     <li class="chapter">
-                        <div class="simple">
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-pipes-links"
+                            >
                             <span class="fa fa-plus"></span>
                             <span>Pipes</span>
-                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                    data-target="#xs-pipes-links"
-                                ></span>
+                            <span class="fa fa-angle-down"></span>
                         </div>
-                        <ul class="links collapse in"
+                        <ul class="links collapse "
                                 id="xs-pipes-links"
                             >
                                 <li class="link">
@@ -383,7 +409,30 @@
                     </li>
             
                     <li class="chapter">
-                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                        <div class="simple menu-toggler" data-toggle="collapse"
+                                data-target="#xs-miscellaneous-links"
+                            >
+                            <span class="fa fa-cubes"></span>
+                            <span>Miscellaneous</span>
+                            <span class="fa fa-angle-down"></span>
+                        </div>
+                        <ul class="links collapse "
+                                id="xs-miscellaneous-links"
+                            >
+                                <li class="link">
+                                  <a href="../miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
+                                </li>
+                                <li class="link">
+                                  <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                </li>
+                                <li class="link">
+                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
                     </li>
             
                     <li class="chapter">
@@ -392,7 +441,7 @@
             
                     <li class="divider"></li>
                     <li class="copyright">
-                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                            Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
                                         <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
                             </a>
                     </li>
@@ -410,7 +459,7 @@
                        <ul class="list">
                    
                            <li class="title">
-                               <a href="../">arcc-league documentation</a>
+                               <a href="../index.html">arcc-league documentation</a>
                            </li>
                    
                            <li class="divider"></li>
@@ -420,11 +469,8 @@
                                </div>
                    
                            <li class="chapter">
-                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <a data-type="chapter-link" href="../index.html"><span class="fa fa-home"></span>Getting started</a>
                                <ul class="links">
-                                       <li class="link">
-                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
-                                       </li>
                                        <li class="link">
                                            <a 
                                                
@@ -434,25 +480,43 @@
                                                <span class="fa fa-th"></span>Overview
                                            </a>
                                        </li>
+                                       <li class="link">
+                                         <a href="../index.html" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="./changelog.html"
+                                               >
+                                               <span class="fa fa-file-text-o"></span>CHANGELOG
+                                           </a>
+                                       </li>
                                </ul>
                            </li>
                    
+                   
                            <li class="chapter">
-                               <a data-type="chapter-link" href="./modules.html" >
-                                   <span class="fa fa-archive"></span>
-                                   <span>Modules</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                               <a data-type="chapter-link" href="../modules.html" >
+                                   <div class="menu-toggler linked" data-toggle="collapse"
                                            data-target="#modules-links"
-                                   ></span>
+                                   >
+                                       <span class="fa fa-archive"></span>
+                                       <span class="link-name">Modules</span>
+                                       <span class="fa fa-angle-down"></span>
+                                   </div>
                                </a>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="modules-links"
                    >
                                        <li class="link">
                                            <a href="../modules/AppModule.html" >AppModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/AppRoutingModule.html" >AppRoutingModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/AuthModule.html" >AuthModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AuthRoutingModule.html" >AuthRoutingModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/CommonBackendModule.html" >CommonBackendModule</a>
@@ -467,13 +531,22 @@
                                            <a href="../modules/CoreModule.html" >CoreModule</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../modules/LeaderboardRoutingModule.html" >LeaderboardRoutingModule</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../modules/MiscellaneousModule.html" >MiscellaneousModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/MiscellaneousRoutingModule.html" >MiscellaneousRoutingModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/PagesModule.html" >PagesModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/StaticModule.html" >StaticModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/StaticRoutingModule.html" >StaticRoutingModule</a>
                                        </li>
                                        <li class="link">
                                            <a href="../modules/ThemeModule.html" >ThemeModule</a>
@@ -487,18 +560,21 @@
                                        <li class="link">
                                            <a href="../modules/UsersModule.html" >UsersModule</a>
                                        </li>
+                                       <li class="link">
+                                           <a href="../modules/UsersRoutingModule.html" >UsersRoutingModule</a>
+                                       </li>
                                </ul>
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#components-links"
+                   >
                                    <span class="fa fa-cogs"></span>
                                    <span>Components</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#components-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="components-links"
                    >
                                        <li class="link">
@@ -595,7 +671,7 @@
                                            <a href="../components/UploadModelComponent.html" >UploadModelComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/UserComponent.html"  class="active" >UserComponent</a>
+                                           <a href="../components/UserComponent.html"  data-type="entity-link" class="active" >UserComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/UserDashboardComponent.html" >UserDashboardComponent</a>
@@ -608,14 +684,14 @@
                    
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#classes-links"
+                   >
                                    <span class="fa fa-file-code-o"></span>
                                    <span>Classes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#classes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="classes-links"
                    >
                                        <li class="link">
@@ -630,16 +706,15 @@
                                </ul>
                            </li>
                    
-                   
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#injectables-links"
+                   >
                                    <span class="fa fa-long-arrow-down"></span>
                                    <span>Injectables</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#injectables-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="injectables-links"
                    >
                                        <li class="link">
@@ -703,14 +778,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#interfaces-links"
+                   >
                                    <span class="fa fa-info"></span>
                                    <span>Interfaces</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#interfaces-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="interfaces-links"
                    >
                                        <li class="link">
@@ -735,14 +810,14 @@
                            </li>
                    
                            <li class="chapter">
-                               <div class="simple">
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#pipes-links"
+                   >
                                    <span class="fa fa-plus"></span>
                                    <span>Pipes</span>
-                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
-                                           data-target="#pipes-links"
-                   ></span>
+                                   <span class="fa fa-angle-down"></span>
                                </div>
-                               <ul class="links collapse in"
+                               <ul class="links collapse "
                                        id="pipes-links"
                    >
                                        <li class="link">
@@ -770,7 +845,30 @@
                            </li>
                    
                            <li class="chapter">
-                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                               <div class="simple menu-toggler" data-toggle="collapse"
+                                       data-target="#miscellaneous-links"
+                   >
+                                   <span class="fa fa-cubes"></span>
+                                   <span>Miscellaneous</span>
+                                   <span class="fa fa-angle-down"></span>
+                               </div>
+                               <ul class="links collapse "
+                                       id="miscellaneous-links"
+                   >
+                                       <li class="link">
+                                         <a href="../miscellaneous/enumerations.html" data-type="entity-link" >Enums</a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../miscellaneous/functions.html" data-type="entity-link" >Functions</a>
+                                       </li>
+                                       <li class="link">
+                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
                            </li>
                    
                            <li class="chapter">
@@ -779,7 +877,7 @@
                    
                            <li class="divider"></li>
                            <li class="copyright">
-                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                   Documentation generated using <a href="https://compodoc.github.io/website/" target="_blank">
                                                <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
                                    </a>
                            </li>
@@ -792,29 +890,47 @@
                    <div class="content-data">
 
 
+
+
 <ol class="breadcrumb">
   <li>Components</li>
   <li>UserComponent</li>
 </ol>
 
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
 
-    <ul class="nav nav-tabs" role="tablist">
-        <li class="active">
-            <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
-        </li>
-        <li>
-            <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
-        </li>
-    </ul>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
 
-    <div class="tab-content">
-        <div class="tab-pane fade active in" id="infos"><p class="comment">
+    <li>
+        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+    </li>
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
     <h3>File</h3>
 </p>
 <p class="comment">
     <code>src/app/pages/users/user/user.component.ts</code>
 </p>
 
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/docs/ts/latest/api/core/index/OnInit-interface.html" target="_blank" >OnInit</a></code>
+                <code><a href="https://angular.io/docs/ts/latest/api/core/index/OnDestroy-interface.html" target="_blank" >OnDestroy</a></code>
+    </p>
 
 
 <section>
@@ -847,7 +963,7 @@
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>user.component.html</code></td>
+                <td class="col-md-9"><code>./user.component.html</code></td>
             </tr>
 
 
@@ -855,7 +971,77 @@
     </table>
 </section>
 
-
+    <section>
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                 <a href="#email">email</a>
+                            </li>
+                            <li>
+                                 <a href="#fullName">fullName</a>
+                            </li>
+                            <li>
+                                 <a href="#mode">mode</a>
+                            </li>
+                            <li>
+                                <span class="modifier">Protected</span> <a href="#unsubscribe$">unsubscribe$</a>
+                            </li>
+                            <li>
+                                 <a href="#userForm">userForm</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                 <a href="#back">back</a>
+                            </li>
+                            <li>
+                                <span class="modifier">Static</span> <a href="#convertToUser">convertToUser</a>
+                            </li>
+                            <li>
+                                 <a href="#initUserForm">initUserForm</a>
+                            </li>
+                            <li>
+                                 <a href="#loadUser">loadUser</a>
+                            </li>
+                            <li>
+                                 <a href="#loadUserData">loadUserData</a>
+                            </li>
+                            <li>
+                                 <a href="#ngOnDestroy">ngOnDestroy</a>
+                            </li>
+                            <li>
+                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                 <a href="#save">save</a>
+                            </li>
+                            <li>
+                                 <a href="#setViewMode">setViewMode</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
     <section>
         <h3 id="constructor">Constructor</h3>
@@ -863,247 +1049,483 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <code>constructor(usersService: <a href="../classes/UserData.html" >UserData</a>, router: any, route: any, toasterService: any, fb: any)</code>
+                            <code>constructor(usersService: <a href="../interfaces/User.html">UserData</a>, router: <a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank">Router</a>, route: <a href="https://angular.io/docs/ts/latest/api/router/index/ActivatedRoute-interface.html" target="_blank">ActivatedRoute</a>, toasterService: NbToastrService, fb: <a href="https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html" target="_blank">FormBuilder</a>)</code>
                         </td>
                     </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/pages/users/user/user.component.ts:59</a></div>
+                                </td>
+                            </tr>
     
+                    <tr>
+                        <td class="col-md-4">
+                                <div>
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>usersService</td>
+                                                      <td>
+                                                                <code><a href="../interfaces/User.html" target="_self" >UserData</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>router</td>
+                                                      <td>
+                                                                <code><a href="https://angular.io/docs/ts/latest/api/router/index/Router-class.html" target="_blank" >Router</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>route</td>
+                                                      <td>
+                                                                <code><a href="https://angular.io/docs/ts/latest/api/router/index/ActivatedRoute-interface.html" target="_blank" >ActivatedRoute</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>toasterService</td>
+                                                      <td>
+                                                                <code>NbToastrService</code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                      <td>fb</td>
+                                                      <td>
+                                                                <code><a href="https://angular.io/docs/ts/latest/api/forms/index/FormBuilder-class.html" target="_blank" >FormBuilder</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
     </section>
 
+
+
+
+
     <section>
-        <h3 id="methods">Methods</h3>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> setViewMode</b>
+                            <a name="back"></a>
+                            <span class="name"><b> back</b><a href="#back"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    <code>setViewMode(viewMode: UserFormMode)</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description"><p>Setter for mode</p>
-    </div>
-                                <div class="io-description">
-                                        <b>Parameters :</b>
-                                        <ul class="jsdoc-params">
-                                                <li>
-                                                    <div>
-                                                        <b>viewMode</b>
-                                                    </div>
-                                                    <div>
-                                                        
-                                                    </div>
-                                                </li>
-                                        </ul>
-                                </div>
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>void</code>
-    
-                                </div>
-                                    <div class="io-description">
-                                        
-                                    </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> initUserForm</b>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    <code>initUserForm()</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description"><p>Initializes the user form</p>
-    </div>
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>void</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> loadUserData</b>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    <code>loadUserData()</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description"><p>Decides whether or not to load the users data, add a new user, or view another user<br>Consolidates multiple edit forms into one</p>
-    </div>
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>void</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> loadUser</b>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    <code>loadUser(id: any)</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description"><p>Loads another user based on their ID</p>
-    </div>
-                                <div class="io-description">
-                                        <b>Parameters :</b>
-                                        <ul class="jsdoc-params">
-                                                <li>
-                                                    <div>
-                                                        <b>id</b>
-                                                    </div>
-                                                    <div>
-                                                        <p>User ID</p>
-    
-                                                    </div>
-                                                </li>
-                                        </ul>
-                                </div>
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>void</code>
-    
-                                </div>
-                                    <div class="io-description">
-                                        
-                                    </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b><span class="modifier">Static</span> convertToUser</b>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <span class="modifier-icon method fa fa-play export">
-                                    <span class="fa fa-export"></span>
-                                </span>
-                            <code>convertToUser(value: any)</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description"><p>Converts object to user</p>
-    </div>
-                                <div class="io-description">
-                                        <b>Parameters :</b>
-                                        <ul class="jsdoc-params">
-                                                <li>
-                                                    <div>
-                                                        <b>value</b>
-                                                    </div>
-                                                    <div>
-                                                        <p>Object that will represent the user</p>
-    
-                                                    </div>
-                                                </li>
-                                        </ul>
-                                </div>
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>User</code>
-    
-                                </div>
-                                    <div class="io-description">
-                                        
-                                    </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> save</b>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-    <code>save()</code>
-                        </td>
-                    </tr>
-    
-                    <tr>
-                        <td class="col-md-4">
-                                <div class="io-description"><p>Saves the user to the database</p>
-    </div>
-                                <div class="io-description">
-                                    <b>Returns: </b>    <code>void</code>
-    
-                                </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <b> back</b>
-                        </td>
-                    </tr>
-    
                     <tr>
                         <td class="col-md-4">
     <code>back()</code>
                         </td>
                     </tr>
     
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="187" class="link-to-prism">src/app/pages/users/user/user.component.ts:187</a></div>
+                                </td>
+                            </tr>
+    
                     <tr>
                         <td class="col-md-4">
                                 <div class="io-description"><p>Go to the last page</p>
     </div>
+    
                                 <div class="io-description">
-                                    <b>Returns: </b>    <code>void</code>
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
     
                                 </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="convertToUser"></a>
+                            <span class="name"><b><span class="modifier">Static</span> convertToUser</b><a href="#convertToUser"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                                <span class="modifier-icon fa fa-reset"></span>
+                            <code>convertToUser(value: <a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank">any</a>)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="155" class="link-to-prism">src/app/pages/users/user/user.component.ts:155</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Converts object to user</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>value</td>
+                                                      <td>
+                                                              <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td><p>Object that will represent the user</p>
+    </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="../interfaces/User.html" target="_self" >User</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="initUserForm"></a>
+                            <span class="name"><b> initUserForm</b><a href="#initUserForm"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>initUserForm()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="76" class="link-to-prism">src/app/pages/users/user/user.component.ts:76</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Initializes the user form</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="loadUser"></a>
+                            <span class="name"><b> loadUser</b><a href="#loadUser"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>loadUser(id?: )</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="126" class="link-to-prism">src/app/pages/users/user/user.component.ts:126</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Loads another user based on their ID</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>id</td>
+                                                      <td>
+                                                      </td>
+                                                      <td>
+                                                          true
+                                                      </td>
+                                                      <td><p>User ID</p>
+    </td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="loadUserData"></a>
+                            <span class="name"><b> loadUserData</b><a href="#loadUserData"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>loadUserData()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="105" class="link-to-prism">src/app/pages/users/user/user.component.ts:105</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Decides whether or not to load the users data, add a new user, or view another user
+    Consolidates multiple edit forms into one</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngOnDestroy"></a>
+                            <span class="name"><b> ngOnDestroy</b><a href="#ngOnDestroy"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>ngOnDestroy()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="194" class="link-to-prism">src/app/pages/users/user/user.component.ts:194</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Unsubscribe from stuff on destroy</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngOnInit"></a>
+                            <span class="name"><b> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>ngOnInit()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/pages/users/user/user.component.ts:68</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="save"></a>
+                            <span class="name"><b> save</b><a href="#save"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>save()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="164" class="link-to-prism">src/app/pages/users/user/user.component.ts:164</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Saves the user to the database</p>
+    </div>
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="setViewMode"></a>
+                            <span class="name"><b> setViewMode</b><a href="#setViewMode"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+    <code>setViewMode(viewMode: <a href="../interfaces/User.html">UserFormMode</a>)</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="57" class="link-to-prism">src/app/pages/users/user/user.component.ts:57</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div class="io-description"><p>Setter for mode</p>
+    </div>
+    
+                                <div class="io-description">
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>viewMode</td>
+                                                      <td>
+                                                              <code><a href="../interfaces/User.html" target="_self" >UserFormMode</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                                <div>
+                                </div>
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                                    <div class="io-description">
+                                        
+                                    </div>
                         </td>
                     </tr>
                 </tbody>
@@ -1111,98 +1533,155 @@
     </section>
 
     <section>
-        <h3 id="inputs">Properties</h3>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> email</b>
+                            <a name="email"></a>
+                            <span class="name"><b> email</b><a href="#email"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>email:     <code>any</code>
-    </bcode>
+                            <code>email:     <code></code>
+    </code>
                         </td>
                     </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="38" class="link-to-prism">src/app/pages/users/user/user.component.ts:38</a></div>
+                                </td>
+                            </tr>
+    
+    
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> login</b>
+                            <a name="fullName"></a>
+                            <span class="name"><b> fullName</b><a href="#fullName"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>login:     <code>any</code>
-    </bcode>
+                            <code>fullName:     <code></code>
+    </code>
                         </td>
                     </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="36" class="link-to-prism">src/app/pages/users/user/user.component.ts:36</a></div>
+                                </td>
+                            </tr>
+    
+    
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> mode</b>
+                            <a name="mode"></a>
+                            <span class="name"><b> mode</b><a href="#mode"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>mode:     <code>UserFormMode</code>
-    </bcode>
+                            <code>mode:     <code><a href="../interfaces/User.html" target="_self" >UserFormMode</a></code>
+    </code>
                         </td>
                     </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="../interfaces/User.html" target="_self" >UserFormMode</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="51" class="link-to-prism">src/app/pages/users/user/user.component.ts:51</a></div>
+                                </td>
+                            </tr>
+    
                     <tr>
                         <td class="col-md-4">
                             <div class="io-description"><p>What mode the form is being loaded in</p>
     </div>
                         </td>
                     </tr>
+    
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b><span class="modifier">Protected</span> unsubscribe$</b>
+                            <a name="unsubscribe$"></a>
+                            <span class="name"><b><span class="modifier">Protected</span> unsubscribe$</b><a href="#unsubscribe$"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <span class="modifier-icon fa fa-lock"></span><code>unsubscribe$:     <code>any</code>
-    </bcode>
+                            <span class="modifier-icon fa fa-lock"></span><code>unsubscribe$:     <code></code>
+    </code>
                         </td>
                     </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="33" class="link-to-prism">src/app/pages/users/user/user.component.ts:33</a></div>
+                                </td>
+                            </tr>
+    
                     <tr>
                         <td class="col-md-4">
                             <div class="io-description"><p>Subject that is for noting when the action is complete</p>
     </div>
                         </td>
                     </tr>
+    
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <b> userForm</b>
+                            <a name="userForm"></a>
+                            <span class="name"><b> userForm</b><a href="#userForm"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>userForm:     <code>any</code>
-    </bcode>
+                            <code>userForm:     <code><a href="https://angular.io/docs/ts/latest/api/forms/index/FormGroup-class.html" target="_blank" >FormGroup</a></code>
+    </code>
                         </td>
                     </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <i>Type : </i>    <code><a href="https://angular.io/docs/ts/latest/api/forms/index/FormGroup-class.html" target="_blank" >FormGroup</a></code>
+    
+                            </td>
+                        </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="28" class="link-to-prism">src/app/pages/users/user/user.component.ts:28</a></div>
+                                </td>
+                            </tr>
+    
+    
                 </tbody>
             </table>
     </section>
 </div>
-        <div class="tab-pane fade tab-source-code" id="source">
-            <pre><code class="hljs javascript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import { Component, OnDestroy, OnInit } from &#x27;@angular/core&#x27;;
 import { FormBuilder, FormGroup, Validators } from &#x27;@angular/forms&#x27;;
 import { Router, ActivatedRoute } from &#x27;@angular/router&#x27;;
 
@@ -1213,7 +1692,7 @@ import { takeUntil } from &#x27;rxjs/operators&#x27;;
 import { NbToastrService } from &#x27;@nebular/theme&#x27;;
 
 import { UserData, User } from &#x27;../../../@core/interfaces/common/users&#x27;;
-import { EMAIL_PATTERN, NUMBERS_PATTERN } from &#x27;../../../@auth/components&#x27;;
+import { EMAIL_PATTERN } from &#x27;../../../@auth/components&#x27;;
 
 
 export enum UserFormMode {
@@ -1237,7 +1716,7 @@ export class UserComponent implements OnInit, OnDestroy {
   protected readonly unsubscribe$ &#x3D; new Subject&lt;void&gt;();
 
   // Getters for the form
-  get login() { return this.userForm.get(&#x27;login&#x27;); }
+  get fullName() { return this.userForm.get(&#x27;fullName&#x27;); }
 
   get email() { return this.userForm.get(&#x27;email&#x27;); }
 
@@ -1282,7 +1761,7 @@ export class UserComponent implements OnInit, OnDestroy {
       id: this.fb.control(&#x27;&#x27;),
       role: this.fb.control(&#x27;&#x27;),
 
-      login: this.fb.control(&#x27;&#x27;, [Validators.required]),
+      fullName: this.fb.control(&#x27;&#x27;, [Validators.required]),
       // age: this.fb.control(&#x27;&#x27;, [Validators.required, Validators.min(1),
       //   Validators.max(120), Validators.pattern(NUMBERS_PATTERN)]),
       email: this.fb.control(&#x27;&#x27;, [
@@ -1336,7 +1815,7 @@ export class UserComponent implements OnInit, OnDestroy {
         this.userForm.setValue({
           id: user.id,
           role: user.role,
-          login: user.login ? user.login : &#x27;&#x27;,
+          fullName: user.fullName ? user.fullName : &#x27;&#x27;,
           // age: user.age ? user.age : &#x27;&#x27;,
           email: user.email,
           // address: {
@@ -1389,7 +1868,7 @@ export class UserComponent implements OnInit, OnDestroy {
    * Go to the last page
    */
   back() {
-    this.router.navigate([&#x27;/pages&#x27;]).then();
+    this.router.navigate([&#x27;/&#x27;]).then();
   }
 
   /**
@@ -1401,9 +1880,100 @@ export class UserComponent implements OnInit, OnDestroy {
   }
 }
 </code></pre>
-        </div>
     </div>
 
+    <div class="tab-pane fade" id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;nb-card&gt;
+  &lt;nb-card-header&gt;User Information&lt;/nb-card-header&gt;
+  &lt;nb-card-body class&#x3D;&quot;container&quot;&gt;
+    &lt;div [formGroup]&#x3D;&quot;userForm&quot;&gt;
+
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label for&#x3D;&quot;inputLogin&quot;&gt;Full Name&lt;/label&gt;
+        &lt;input nbInput id&#x3D;&quot;inputLogin&quot; formControlName&#x3D;&quot;fullName&quot;
+          [status]&#x3D;&quot;(fullName?.errors?.required || fullName?.hasError(&#x27;minlength&#x27;) || fullName?.hasError(&#x27;maxlength&#x27;)) ? &#x27;danger&#x27; : &#x27;primary&#x27;&quot;
+          class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Login&quot;&gt;
+        &lt;ngx-validation-message label&#x3D;&quot;Login&quot; [showMinLength]&#x3D;&quot;fullName?.hasError(&#x27;minlength&#x27;)&quot;
+          [showMaxLength]&#x3D;&quot;fullName?.hasError(&#x27;maxlength&#x27;)&quot; [showRequired]&#x3D;&quot;fullName?.errors?.required&quot; minLength&#x3D;6
+          maxLength&#x3D;20&gt;&lt;/ngx-validation-message&gt;
+      &lt;/div&gt;
+
+&lt;!--      &lt;div class&#x3D;&quot;form-group col-md-4 col-sm-12&quot;&gt;--&gt;
+&lt;!--        &lt;label for&#x3D;&quot;inputAge&quot;&gt;Age&lt;/label&gt;--&gt;
+&lt;!--        &lt;input nbInput id&#x3D;&quot;inputAge&quot; formControlName&#x3D;&quot;age&quot;--&gt;
+&lt;!--          [status]&#x3D;&quot;(age?.errors?.min || age?.errors?.max || age?.hasError(&#x27;pattern&#x27;)) ? &#x27;danger&#x27; : &#x27;primary&#x27;&quot;--&gt;
+&lt;!--          class&#x3D;&quot;form-control&quot; placeholder&#x3D;&quot;Age&quot;&gt;--&gt;
+&lt;!--        &lt;ngx-validation-message label&#x3D;&quot;Age&quot; [showMin]&#x3D;&quot;age?.errors?.min&quot; [showMax]&#x3D;&quot;age?.errors?.max&quot;--&gt;
+&lt;!--                                [showRequired]&#x3D;&quot;age?.errors?.required&quot;--&gt;
+&lt;!--                                [showPattern]&#x3D;&quot;age?.hasError(&#x27;pattern&#x27;)&quot; min&#x3D;1 max&#x3D;120&gt;&lt;/ngx-validation-message&gt;--&gt;
+&lt;!--      &lt;/div&gt;--&gt;
+
+      &lt;div class&#x3D;&quot;form-group&quot;&gt;
+        &lt;label for&#x3D;&quot;inputEmail&quot;&gt;Email&lt;/label&gt;
+        &lt;input nbInput id&#x3D;&quot;inputEmail&quot; formControlName&#x3D;&quot;email&quot;
+          [status]&#x3D;&quot;(email?.errors?.required || email?.hasError(&#x27;pattern&#x27;)) ? &#x27;danger&#x27; : &#x27;primary&#x27;&quot; class&#x3D;&quot;form-control&quot;
+          placeholder&#x3D;&quot;Email&quot;&gt;
+        &lt;ngx-validation-message label&#x3D;&quot;Email&quot; [showPattern]&#x3D;&quot;email?.hasError(&#x27;pattern&#x27;)&quot;
+          [showRequired]&#x3D;&quot;email?.errors?.required&quot; min&#x3D;1 max&#x3D;120&gt;&lt;/ngx-validation-message&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;form-group text-center&quot;&gt;
+        &lt;button nbButton status&#x3D;&quot;warning&quot; routerLink&#x3D;&quot;/pages/users/reset-password&quot;&gt;Reset Password&lt;/button&gt;
+      &lt;/div&gt;
+
+&lt;!--      &lt;div class&#x3D;&quot;form-group col-md-4 col-sm-12&quot; formGroupName&#x3D;&quot;address&quot;&gt;--&gt;
+&lt;!--        &lt;label for&#x3D;&quot;inputStreet&quot;&gt;Street&lt;/label&gt;--&gt;
+&lt;!--        &lt;input nbInput class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputStreet&quot; placeholder&#x3D;&quot;Street&quot; formControlName&#x3D;&quot;street&quot;&gt;--&gt;
+&lt;!--      &lt;/div&gt;--&gt;
+
+&lt;!--      &lt;div class&#x3D;&quot;form-group col-md-4 col-sm-12&quot; formGroupName&#x3D;&quot;address&quot;&gt;--&gt;
+&lt;!--        &lt;label for&#x3D;&quot;inputCity&quot;&gt;City&lt;/label&gt;--&gt;
+&lt;!--        &lt;input nbInput class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputCity&quot; placeholder&#x3D;&quot;City&quot; formControlName&#x3D;&quot;city&quot;&gt;--&gt;
+&lt;!--      &lt;/div&gt;--&gt;
+
+&lt;!--      &lt;div class&#x3D;&quot;form-group col-md-4 col-sm-12&quot; formGroupName&#x3D;&quot;address&quot;&gt;--&gt;
+&lt;!--        &lt;label for&#x3D;&quot;inputZipCode&quot;&gt;Zip Code&lt;/label&gt;--&gt;
+&lt;!--        &lt;input nbInput class&#x3D;&quot;form-control&quot; id&#x3D;&quot;inputZipCode&quot; placeholder&#x3D;&quot;Zip Code&quot; formControlName&#x3D;&quot;zipCode&quot;&gt;--&gt;
+&lt;!--      &lt;/div&gt;--&gt;
+    &lt;/div&gt;
+  &lt;/nb-card-body&gt;
+  &lt;nb-card-footer class&#x3D;&quot;text-center&quot;&gt;
+    &lt;button nbButton status&#x3D;&quot;primary&quot; [disabled]&#x3D;&quot;!userForm.valid&quot; (click)&#x3D;&quot;save()&quot; hero&gt;Save&lt;/button&gt;
+    &lt;button nbButton status&#x3D;&quot;info&quot; (click)&#x3D;&quot;back()&quot; hero&gt;Back&lt;/button&gt;
+  &lt;/nb-card-footer&gt;
+&lt;/nb-card&gt;
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><nb-card>  <nb-card-header>User Information</nb-card-header>  <nb-card-body class="container">    <div [formGroup]="userForm">      <div class="form-group">        <label for="inputLogin">Full Name</label>        <input nbInput id="inputLogin" formControlName="fullName"          [status]="(fullName?.errors?.required || fullName?.hasError(\'minlength\') || fullName?.hasError(\'maxlength\')) ? \'danger\' : \'primary\'"          class="form-control" placeholder="Login">        <ngx-validation-message label="Login" [showMinLength]="fullName?.hasError(\'minlength\')"          [showMaxLength]="fullName?.hasError(\'maxlength\')" [showRequired]="fullName?.errors?.required" minLength=6          maxLength=20></ngx-validation-message>      </div><!--      <div class="form-group col-md-4 col-sm-12">--><!--        <label for="inputAge">Age</label>--><!--        <input nbInput id="inputAge" formControlName="age"--><!--          [status]="(age?.errors?.min || age?.errors?.max || age?.hasError(\'pattern\')) ? \'danger\' : \'primary\'"--><!--          class="form-control" placeholder="Age">--><!--        <ngx-validation-message label="Age" [showMin]="age?.errors?.min" [showMax]="age?.errors?.max"--><!--                                [showRequired]="age?.errors?.required"--><!--                                [showPattern]="age?.hasError(\'pattern\')" min=1 max=120></ngx-validation-message>--><!--      </div>-->      <div class="form-group">        <label for="inputEmail">Email</label>        <input nbInput id="inputEmail" formControlName="email"          [status]="(email?.errors?.required || email?.hasError(\'pattern\')) ? \'danger\' : \'primary\'" class="form-control"          placeholder="Email">        <ngx-validation-message label="Email" [showPattern]="email?.hasError(\'pattern\')"          [showRequired]="email?.errors?.required" min=1 max=120></ngx-validation-message>      </div>      <div class="form-group text-center">        <button nbButton status="warning" routerLink="/pages/users/reset-password">Reset Password</button>      </div><!--      <div class="form-group col-md-4 col-sm-12" formGroupName="address">--><!--        <label for="inputStreet">Street</label>--><!--        <input nbInput class="form-control" id="inputStreet" placeholder="Street" formControlName="street">--><!--      </div>--><!--      <div class="form-group col-md-4 col-sm-12" formGroupName="address">--><!--        <label for="inputCity">City</label>--><!--        <input nbInput class="form-control" id="inputCity" placeholder="City" formControlName="city">--><!--      </div>--><!--      <div class="form-group col-md-4 col-sm-12" formGroupName="address">--><!--        <label for="inputZipCode">Zip Code</label>--><!--        <input nbInput class="form-control" id="inputZipCode" placeholder="Zip Code" formControlName="zipCode">--><!--      </div>-->    </div>  </nb-card-body>  <nb-card-footer class="text-center">    <button nbButton status="primary" [disabled]="!userForm.valid" (click)="save()" hero>Save</button>    <button nbButton status="info" (click)="back()" hero>Back</button>  </nb-card-footer></nb-card></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'ngx-app'},{'name': 'BoardComponent', 'selector': 'ngx-user'},{'name': 'FooterComponent', 'selector': 'ngx-footer'},{'name': 'FsIconComponent', 'selector': 'ngx-fs-icon'},{'name': 'HeaderComponent', 'selector': 'ngx-header'},{'name': 'LandingPageComponent', 'selector': 'ngx-landing-page'},{'name': 'LeaderboardComponent', 'selector': 'ngx-users'},{'name': 'LeaderboardRankingComponent', 'selector': 'ngx-leaderboard-ranking'},{'name': 'MiscellaneousComponent', 'selector': 'ngx-miscellaneous'},{'name': 'ModelListComponent', 'selector': 'ngx-model-list'},{'name': 'ModelsAwaitingTestingComponent', 'selector': 'ngx-models-awaiting-testing'},{'name': 'ModelsUploadedComponent', 'selector': 'ngx-models-uploaded'},{'name': 'NgxAuthBlockComponent', 'selector': 'ngx-auth-block'},{'name': 'NgxAuthComponent', 'selector': 'ngx-auth'},{'name': 'NgxLoginComponent', 'selector': 'ngx-login'},{'name': 'NgxLogoutComponent', 'selector': 'ngx-logout'},{'name': 'NgxRegisterComponent', 'selector': 'ngx-register'},{'name': 'NgxRequestPasswordComponent', 'selector': 'ngx-request-password-page'},{'name': 'NgxResetPasswordComponent', 'selector': 'ngx-reset-password-page'},{'name': 'NgxValidationMessageComponent', 'selector': 'ngx-validation-message'},{'name': 'NotFoundComponent', 'selector': 'ngx-not-found'},{'name': 'OneColumnLayoutComponent', 'selector': 'ngx-one-column-layout'},{'name': 'PagesComponent', 'selector': 'ngx-pages'},{'name': 'SearchInputComponent', 'selector': 'ngx-search-input'},{'name': 'StaticComponent', 'selector': 'ngx-static'},{'name': 'TermsAndConditionsComponent', 'selector': 'ngx-terms-and-conditions'},{'name': 'ThreeColumnsLayoutComponent', 'selector': 'ngx-three-columns-layout'},{'name': 'TinyMCEComponent', 'selector': 'ngx-tiny-mce'},{'name': 'TwoColumnsLayoutComponent', 'selector': 'ngx-two-columns-layout'},{'name': 'UpdatesComponent', 'selector': 'ngx-updates'},{'name': 'UploadModelComponent', 'selector': 'ngx-upload-model'},{'name': 'UserComponent', 'selector': 'ngx-user'},{'name': 'UserDashboardComponent', 'selector': 'ngx-user-dashboard'},{'name': 'UsersComponent', 'selector': 'ngx-users'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'UserComponent'};
+</script>
+<script src="../js/tree.js"></script>
 
 
 
@@ -1435,20 +2005,17 @@ export class UserComponent implements OnInit, OnDestroy {
 
        <script src="../js/compodoc.js"></script>
 
+       <script>var COMPODOC_CURRENT_PAGE_DEPTH = 1;</script>
+
        <script src="../js/search/search.js"></script>
        <script src="../js/search/lunr.min.js"></script>
        <script src="../js/search/search-lunr.js"></script>
 
+       <script src="../js/tabs.js"></script>
        <script src="../js/menu.js"></script>
-       <script src="../js/libs/highlight.pack.js"></script>
-       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
        <script src="../js/search/search_index.js"></script>
-       <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                hljs.initHighlightingOnLoad();
-                hljs.initLineNumbersOnLoad();
-            });
-       </script>
 
     </body>
 </html>

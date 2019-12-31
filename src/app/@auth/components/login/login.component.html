@@ -56,7 +56,7 @@
 
   <button nbButton fullWidth status="primary" size="large"
    (click)="login()" [disabled]="submitted || !loginForm.valid"
-    [class.btn-pulse]="submitted">
+    [nbSpinner]="submitted">
     Log In
   </button>
 </div>

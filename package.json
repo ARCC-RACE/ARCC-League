@@ -16,6 +16,7 @@
     "build": "ng build",
     "build:prod": "npm run build -- --prod --aot",
     "deploy": "npm run build:prod -- --output-path dist && firebase deploy",
+    "doc-deploy": "npm run docs && npm run deploy",
     "test": "ng test",
     "test:coverage": "rimraf coverage && npm run test -- --code-coverage",
     "lint": "ng lint",

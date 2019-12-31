@@ -33,7 +33,7 @@ export class UserComponent implements OnInit, OnDestroy {
   protected readonly unsubscribe$ = new Subject<void>();
 
   // Getters for the form
-  get login() { return this.userForm.get('login'); }
+  get fullName() { return this.userForm.get('fullName'); }
 
   get email() { return this.userForm.get('email'); }
 
@@ -78,7 +78,7 @@ export class UserComponent implements OnInit, OnDestroy {
       id: this.fb.control(''),
       role: this.fb.control(''),
 
-      login: this.fb.control('', [Validators.required]),
+      fullName: this.fb.control('', [Validators.required]),
       // age: this.fb.control('', [Validators.required, Validators.min(1),
       //   Validators.max(120), Validators.pattern(NUMBERS_PATTERN)]),
       email: this.fb.control('', [
@@ -132,7 +132,7 @@ export class UserComponent implements OnInit, OnDestroy {
         this.userForm.setValue({
           id: user.id,
           role: user.role,
-          login: user.login ? user.login : '',
+          fullName: user.fullName ? user.fullName : '',
           // age: user.age ? user.age : '',
           email: user.email,
           // address: {
@@ -185,7 +185,7 @@ export class UserComponent implements OnInit, OnDestroy {
    * Go to the last page
    */
   back() {
-    this.router.navigate(['/pages']).then();
+    this.router.navigate(['/']).then();
   }
 
   /**
